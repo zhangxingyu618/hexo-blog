@@ -1,0 +1,545 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-Hans" color-mode=light>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>LogicFlow初上手 - 1000STAR</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  
+  <meta name="description" content="LogicFlow初上手
+因为之前用的G6-edit，...">
+  <meta name="author" content="xing">
+  <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1445822_p6ry5n7lrr.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="/lib/fancybox/fancybox.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/atom-one-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      loading: {
+        gif: '',
+        lottie: 'https://assets4.lottiefiles.com/private_files/lf30_n3at4oi7.json'
+      },
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: {
+          gif: '/images/theme/loading.gif',
+          lottie: ''
+        }
+      },
+      donate: {
+        enable: true,
+        alipay: 'https://i.loli.net/2021/11/11/9FSws7lKeEImAhD.jpg',
+        wechat: 'https://i.loli.net/2021/11/11/yWeBOLCIqRpGlfu.png'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: true
+      },
+      preview: {
+        background: {
+          default: '',
+          api: ''
+        },
+        motto: {
+          default: '我在开了灯的床头下，想问问自己的心啊。',
+          typing: true,
+          api: 'https://v2.jinrishici.com/one.json',
+          data_contents: '["data","content"]'
+        },
+      },
+      qrcode: {
+        enable: true,
+        type: 'url',
+        image: 'https://i.loli.net/2021/11/08/d6Y2VekyzoBU5KA.gif',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        type: 'simple'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      },
+      search: {
+        enable: true,
+        path: '/search.xml'
+      }
+    }
+  </script>
+
+  
+
+  
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body class="lock-screen">
+  <div class="loading" id="loading"></div>
+  
+    
+
+
+  <nav class="navbar">
+    <div class="left">
+      
+        <i class="iconfont iconhome j-navbar-back-home"></i>
+      
+      
+        <i class="iconfont iconqrcode j-navbar-qrcode"></i>
+      
+      
+        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+      
+      
+        <i class="iconfont iconsearch j-navbar-search"></i>
+      
+    </div>
+    <div class="center">LogicFlow初上手</div>
+    <div class="right">
+      <i class="iconfont iconmenu j-navbar-menu"></i>
+    </div>
+    
+      <div id="qrcode-navbar"></div>
+    
+  </nav>
+
+  
+  
+
+<nav class="menu">
+  <div class="menu-container">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline "> 首页</a>
+      </li><li class="menu-item">
+        <a href="/galleries/ " class="underline "> 摄影</a>
+      </li><li class="menu-item">
+        <a href="/archives/ " class="underline "> 归档</a>
+      </li><li class="menu-item">
+        <a href="/tags/ " class="underline "> 标签</a>
+      </li><li class="menu-item">
+        <a href="/categories/ " class="underline "> 分类</a>
+      </li><li class="menu-item">
+        <a href="/about/ " class="underline "> 关于</a>
+      </li></ul>
+    
+      <div class="menu-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+    
+  </div>
+</nav>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/theme/post-image/post%20(9).jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">LogicFlow初上手</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>November 11, 2021</span>
+      
+        <span class="post-info-item">
+          <i class="iconfont iconeye"></i><span id="/2021/11/11/LogicFlow%E5%88%9D%E4%B8%8A%E6%89%8B/" class="leancloud-counter" data-flag-title="LogicFlow初上手"></span>
+        </span>
+        <span class="post-info-item">
+          <i class="iconfont iconheart"></i><span id="/2021/11/11/LogicFlow%E5%88%9D%E4%B8%8A%E6%89%8B/" class="leancloud-like" data-flag-title="LogicFlow初上手"></span>
+        </span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>1903</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        <h1 id="LogicFlow初上手"><a href="#LogicFlow初上手" class="headerlink" title="LogicFlow初上手"></a>LogicFlow初上手</h1><blockquote>
+<p>因为之前用的G6-edit，转过来之后好用了太多，方便了太多，主要是G6-edit没有完整详细的文档，好像也没开源不能商用。</p>
+</blockquote>
+<h3 id="logicflow-有非常好的流程图编辑功能"><a href="#logicflow-有非常好的流程图编辑功能" class="headerlink" title="logicflow 有非常好的流程图编辑功能"></a>logicflow 有非常好的流程图编辑功能</h3><p>通过 <code>npm</code> 或 <code>yarn</code> 来安装 <code>LogicFlow</code>。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment"># npm</span><br>$ npm install @logicflow/core --save<br><br><span class="hljs-comment"># yarn</span><br>$ yarn add @logicflow/core<br></code></pre></td></tr></table></figure>
+
+<p>安装完成之后，使用 <code>import</code> 或 <code>require</code> 进行引用。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">import</span> LogicFlow <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@logicflow/core&#x27;</span>;<br><span class="hljs-keyword">import</span> <span class="hljs-string">&#x27;@logicflow/core/dist/style/index.css&#x27;</span>;<br></code></pre></td></tr></table></figure>
+
+<h3 id="用法非常简单"><a href="#用法非常简单" class="headerlink" title="用法非常简单"></a>用法非常简单</h3><p>1.通过 <code>JSON</code> 的数据格式，来让 <code>LogicFlow</code> 渲染。该数据中需要有 <code>nodes</code>（节点） 和 <code>edges</code>（边） 字段，分别用数组表示：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> data = &#123;<br>  <span class="hljs-comment">// 节点</span><br>  <span class="hljs-attr">nodes</span>: [<br>    &#123;<br>      <span class="hljs-attr">id</span>: <span class="hljs-number">50</span>,<br>      <span class="hljs-attr">type</span>: <span class="hljs-string">&#x27;rect&#x27;</span>,<br>      <span class="hljs-attr">x</span>: <span class="hljs-number">100</span>,<br>      <span class="hljs-attr">y</span>: <span class="hljs-number">150</span>,<br>      <span class="hljs-attr">text</span>: <span class="hljs-string">&#x27;你好&#x27;</span>,<br>    &#125;,<br>    &#123;<br>      <span class="hljs-attr">id</span>: <span class="hljs-number">21</span>,<br>      <span class="hljs-attr">type</span>: <span class="hljs-string">&#x27;circle&#x27;</span>,<br>      <span class="hljs-attr">x</span>: <span class="hljs-number">300</span>,<br>      <span class="hljs-attr">y</span>: <span class="hljs-number">150</span>,<br>    &#125;,<br>  ],<br>  <span class="hljs-comment">// 边</span><br>  <span class="hljs-attr">edges</span>: [<br>    &#123;<br>      <span class="hljs-attr">type</span>: <span class="hljs-string">&#x27;polyline&#x27;</span>,<br>      <span class="hljs-attr">sourceNodeId</span>: <span class="hljs-number">50</span>,<br>      <span class="hljs-attr">targetNodeId</span>: <span class="hljs-number">21</span>,<br>    &#125;,<br>  ],<br>&#125;;<br></code></pre></td></tr></table></figure>
+
+<p>2.创建一个 <code>LogicFlow</code> 的实例，此时可以传入一些参数来控制画布，比如画布的大小。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> lf = <span class="hljs-keyword">new</span> LogicFlow(&#123;<br>  <span class="hljs-attr">container</span>: <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&#x27;#container&#x27;</span>),<br>  <span class="hljs-attr">stopScrollGraph</span>: <span class="hljs-literal">true</span>,<br>  <span class="hljs-attr">stopZoomGraph</span>: <span class="hljs-literal">true</span>,<br>  <span class="hljs-attr">width</span>: <span class="hljs-number">500</span>,<br>  <span class="hljs-attr">height</span>: <span class="hljs-number">500</span>,<br>  <span class="hljs-attr">grid</span>: &#123;<br>    <span class="hljs-attr">type</span>: <span class="hljs-string">&#x27;dot&#x27;</span>,<br>    <span class="hljs-attr">size</span>: <span class="hljs-number">20</span>,<br>  &#125;,<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+<p>3.通过刚才创建的实例，来渲染画布。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js">lf.render(data);<br></code></pre></td></tr></table></figure>
+
+<p>到此，我们就创建好了一个最简单的示例。</p>
+<p><img    class="lazyload" data-original="https://i.loli.net/2021/11/11/3dUANH95Rl4P2iO.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">image-20210624165630709</span></p>
+<blockquote>
+<p>logicflow的节点你可以任意拖拽，两个节点之间的连线也可以自由连接，可编辑性非常强大。</p>
+</blockquote>
+<h3 id="logicflow-的相关API非常强大，包括控制栏还有拖拽栏都可以利用API非常简单的实现"><a href="#logicflow-的相关API非常强大，包括控制栏还有拖拽栏都可以利用API非常简单的实现" class="headerlink" title="logicflow 的相关API非常强大，包括控制栏还有拖拽栏都可以利用API非常简单的实现"></a>logicflow 的相关API非常强大，包括控制栏还有拖拽栏都可以利用API非常简单的实现</h3><h4 id="控制面板"><a href="#控制面板" class="headerlink" title="控制面板"></a>控制面板</h4><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs ts"><span class="hljs-keyword">import</span> LogicFlow <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@logicflow/core&#x27;</span>;<br><span class="hljs-keyword">import</span> &#123; Control &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@logicflow/extension&#x27;</span>;<br><span class="hljs-keyword">import</span> <span class="hljs-string">&#x27;@logicflow/extension/lib/style/index.css&#x27;</span><br><br>LogicFlow.use(Control);<br></code></pre></td></tr></table></figure>
+
+<p><img    class="lazyload" data-original="https://i.loli.net/2021/11/11/srAMShNTxOFvQ3Z.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">image-20210624165536045</span></p>
+<h4 id="拖拽面板"><a href="#拖拽面板" class="headerlink" title="拖拽面板"></a>拖拽面板</h4><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs ts"><span class="hljs-keyword">import</span> LogicFlow <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@logicflow/core&#x27;</span>;<br><span class="hljs-keyword">import</span> &#123; DndPanel &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@logicflow/extension&#x27;</span>;<br><span class="hljs-keyword">import</span> <span class="hljs-string">&#x27;@logicflow/extension/lib/style/index.css&#x27;</span><br><br>LogicFlow.use(DndPanel);<br></code></pre></td></tr></table></figure>
+
+<p><img    class="lazyload" data-original="https://i.loli.net/2021/11/11/JiTazKtM5FR2dDm.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">image-20210624165558372</span></p>
+<p>等等功能都可以调用API快速在实现。包括节点的各种API真的是功能非常强大又非常贴心的框架，简单滴代码开发一个可拖拽的流程图编辑器。</p>
+<p>还有他的自定义程度也非常高，如果API自带模板不能满足也可以高度自定义组件以及相关方法。</p>
+
+      </section>
+      <section class="extra">
+        
+          <ul class="copyright">
+  
+    <li><strong>本文作者：</strong>xing</li>
+    <li><strong>本文链接：</strong><a href="https://47.104.3.107/2021/11/11/LogicFlow%E5%88%9D%E4%B8%8A%E6%89%8B/index.html" title="https:&#x2F;&#x2F;47.104.3.107&#x2F;2021&#x2F;11&#x2F;11&#x2F;LogicFlow%E5%88%9D%E4%B8%8A%E6%89%8B&#x2F;index.html">https:&#x2F;&#x2F;47.104.3.107&#x2F;2021&#x2F;11&#x2F;11&#x2F;LogicFlow%E5%88%9D%E4%B8%8A%E6%89%8B&#x2F;index.html</a></li>
+    <li><strong>版权声明：</strong>本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="BY-NC-SA" target="_blank" rel="noopener">BY-NC-SA</a> 许可协议，转载请注明出处！</li>
+  
+</ul>
+        
+        
+          <section class="donate">
+  <div id="qrcode-donate">
+    <img   class="lazyload" data-original="https://i.loli.net/2021/11/11/9FSws7lKeEImAhD.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
+  </div>
+  <div class="icon">
+    <a href="javascript:;" id="alipay"><i class="iconfont iconalipay"></i></a>
+    <a href="javascript:;" id="wechat"><i class="iconfont iconwechat-fill"></i></a>
+  </div>
+</section>
+        
+        
+        
+  <nav class="nav">
+    <a href="/2021/11/11/vue3%20+%20G6%20%E9%87%87%E5%9D%91%E7%AC%94%E8%AE%B0%202/"><i class="iconfont iconleft"></i>vue3 + G6 采坑笔记 2</a>
+    <a href="/2021/11/11/G6%20%E5%AF%B9%E6%AF%94%20LogicFlow/">G6 对比 LogicFlow<i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">文章目录：</h3>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#LogicFlow%E5%88%9D%E4%B8%8A%E6%89%8B"><span class="toc-text">LogicFlow初上手</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#logicflow-%E6%9C%89%E9%9D%9E%E5%B8%B8%E5%A5%BD%E7%9A%84%E6%B5%81%E7%A8%8B%E5%9B%BE%E7%BC%96%E8%BE%91%E5%8A%9F%E8%83%BD"><span class="toc-text">logicflow 有非常好的流程图编辑功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E6%B3%95%E9%9D%9E%E5%B8%B8%E7%AE%80%E5%8D%95"><span class="toc-text">用法非常简单</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#logicflow-%E7%9A%84%E7%9B%B8%E5%85%B3API%E9%9D%9E%E5%B8%B8%E5%BC%BA%E5%A4%A7%EF%BC%8C%E5%8C%85%E6%8B%AC%E6%8E%A7%E5%88%B6%E6%A0%8F%E8%BF%98%E6%9C%89%E6%8B%96%E6%8B%BD%E6%A0%8F%E9%83%BD%E5%8F%AF%E4%BB%A5%E5%88%A9%E7%94%A8API%E9%9D%9E%E5%B8%B8%E7%AE%80%E5%8D%95%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="toc-text">logicflow 的相关API非常强大，包括控制栏还有拖拽栏都可以利用API非常简单的实现</span></a></li></ol></li></ol></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
+  
+
+<footer class="footer">
+  <div class="footer-social"><a 
+        href="tencent://message/?Menu=yes&uin=1846730600 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#12B7F5'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconQQ "></i>
+      </a><a 
+        href="https://i.loli.net/2021/11/11/7hfawNSHkoeCrzl.jpg "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#09BB07'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconwechat-fill "></i>
+      </a><a 
+        href="https://github.com/zhangxingyu618 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#9f7be1'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  icongithub-fill "></i>
+      </a><a 
+        href="mailto:1846730600@qq.com "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#DA2E76'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconmail "></i>
+      </a></div>
+  
+    <div class="footer-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+  
+</footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+    <div class="fab fab-like">
+      <i class="iconfont iconheart"></i>
+    </div>
+  
+  
+    <div class="fab fab-daovoice">
+      <i class="iconfont iconcomment"></i>
+    </div>
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+    <div class="scrollbar j-scrollbar">
+  <div class="scrollbar-current j-scrollbar-current"></div>
+</div>
+  
+  
+    
+<script src="/js/color-mode.js"></script>
+
+  
+  
+    <div class="search">
+  <div class="search-container">
+    <div class="search-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <div class="search-input-wrapper">
+      <i class="search-input-icon iconfont iconsearch"></i>
+      <input class="search-input" type="search" id="search-input" placeholder="Search..." autofocus autocomplete="off"
+        autocorrect="off" autocapitalize="off">
+    </div>
+    <div class="search-output" id="search-output"></div>
+  </div>
+</div>
+  
+</body>
+
+<script src="/lib/jquery/jquery.js"></script>
+
+
+
+  
+<script src="/lib/lottie/lottie.js"></script>
+
+
+
+
+  
+<script src="/lib/lazyload/lazyload.js"></script>
+
+
+
+
+  
+<script src="/lib/fancybox/fancybox.js"></script>
+
+
+
+
+
+
+  
+<script src="/lib/qrcode/qrcode.js"></script>
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+  <script>
+  $.getScript("//cdn.jsdelivr.net/npm/leancloud-storage@4.1.0/dist/av-min.js", () => {
+
+    AV.init({
+      appId: 'XYmCtrvSgmSaocvAdvV2Mz3m-gzGzoHsz',
+      appKey: 'KwcsbELgwcycRgXH31uI2UzB',
+      serverURLs: 'https://leancloud.cn/',
+    });
+
+    const Counter = AV.Object.extend("Counter");
+    const Like = AV.Object.extend("Like");
+
+    const showCount = (Counter) => {
+      const asyncLimit = new AsyncLimit(2);
+      $(".leancloud-counter").each(async (e) => {
+        const url = $(".leancloud-counter").eq(e).attr('id').trim();
+        const query = new AV.Query("Counter");
+        query.equalTo("words", url);
+        let count = await asyncLimit.run(() => query.count());
+        $(".leancloud-counter").eq(e).text(count ? count : 0);
+      });
+    }
+
+    const addCount = (Counter) => {
+      const url = $(".leancloud-counter").length === 1 ? $(".leancloud-counter").attr('id').trim() : 'https://47.104.3.107';
+      var query = new Counter;
+      query.save({
+        words: url
+      });
+    }
+
+    const showLike = (Like) => {
+      const asyncLimit = new AsyncLimit(2);
+      $(".leancloud-like").each(async (e) => {
+        const url = $(".leancloud-like").eq(e).attr('id').trim();
+        const query = new AV.Query("Like");
+        query.equalTo("path", url);
+        let count = await asyncLimit.run(() => query.count());
+        $(".leancloud-like").eq(e).text(count ? count : 0);
+      });
+    }
+
+    const addLike = (Like) => {
+      const url = $(".leancloud-like").length === 1 ? $(".leancloud-like").attr('id').trim() : 'https://47.104.3.107';
+      var query = new Like;
+      query.save({
+        path: url,
+        nickName: 'Anonymous'
+      });
+      $(".leancloud-like").addClass('islike');
+      $(".fab-like").children(".iconfont").removeClass("iconheart").addClass("iconheart-fill").css("color", "#eb3223");
+      ZHAOO.zui.message({ text: '爱你哦~', type: 'success' });
+      setTimeout(() => showLike(Like), 1000);
+    }
+
+    const handleLikeClick = () => {
+      const isLike = $(".leancloud-like").length === 1 && $(".leancloud-like").hasClass('islike') ? true : false;
+      if (isLike) {
+        ZHAOO.zui.message({ text: '小心心不可以收回呢~', type: 'warning' });
+      } else {
+        addLike(Like);
+      }
+    }
+
+    $(function () {
+      addCount(Counter);
+      showCount(Counter);
+      showLike(Like);
+      $(".fab-like").on("click", function () {
+        handleLikeClick();
+      });
+    });
+
+  });
+</script>
+
+
+
+  
+
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i["DaoVoiceObject"] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    a.charset = "utf-8";
+    m.parentNode.insertBefore(a, m)
+  })(window, document, "script", "https://widget.daovoice.io/widget/731d55bd.js", "daovoice")
+  daovoice('init', {
+    app_id: "731d55bd"
+  }, {
+    launcher: {
+      disableLauncherIcon: true,
+    },
+  });
+  daovoice('update');
+</script>
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

@@ -1,0 +1,685 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-Hans" color-mode=light>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>flex布局语法 - 1000STAR</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  
+  <meta name="description" content="flex布局语法一、flex 布局是什么？Flex是 ...">
+  <meta name="author" content="xing">
+  <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1445822_p6ry5n7lrr.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="/lib/fancybox/fancybox.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/atom-one-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      loading: {
+        gif: '',
+        lottie: 'https://assets4.lottiefiles.com/private_files/lf30_n3at4oi7.json'
+      },
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: {
+          gif: '/images/theme/loading.gif',
+          lottie: ''
+        }
+      },
+      donate: {
+        enable: true,
+        alipay: 'https://i.loli.net/2021/11/11/9FSws7lKeEImAhD.jpg',
+        wechat: 'https://i.loli.net/2021/11/11/yWeBOLCIqRpGlfu.png'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: true
+      },
+      preview: {
+        background: {
+          default: '',
+          api: ''
+        },
+        motto: {
+          default: '我在开了灯的床头下，想问问自己的心啊。',
+          typing: true,
+          api: 'https://v2.jinrishici.com/one.json',
+          data_contents: '["data","content"]'
+        },
+      },
+      qrcode: {
+        enable: true,
+        type: 'url',
+        image: 'https://i.loli.net/2021/11/08/d6Y2VekyzoBU5KA.gif',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        type: 'simple'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      },
+      search: {
+        enable: true,
+        path: '/search.xml'
+      }
+    }
+  </script>
+
+  
+
+  
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body class="lock-screen">
+  <div class="loading" id="loading"></div>
+  
+    
+
+
+  <nav class="navbar">
+    <div class="left">
+      
+        <i class="iconfont iconhome j-navbar-back-home"></i>
+      
+      
+        <i class="iconfont iconqrcode j-navbar-qrcode"></i>
+      
+      
+        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+      
+      
+        <i class="iconfont iconsearch j-navbar-search"></i>
+      
+    </div>
+    <div class="center">flex布局语法</div>
+    <div class="right">
+      <i class="iconfont iconmenu j-navbar-menu"></i>
+    </div>
+    
+      <div id="qrcode-navbar"></div>
+    
+  </nav>
+
+  
+  
+
+<nav class="menu">
+  <div class="menu-container">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline "> 首页</a>
+      </li><li class="menu-item">
+        <a href="/galleries/ " class="underline "> 摄影</a>
+      </li><li class="menu-item">
+        <a href="/archives/ " class="underline "> 归档</a>
+      </li><li class="menu-item">
+        <a href="/tags/ " class="underline "> 标签</a>
+      </li><li class="menu-item">
+        <a href="/categories/ " class="underline "> 分类</a>
+      </li><li class="menu-item">
+        <a href="/about/ " class="underline "> 关于</a>
+      </li></ul>
+    
+      <div class="menu-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+    
+  </div>
+</nav>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/theme/post-image/post%20(10).jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">flex布局语法</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>November 17, 2021</span>
+      
+        <span class="post-info-item">
+          <i class="iconfont iconeye"></i><span id="/2021/11/17/flex%E5%B8%83%E5%B1%80/" class="leancloud-counter" data-flag-title="flex布局语法"></span>
+        </span>
+        <span class="post-info-item">
+          <i class="iconfont iconheart"></i><span id="/2021/11/17/flex%E5%B8%83%E5%B1%80/" class="leancloud-like" data-flag-title="flex布局语法"></span>
+        </span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>3959</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        <h1 id="flex布局语法"><a href="#flex布局语法" class="headerlink" title="flex布局语法"></a>flex布局语法</h1><h2 id="一、flex-布局是什么？"><a href="#一、flex-布局是什么？" class="headerlink" title="一、flex 布局是什么？"></a>一、flex 布局是什么？</h2><p>Flex是 Flexible Box 的缩写，意为”弹性布局”，用来为盒状模型提供最大的灵活性。</p>
+<p><strong>任何一个容器</strong> 都可以指定为 Flex 布局。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.box</span>&#123;<br>  <span class="hljs-attribute">display</span>: flex;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><strong>行内元素</strong> 也可以使用 Flex 布局。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.box</span>&#123;<br>  <span class="hljs-attribute">display</span>: inline-flex;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>Webkit 内核的浏览器，必须加上<code>-webkit</code>前缀。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.box</span>&#123;<br>  <span class="hljs-attribute">display</span>: -webkit-flex; <span class="hljs-comment">/* Safari */</span><br>  <span class="hljs-attribute">display</span>: flex;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><strong>注意</strong>，设为 Flex 布局以后，子元素的<code>float</code>、<code>clear</code>和<code>vertical-align</code>属性将失效。</p>
+<h2 id="二、基本概念"><a href="#二、基本概念" class="headerlink" title="二、基本概念"></a>二、基本概念</h2><p>采用 Flex 布局的元素，称为 Flex 容器（flex container），简称”容器”。它的所有子元素自动成为容器成员，称为 Flex 项目（flex item），简称”项目”。</p>
+<p><img    class="lazyload" data-original="https://upload-images.jianshu.io/upload_images/13944531-b1144007e4830a72.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/563/format/webp" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">img</span></p>
+<p>容器默认存在两根轴：水平的主轴（或x轴）（main axis）和垂直的交叉轴（或y轴）（cross axis）。主轴的开始位置（与边框的交叉点）叫做<code>main start</code>，结束位置叫做<code>main end</code>；交叉轴的开始位置叫做<code>cross start</code>，结束位置叫做<code>cross end</code>。</p>
+<p>项目默认沿主轴排列。单个项目占据的主轴空间叫做<code>main size</code>，占据的交叉轴空间叫做<code>cross size</code>。</p>
+<h2 id="三、容器的属性"><a href="#三、容器的属性" class="headerlink" title="三、容器的属性"></a>三、容器的属性</h2><p>以下6个属性设置在容器上。(即设置在 display: flex; 的元素上)</p>
+<blockquote>
+<ul>
+<li>flex-direction 方向 决定项目的排列方向</li>
+<li>flex-wrap 换行</li>
+<li>flex-flow 方向和换行的简写</li>
+<li>justify-content 主轴对齐方式</li>
+<li>align-items 交叉轴对齐方式</li>
+<li>align-content 多轴线的对齐方式</li>
+</ul>
+</blockquote>
+<h3 id="3-1-flex-direction属性"><a href="#3-1-flex-direction属性" class="headerlink" title="3.1 flex-direction属性"></a>3.1 flex-direction属性</h3><p><code>flex-direction</code>属性决定主轴的方向（即项目的排列方向）。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.box</span> &#123;<br>  <span class="hljs-attribute">flex-direction</span>: row | row-reverse | column | column-reverse;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+</blockquote>
+<p><img    class="lazyload" data-original="https://upload-images.jianshu.io/upload_images/13944531-c2f97bb8a47d139c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/796/format/webp" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">img</span></p>
+<p>它可能有4个值。</p>
+<blockquote>
+<ul>
+<li><code>row</code>（默认值）：主轴为水平方向，起点在左端。</li>
+<li><code>row-reverse</code>：主轴为水平方向，起点在右端。</li>
+<li><code>column</code>：主轴为垂直方向，起点在上沿。</li>
+<li><code>column-reverse</code>：主轴为垂直方向，起点在下沿。</li>
+</ul>
+</blockquote>
+<h3 id="3-2-flex-wrap属性"><a href="#3-2-flex-wrap属性" class="headerlink" title="3.2 flex-wrap属性"></a>3.2 flex-wrap属性</h3><p>默认情况下，项目都排在一条线（又称”轴线”）上。<code>flex-wrap</code>属性定义，如果一条轴线排不下，如何换行。</p>
+<p><img    class="lazyload" data-original="https://upload-images.jianshu.io/upload_images/13944531-262f5854ece5b1fd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/798/format/webp" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">img</span></p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.box</span>&#123;<br>  <span class="hljs-attribute">flex-wrap</span>: nowrap | wrap | wrap-reverse;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+</blockquote>
+<p>它可能取三个值。</p>
+<p>（1）<code>nowrap</code>（默认）：不换行。会压缩项目的宽度</p>
+<p><img    class="lazyload" data-original="https://upload-images.jianshu.io/upload_images/13944531-ce8c6f815b5bfc0a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700/format/webp" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">img</span></p>
+<p>（2）<code>wrap</code>：换行，第一行在上方。</p>
+<p><img    class="lazyload" data-original="https://upload-images.jianshu.io/upload_images/13944531-0701b857c3588b37.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/700/format/webp" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">img</span></p>
+<p>（3）<code>wrap-reverse</code>：换行，第一行在下方。</p>
+<p><img    class="lazyload" data-original="https://upload-images.jianshu.io/upload_images/13944531-0ae21f2bd8af65f8.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/700/format/webp" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">img</span></p>
+<h3 id="3-3-flex-flow"><a href="#3-3-flex-flow" class="headerlink" title="3.3 flex-flow"></a>3.3 flex-flow</h3><p><code>flex-flow</code>属性是<code>flex-direction</code>属性和<code>flex-wrap</code>属性的简写形式，默认值为<code>row nowrap</code>。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.box</span> &#123;<br>  <span class="hljs-attribute">flex-flow</span>: &lt;flex-direction&gt; || &lt;flex-wrap&gt;;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+</blockquote>
+<h3 id="3-4-justify-content属性"><a href="#3-4-justify-content属性" class="headerlink" title="3.4 justify-content属性"></a>3.4 justify-content属性</h3><p><code>justify-content</code>属性定义了项目在主轴上的对齐方式。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.box</span> &#123;<br>  <span class="hljs-attribute">justify-content</span>: flex-start | flex-end | center | space-between | space-around;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+</blockquote>
+<p><img    class="lazyload" data-original="https://upload-images.jianshu.io/upload_images/13944531-3e78d500eb78a34b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/637/format/webp" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">img</span></p>
+<p>它可能取5个值，具体对齐方式与轴的方向有关。下面假设主轴为从左到右。</p>
+<blockquote>
+<ul>
+<li><code>flex-start</code>（默认值）：左对齐</li>
+<li><code>flex-end</code>：右对齐</li>
+<li><code>center</code>： 居中</li>
+<li><code>space-between</code>：两端对齐，项目之间的间隔都相等。</li>
+<li><code>space-around</code>：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。</li>
+</ul>
+</blockquote>
+<h3 id="3-5-align-items属性"><a href="#3-5-align-items属性" class="headerlink" title="3.5 align-items属性"></a>3.5 align-items属性</h3><p><code>align-items</code>属性定义项目在交叉轴上如何对齐。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.box</span> &#123;<br>  <span class="hljs-attribute">align-items</span>: flex-start | flex-end | center | baseline | stretch;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+</blockquote>
+<p><img    class="lazyload" data-original="https://upload-images.jianshu.io/upload_images/13944531-96b4662bd1da272a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/617/format/webp" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">img</span></p>
+<p>它可能取5个值。具体的对齐方式与交叉轴的方向有关，下面假设交叉轴从上到下。</p>
+<blockquote>
+<ul>
+<li><code>flex-start</code>：交叉轴的起点对齐。</li>
+<li><code>flex-end</code>：交叉轴的终点对齐。</li>
+<li><code>center</code>：交叉轴的中点对齐。</li>
+<li><code>baseline</code>: 项目的第一行文字的基线对齐。</li>
+<li><code>stretch</code>（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。</li>
+</ul>
+</blockquote>
+<h3 id="3-6-align-content属性"><a href="#3-6-align-content属性" class="headerlink" title="3.6 align-content属性"></a>3.6 align-content属性</h3><p><code>align-content</code>属性定义了多根轴线的对齐方式（<strong>一排项目为一根轴线</strong>）。如果项目只有一根轴线，该属性不起作用。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.box</span> &#123;<br>  <span class="hljs-attribute">align-content</span>: flex-start | flex-end | center | space-between | space-around | stretch;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+</blockquote>
+<p><img    class="lazyload" data-original="https://upload-images.jianshu.io/upload_images/13944531-1ca06439bf8f102c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620/format/webp" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">img</span></p>
+<p>该属性可能取6个值。</p>
+<blockquote>
+<ul>
+<li><code>flex-start</code>：与交叉轴的起点对齐。</li>
+<li><code>flex-end</code>：与交叉轴的终点对齐。</li>
+<li><code>center</code>：与交叉轴的中点对齐。</li>
+<li><code>space-between</code>：与交叉轴两端对齐，轴线之间的间隔平均分布。</li>
+<li><code>space-around</code>：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。</li>
+<li><code>stretch</code>（默认值）：轴线占满整个交叉轴。</li>
+</ul>
+</blockquote>
+<h2 id="四、项目的属性"><a href="#四、项目的属性" class="headerlink" title="四、项目的属性"></a>四、项目的属性</h2><p>以下6个属性设置在项目上。</p>
+<blockquote>
+<ul>
+<li><code>order</code></li>
+<li><code>flex-grow</code></li>
+<li><code>flex-shrink</code></li>
+<li><code>flex-basis</code></li>
+<li><code>flex</code> <code>flex-grow</code>, <code>flex-shrink</code> 和 <code>flex-basis</code>的简写</li>
+<li><code>align-self</code></li>
+</ul>
+</blockquote>
+<h3 id="4-1-order属性"><a href="#4-1-order属性" class="headerlink" title="4.1 order属性"></a>4.1 order属性</h3><p><code>order</code>属性定义项目的排列顺序。数值越小，排列越靠前，默认为0。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.item</span> &#123;<br>  <span class="hljs-attribute">order</span>: &lt;integer&gt;;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+</blockquote>
+<p><img    class="lazyload" data-original="https://upload-images.jianshu.io/upload_images/13944531-034cbd418547ec54.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/751/format/webp" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">img</span></p>
+<h3 id="4-2-flex-grow属性"><a href="#4-2-flex-grow属性" class="headerlink" title="4.2 flex-grow属性"></a>4.2 flex-grow属性</h3><p><code>flex-grow</code>属性定义项目的放大比例，默认为<code>0</code>，即如果存在剩余空间，也不放大。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.item</span> &#123;<br>  <span class="hljs-attribute">flex-grow</span>: &lt;number&gt;; <span class="hljs-comment">/* default 0 */</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+</blockquote>
+<p><img    class="lazyload" data-original="https://upload-images.jianshu.io/upload_images/13944531-af1be60c6e332220.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/802/format/webp" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">img</span></p>
+<p>如果所有项目的<code>flex-grow</code>属性都为1，则它们将等分剩余空间（如果有的话）。如果一个项目的<code>flex-grow</code>属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍。</p>
+<h3 id="4-3-flex-shrink属性"><a href="#4-3-flex-shrink属性" class="headerlink" title="4.3 flex-shrink属性"></a>4.3 flex-shrink属性</h3><p><code>flex-shrink</code>属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.item</span> &#123;<br>  <span class="hljs-attribute">flex-shrink</span>: &lt;number&gt;; <span class="hljs-comment">/* default 1 */</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+</blockquote>
+<p><img    class="lazyload" data-original="https://upload-images.jianshu.io/upload_images/13944531-782c37762df70627.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/700/format/webp" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">img</span></p>
+<p>如果所有项目的<code>flex-shrink</code>属性都为1，当空间不足时，都将等比例缩小。如果一个项目的<code>flex-shrink</code>属性为0，其他项目都为1，则空间不足时，前者不缩小。</p>
+<p>负值对该属性无效。</p>
+<h3 id="4-4-flex-basis属性"><a href="#4-4-flex-basis属性" class="headerlink" title="4.4 flex-basis属性"></a>4.4 flex-basis属性</h3><p><code>flex-basis</code>属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为<code>auto</code>，即项目的本来大小。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.item</span> &#123;<br>  <span class="hljs-attribute">flex-basis</span>: &lt;length&gt; | auto; <span class="hljs-comment">/* default auto */</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+</blockquote>
+<p>它可以设为跟<code>width</code>或<code>height</code>属性一样的值（比如350px），则项目将占据固定空间。</p>
+<h3 id="4-5-flex属性"><a href="#4-5-flex属性" class="headerlink" title="4.5 flex属性"></a>4.5 flex属性</h3><p><code>flex</code>属性是<code>flex-grow</code>, <code>flex-shrink</code> 和 <code>flex-basis</code>的简写，默认值为<code>0 1 auto</code>。后两个属性可选。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.item</span> &#123;<br>  <span class="hljs-attribute">flex</span>: none | [ &lt;<span class="hljs-string">&#x27;flex-grow&#x27;</span>&gt; &lt;<span class="hljs-string">&#x27;flex-shrink&#x27;</span>&gt;? || &lt;<span class="hljs-string">&#x27;flex-basis&#x27;</span>&gt; ]<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+</blockquote>
+<p>该属性有两个快捷值：<code>auto</code> (<code>1 1 auto</code>) 和 none (<code>0 0 auto</code>)。</p>
+<p><strong>建议优先使用这个属性，而不是单独写三个分离的属性，因为浏览器会推算相关值。</strong></p>
+<h3 id="4-6-align-self属性"><a href="#4-6-align-self属性" class="headerlink" title="4.6 align-self属性"></a>4.6 align-self属性</h3><p><code>align-self</code>属性允许单个项目有与其他项目不一样的对齐方式，可覆盖<code>align-items</code>属性。默认值为<code>auto</code>，表示继承父元素的<code>align-items</code>属性，如果没有父元素，则等同于<code>stretch</code>。</p>
+<blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.item</span> &#123;<br>  <span class="hljs-attribute">align-self</span>: auto | flex-start | flex-end | center | baseline | stretch;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+</blockquote>
+<p><img    class="lazyload" data-original="https://upload-images.jianshu.io/upload_images/13944531-8bc809b9bbb4d3ef.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/743/format/webp" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">img</span></p>
+<p>该属性可能取6个值，除了auto，其他都与align-items属性完全一致。</p>
+
+      </section>
+      <section class="extra">
+        
+          <ul class="copyright">
+  
+    <li><strong>本文作者：</strong>xing</li>
+    <li><strong>本文链接：</strong><a href="https://47.104.3.107/2021/11/17/flex%E5%B8%83%E5%B1%80/index.html" title="https:&#x2F;&#x2F;47.104.3.107&#x2F;2021&#x2F;11&#x2F;17&#x2F;flex%E5%B8%83%E5%B1%80&#x2F;index.html">https:&#x2F;&#x2F;47.104.3.107&#x2F;2021&#x2F;11&#x2F;17&#x2F;flex%E5%B8%83%E5%B1%80&#x2F;index.html</a></li>
+    <li><strong>版权声明：</strong>本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="BY-NC-SA" target="_blank" rel="noopener">BY-NC-SA</a> 许可协议，转载请注明出处！</li>
+  
+</ul>
+        
+        
+          <section class="donate">
+  <div id="qrcode-donate">
+    <img   class="lazyload" data-original="https://i.loli.net/2021/11/11/9FSws7lKeEImAhD.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
+  </div>
+  <div class="icon">
+    <a href="javascript:;" id="alipay"><i class="iconfont iconalipay"></i></a>
+    <a href="javascript:;" id="wechat"><i class="iconfont iconwechat-fill"></i></a>
+  </div>
+</section>
+        
+        
+        
+  <nav class="nav">
+    <a href="/2021/12/28/Quasar%E4%B8%AD%E6%B7%BB%E5%8A%A0TailwindCSS/"><i class="iconfont iconleft"></i>Quasar 中添加 tailwindcss</a>
+    <a href="/2021/11/15/Typora%E5%BF%AB%E6%8D%B7%E9%94%AE/">Typora 快捷键<i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">文章目录：</h3>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#flex%E5%B8%83%E5%B1%80%E8%AF%AD%E6%B3%95"><span class="toc-text">flex布局语法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81flex-%E5%B8%83%E5%B1%80%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">一、flex 布局是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">二、基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%AE%B9%E5%99%A8%E7%9A%84%E5%B1%9E%E6%80%A7"><span class="toc-text">三、容器的属性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-flex-direction%E5%B1%9E%E6%80%A7"><span class="toc-text">3.1 flex-direction属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-flex-wrap%E5%B1%9E%E6%80%A7"><span class="toc-text">3.2 flex-wrap属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-flex-flow"><span class="toc-text">3.3 flex-flow</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-justify-content%E5%B1%9E%E6%80%A7"><span class="toc-text">3.4 justify-content属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-align-items%E5%B1%9E%E6%80%A7"><span class="toc-text">3.5 align-items属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-6-align-content%E5%B1%9E%E6%80%A7"><span class="toc-text">3.6 align-content属性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%B1%9E%E6%80%A7"><span class="toc-text">四、项目的属性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-order%E5%B1%9E%E6%80%A7"><span class="toc-text">4.1 order属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-flex-grow%E5%B1%9E%E6%80%A7"><span class="toc-text">4.2 flex-grow属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-flex-shrink%E5%B1%9E%E6%80%A7"><span class="toc-text">4.3 flex-shrink属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-flex-basis%E5%B1%9E%E6%80%A7"><span class="toc-text">4.4 flex-basis属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-5-flex%E5%B1%9E%E6%80%A7"><span class="toc-text">4.5 flex属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-6-align-self%E5%B1%9E%E6%80%A7"><span class="toc-text">4.6 align-self属性</span></a></li></ol></li></ol></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
+  
+
+<footer class="footer">
+  <div class="footer-social"><a 
+        href="tencent://message/?Menu=yes&uin=1846730600 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#12B7F5'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconQQ "></i>
+      </a><a 
+        href="https://i.loli.net/2021/11/11/7hfawNSHkoeCrzl.jpg "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#09BB07'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconwechat-fill "></i>
+      </a><a 
+        href="https://github.com/zhangxingyu618 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#9f7be1'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  icongithub-fill "></i>
+      </a><a 
+        href="mailto:1846730600@qq.com "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#DA2E76'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconmail "></i>
+      </a></div>
+  
+    <div class="footer-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+  
+</footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+    <div class="fab fab-like">
+      <i class="iconfont iconheart"></i>
+    </div>
+  
+  
+    <div class="fab fab-daovoice">
+      <i class="iconfont iconcomment"></i>
+    </div>
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+    <div class="scrollbar j-scrollbar">
+  <div class="scrollbar-current j-scrollbar-current"></div>
+</div>
+  
+  
+    
+<script src="/js/color-mode.js"></script>
+
+  
+  
+    <div class="search">
+  <div class="search-container">
+    <div class="search-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <div class="search-input-wrapper">
+      <i class="search-input-icon iconfont iconsearch"></i>
+      <input class="search-input" type="search" id="search-input" placeholder="Search..." autofocus autocomplete="off"
+        autocorrect="off" autocapitalize="off">
+    </div>
+    <div class="search-output" id="search-output"></div>
+  </div>
+</div>
+  
+</body>
+
+<script src="/lib/jquery/jquery.js"></script>
+
+
+
+  
+<script src="/lib/lottie/lottie.js"></script>
+
+
+
+
+  
+<script src="/lib/lazyload/lazyload.js"></script>
+
+
+
+
+  
+<script src="/lib/fancybox/fancybox.js"></script>
+
+
+
+
+
+
+  
+<script src="/lib/qrcode/qrcode.js"></script>
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+  <script>
+  $.getScript("//cdn.jsdelivr.net/npm/leancloud-storage@4.1.0/dist/av-min.js", () => {
+
+    AV.init({
+      appId: 'XYmCtrvSgmSaocvAdvV2Mz3m-gzGzoHsz',
+      appKey: 'KwcsbELgwcycRgXH31uI2UzB',
+      serverURLs: 'https://leancloud.cn/',
+    });
+
+    const Counter = AV.Object.extend("Counter");
+    const Like = AV.Object.extend("Like");
+
+    const showCount = (Counter) => {
+      const asyncLimit = new AsyncLimit(2);
+      $(".leancloud-counter").each(async (e) => {
+        const url = $(".leancloud-counter").eq(e).attr('id').trim();
+        const query = new AV.Query("Counter");
+        query.equalTo("words", url);
+        let count = await asyncLimit.run(() => query.count());
+        $(".leancloud-counter").eq(e).text(count ? count : 0);
+      });
+    }
+
+    const addCount = (Counter) => {
+      const url = $(".leancloud-counter").length === 1 ? $(".leancloud-counter").attr('id').trim() : 'https://47.104.3.107';
+      var query = new Counter;
+      query.save({
+        words: url
+      });
+    }
+
+    const showLike = (Like) => {
+      const asyncLimit = new AsyncLimit(2);
+      $(".leancloud-like").each(async (e) => {
+        const url = $(".leancloud-like").eq(e).attr('id').trim();
+        const query = new AV.Query("Like");
+        query.equalTo("path", url);
+        let count = await asyncLimit.run(() => query.count());
+        $(".leancloud-like").eq(e).text(count ? count : 0);
+      });
+    }
+
+    const addLike = (Like) => {
+      const url = $(".leancloud-like").length === 1 ? $(".leancloud-like").attr('id').trim() : 'https://47.104.3.107';
+      var query = new Like;
+      query.save({
+        path: url,
+        nickName: 'Anonymous'
+      });
+      $(".leancloud-like").addClass('islike');
+      $(".fab-like").children(".iconfont").removeClass("iconheart").addClass("iconheart-fill").css("color", "#eb3223");
+      ZHAOO.zui.message({ text: '爱你哦~', type: 'success' });
+      setTimeout(() => showLike(Like), 1000);
+    }
+
+    const handleLikeClick = () => {
+      const isLike = $(".leancloud-like").length === 1 && $(".leancloud-like").hasClass('islike') ? true : false;
+      if (isLike) {
+        ZHAOO.zui.message({ text: '小心心不可以收回呢~', type: 'warning' });
+      } else {
+        addLike(Like);
+      }
+    }
+
+    $(function () {
+      addCount(Counter);
+      showCount(Counter);
+      showLike(Like);
+      $(".fab-like").on("click", function () {
+        handleLikeClick();
+      });
+    });
+
+  });
+</script>
+
+
+
+  
+
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i["DaoVoiceObject"] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    a.charset = "utf-8";
+    m.parentNode.insertBefore(a, m)
+  })(window, document, "script", "https://widget.daovoice.io/widget/731d55bd.js", "daovoice")
+  daovoice('init', {
+    app_id: "731d55bd"
+  }, {
+    launcher: {
+      disableLauncherIcon: true,
+    },
+  });
+  daovoice('update');
+</script>
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

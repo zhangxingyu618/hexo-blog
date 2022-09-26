@@ -1,0 +1,527 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-Hans" color-mode=light>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>「布局技巧」图片未加载前自动撑开元素高度 - 1000STAR</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  
+  <meta name="description" content="「布局技巧」图片未加载前自动撑开元素高度在移动端开发中...">
+  <meta name="author" content="xing">
+  <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1445822_p6ry5n7lrr.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="/lib/fancybox/fancybox.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/atom-one-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      loading: {
+        gif: '',
+        lottie: 'https://assets4.lottiefiles.com/private_files/lf30_n3at4oi7.json'
+      },
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: {
+          gif: '/images/theme/loading.gif',
+          lottie: ''
+        }
+      },
+      donate: {
+        enable: true,
+        alipay: 'https://i.loli.net/2021/11/11/9FSws7lKeEImAhD.jpg',
+        wechat: 'https://i.loli.net/2021/11/11/yWeBOLCIqRpGlfu.png'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: true
+      },
+      preview: {
+        background: {
+          default: '',
+          api: ''
+        },
+        motto: {
+          default: '我在开了灯的床头下，想问问自己的心啊。',
+          typing: true,
+          api: 'https://v2.jinrishici.com/one.json',
+          data_contents: '["data","content"]'
+        },
+      },
+      qrcode: {
+        enable: true,
+        type: 'url',
+        image: 'https://i.loli.net/2021/11/08/d6Y2VekyzoBU5KA.gif',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        type: 'simple'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      },
+      search: {
+        enable: true,
+        path: '/search.xml'
+      }
+    }
+  </script>
+
+  
+
+  
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body class="lock-screen">
+  <div class="loading" id="loading"></div>
+  
+    
+
+
+  <nav class="navbar">
+    <div class="left">
+      
+        <i class="iconfont iconhome j-navbar-back-home"></i>
+      
+      
+        <i class="iconfont iconqrcode j-navbar-qrcode"></i>
+      
+      
+        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+      
+      
+        <i class="iconfont iconsearch j-navbar-search"></i>
+      
+    </div>
+    <div class="center">「布局技巧」图片未加载前自动撑开元素高度</div>
+    <div class="right">
+      <i class="iconfont iconmenu j-navbar-menu"></i>
+    </div>
+    
+      <div id="qrcode-navbar"></div>
+    
+  </nav>
+
+  
+  
+
+<nav class="menu">
+  <div class="menu-container">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline "> 首页</a>
+      </li><li class="menu-item">
+        <a href="/galleries/ " class="underline "> 摄影</a>
+      </li><li class="menu-item">
+        <a href="/archives/ " class="underline "> 归档</a>
+      </li><li class="menu-item">
+        <a href="/tags/ " class="underline "> 标签</a>
+      </li><li class="menu-item">
+        <a href="/categories/ " class="underline "> 分类</a>
+      </li><li class="menu-item">
+        <a href="/about/ " class="underline "> 关于</a>
+      </li></ul>
+    
+      <div class="menu-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+    
+  </div>
+</nav>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/theme/post-image/post%20(22).jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">「布局技巧」图片未加载前自动撑开元素高度</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>December 31, 2021</span>
+      
+        <span class="post-info-item">
+          <i class="iconfont iconeye"></i><span id="/2021/12/31/%E3%80%8C%E5%B8%83%E5%B1%80%E6%8A%80%E5%B7%A7%E3%80%8D%E5%9B%BE%E7%89%87%E6%9C%AA%E5%8A%A0%E8%BD%BD%E5%89%8D%E8%87%AA%E5%8A%A8%E6%92%91%E5%BC%80%E5%85%83%E7%B4%A0%E9%AB%98%E5%BA%A6/" class="leancloud-counter" data-flag-title="「布局技巧」图片未加载前自动撑开元素高度"></span>
+        </span>
+        <span class="post-info-item">
+          <i class="iconfont iconheart"></i><span id="/2021/12/31/%E3%80%8C%E5%B8%83%E5%B1%80%E6%8A%80%E5%B7%A7%E3%80%8D%E5%9B%BE%E7%89%87%E6%9C%AA%E5%8A%A0%E8%BD%BD%E5%89%8D%E8%87%AA%E5%8A%A8%E6%92%91%E5%BC%80%E5%85%83%E7%B4%A0%E9%AB%98%E5%BA%A6/" class="leancloud-like" data-flag-title="「布局技巧」图片未加载前自动撑开元素高度"></span>
+        </span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>537</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        <h1 id="「布局技巧」图片未加载前自动撑开元素高度"><a href="#「布局技巧」图片未加载前自动撑开元素高度" class="headerlink" title="「布局技巧」图片未加载前自动撑开元素高度"></a>「布局技巧」图片未加载前自动撑开元素高度</h1><p>在移动端开发中，有一些元素是根据图片高度来自动撑开的 ，高度不能写死（如轮播图的外层元素）。在网络较慢的情况下，图片加载需要一些时间，此时该元素的高度没有被撑开，在网页布局上会有一些不想看到的效果。 这种情况我们可以设置如下样式来设置该元素的高度：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs stylus"><span class="hljs-selector-class">.wrapper</span><br>  <span class="hljs-attribute">overflow</span> hidden<br>  <span class="hljs-attribute">width</span> <span class="hljs-number">100%</span><br>  <span class="hljs-attribute">height</span> <span class="hljs-number">0</span><br>  <span class="hljs-attribute">padding-bottom</span> <span class="hljs-number">26.66%</span> // 这个数值是图片的高宽比，即 高/宽<br>  <span class="hljs-attribute">background</span> <span class="hljs-number">#eee</span><br></code></pre></td></tr></table></figure>
+
+<p>上面代码中，<code>padding-bottom</code> 的取值是图片的高宽比（即，高/宽），它会根据 <code>width</code>值的<code>26.66%</code>计算，最终元素的高度会和图片加载完成后的高度一致。</p>
+<p>也可以使用<code>vw</code>的方法，但在一些浏览器可能有兼容性问题：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs stylus"><span class="hljs-selector-class">.wrapper</span><br>  <span class="hljs-attribute">width</span> <span class="hljs-number">100%</span><br>  <span class="hljs-attribute">height</span> <span class="hljs-number">26.66vw</span><br>  <span class="hljs-attribute">background</span> <span class="hljs-number">#eee</span><br></code></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p><code>vw</code>，viewpoint width，视窗宽度，1vw=视窗宽度的1%</p>
+<p><code>vh</code>，viewpoint height，视窗高度，1vh=视窗高度的1%</p>
+<p>更多 <a target="_blank" rel="noopener" href="https://www.runoob.com/cssref/css-units.html">CSS单位 (opens new window)</a>。</p>
+</blockquote>
+
+      </section>
+      <section class="extra">
+        
+          <ul class="copyright">
+  
+    <li><strong>本文作者：</strong>xing</li>
+    <li><strong>本文链接：</strong><a href="https://47.104.3.107/2021/12/31/%E3%80%8C%E5%B8%83%E5%B1%80%E6%8A%80%E5%B7%A7%E3%80%8D%E5%9B%BE%E7%89%87%E6%9C%AA%E5%8A%A0%E8%BD%BD%E5%89%8D%E8%87%AA%E5%8A%A8%E6%92%91%E5%BC%80%E5%85%83%E7%B4%A0%E9%AB%98%E5%BA%A6/index.html" title="https:&#x2F;&#x2F;47.104.3.107&#x2F;2021&#x2F;12&#x2F;31&#x2F;%E3%80%8C%E5%B8%83%E5%B1%80%E6%8A%80%E5%B7%A7%E3%80%8D%E5%9B%BE%E7%89%87%E6%9C%AA%E5%8A%A0%E8%BD%BD%E5%89%8D%E8%87%AA%E5%8A%A8%E6%92%91%E5%BC%80%E5%85%83%E7%B4%A0%E9%AB%98%E5%BA%A6&#x2F;index.html">https:&#x2F;&#x2F;47.104.3.107&#x2F;2021&#x2F;12&#x2F;31&#x2F;%E3%80%8C%E5%B8%83%E5%B1%80%E6%8A%80%E5%B7%A7%E3%80%8D%E5%9B%BE%E7%89%87%E6%9C%AA%E5%8A%A0%E8%BD%BD%E5%89%8D%E8%87%AA%E5%8A%A8%E6%92%91%E5%BC%80%E5%85%83%E7%B4%A0%E9%AB%98%E5%BA%A6&#x2F;index.html</a></li>
+    <li><strong>版权声明：</strong>本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="BY-NC-SA" target="_blank" rel="noopener">BY-NC-SA</a> 许可协议，转载请注明出处！</li>
+  
+</ul>
+        
+        
+          <section class="donate">
+  <div id="qrcode-donate">
+    <img   class="lazyload" data-original="https://i.loli.net/2021/11/11/9FSws7lKeEImAhD.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
+  </div>
+  <div class="icon">
+    <a href="javascript:;" id="alipay"><i class="iconfont iconalipay"></i></a>
+    <a href="javascript:;" id="wechat"><i class="iconfont iconwechat-fill"></i></a>
+  </div>
+</section>
+        
+        
+        
+  <nav class="nav">
+    <a href="/2021/12/31/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E7%9B%B8%E5%85%B3%E7%AC%94%E8%AE%B0/"><i class="iconfont iconleft"></i>数据挖掘课程设计相关笔记</a>
+    <a href="/2021/12/31/CSS%E6%95%99%E7%A8%8B%E6%8A%80%E5%B7%A7/">CSS教程技巧<i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">文章目录：</h3>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E3%80%8C%E5%B8%83%E5%B1%80%E6%8A%80%E5%B7%A7%E3%80%8D%E5%9B%BE%E7%89%87%E6%9C%AA%E5%8A%A0%E8%BD%BD%E5%89%8D%E8%87%AA%E5%8A%A8%E6%92%91%E5%BC%80%E5%85%83%E7%B4%A0%E9%AB%98%E5%BA%A6"><span class="toc-text">「布局技巧」图片未加载前自动撑开元素高度</span></a></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
+  
+
+<footer class="footer">
+  <div class="footer-social"><a 
+        href="tencent://message/?Menu=yes&uin=1846730600 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#12B7F5'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconQQ "></i>
+      </a><a 
+        href="https://i.loli.net/2021/11/11/7hfawNSHkoeCrzl.jpg "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#09BB07'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconwechat-fill "></i>
+      </a><a 
+        href="https://github.com/zhangxingyu618 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#9f7be1'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  icongithub-fill "></i>
+      </a><a 
+        href="mailto:1846730600@qq.com "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#DA2E76'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconmail "></i>
+      </a></div>
+  
+    <div class="footer-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+  
+</footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+    <div class="fab fab-like">
+      <i class="iconfont iconheart"></i>
+    </div>
+  
+  
+    <div class="fab fab-daovoice">
+      <i class="iconfont iconcomment"></i>
+    </div>
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+    <div class="scrollbar j-scrollbar">
+  <div class="scrollbar-current j-scrollbar-current"></div>
+</div>
+  
+  
+    
+<script src="/js/color-mode.js"></script>
+
+  
+  
+    <div class="search">
+  <div class="search-container">
+    <div class="search-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <div class="search-input-wrapper">
+      <i class="search-input-icon iconfont iconsearch"></i>
+      <input class="search-input" type="search" id="search-input" placeholder="Search..." autofocus autocomplete="off"
+        autocorrect="off" autocapitalize="off">
+    </div>
+    <div class="search-output" id="search-output"></div>
+  </div>
+</div>
+  
+</body>
+
+<script src="/lib/jquery/jquery.js"></script>
+
+
+
+  
+<script src="/lib/lottie/lottie.js"></script>
+
+
+
+
+  
+<script src="/lib/lazyload/lazyload.js"></script>
+
+
+
+
+  
+<script src="/lib/fancybox/fancybox.js"></script>
+
+
+
+
+
+
+  
+<script src="/lib/qrcode/qrcode.js"></script>
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+  <script>
+  $.getScript("//cdn.jsdelivr.net/npm/leancloud-storage@4.1.0/dist/av-min.js", () => {
+
+    AV.init({
+      appId: 'XYmCtrvSgmSaocvAdvV2Mz3m-gzGzoHsz',
+      appKey: 'KwcsbELgwcycRgXH31uI2UzB',
+      serverURLs: 'https://leancloud.cn/',
+    });
+
+    const Counter = AV.Object.extend("Counter");
+    const Like = AV.Object.extend("Like");
+
+    const showCount = (Counter) => {
+      const asyncLimit = new AsyncLimit(2);
+      $(".leancloud-counter").each(async (e) => {
+        const url = $(".leancloud-counter").eq(e).attr('id').trim();
+        const query = new AV.Query("Counter");
+        query.equalTo("words", url);
+        let count = await asyncLimit.run(() => query.count());
+        $(".leancloud-counter").eq(e).text(count ? count : 0);
+      });
+    }
+
+    const addCount = (Counter) => {
+      const url = $(".leancloud-counter").length === 1 ? $(".leancloud-counter").attr('id').trim() : 'https://47.104.3.107';
+      var query = new Counter;
+      query.save({
+        words: url
+      });
+    }
+
+    const showLike = (Like) => {
+      const asyncLimit = new AsyncLimit(2);
+      $(".leancloud-like").each(async (e) => {
+        const url = $(".leancloud-like").eq(e).attr('id').trim();
+        const query = new AV.Query("Like");
+        query.equalTo("path", url);
+        let count = await asyncLimit.run(() => query.count());
+        $(".leancloud-like").eq(e).text(count ? count : 0);
+      });
+    }
+
+    const addLike = (Like) => {
+      const url = $(".leancloud-like").length === 1 ? $(".leancloud-like").attr('id').trim() : 'https://47.104.3.107';
+      var query = new Like;
+      query.save({
+        path: url,
+        nickName: 'Anonymous'
+      });
+      $(".leancloud-like").addClass('islike');
+      $(".fab-like").children(".iconfont").removeClass("iconheart").addClass("iconheart-fill").css("color", "#eb3223");
+      ZHAOO.zui.message({ text: '爱你哦~', type: 'success' });
+      setTimeout(() => showLike(Like), 1000);
+    }
+
+    const handleLikeClick = () => {
+      const isLike = $(".leancloud-like").length === 1 && $(".leancloud-like").hasClass('islike') ? true : false;
+      if (isLike) {
+        ZHAOO.zui.message({ text: '小心心不可以收回呢~', type: 'warning' });
+      } else {
+        addLike(Like);
+      }
+    }
+
+    $(function () {
+      addCount(Counter);
+      showCount(Counter);
+      showLike(Like);
+      $(".fab-like").on("click", function () {
+        handleLikeClick();
+      });
+    });
+
+  });
+</script>
+
+
+
+  
+
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i["DaoVoiceObject"] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    a.charset = "utf-8";
+    m.parentNode.insertBefore(a, m)
+  })(window, document, "script", "https://widget.daovoice.io/widget/731d55bd.js", "daovoice")
+  daovoice('init', {
+    app_id: "731d55bd"
+  }, {
+    launcher: {
+      disableLauncherIcon: true,
+    },
+  });
+  daovoice('update');
+</script>
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

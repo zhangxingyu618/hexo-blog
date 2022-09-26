@@ -1,0 +1,1129 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-Hans" color-mode=light>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>小程序开发学习笔记 - 1000STAR</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  
+  <meta name="description" content="小程序开发学习笔记基础课程部分微信公众平台https:...">
+  <meta name="author" content="xing">
+  <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1445822_p6ry5n7lrr.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="/lib/fancybox/fancybox.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/atom-one-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      loading: {
+        gif: '',
+        lottie: 'https://assets4.lottiefiles.com/private_files/lf30_n3at4oi7.json'
+      },
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: {
+          gif: '/images/theme/loading.gif',
+          lottie: ''
+        }
+      },
+      donate: {
+        enable: true,
+        alipay: 'https://i.loli.net/2021/11/11/9FSws7lKeEImAhD.jpg',
+        wechat: 'https://i.loli.net/2021/11/11/yWeBOLCIqRpGlfu.png'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: true
+      },
+      preview: {
+        background: {
+          default: '',
+          api: ''
+        },
+        motto: {
+          default: '我在开了灯的床头下，想问问自己的心啊。',
+          typing: true,
+          api: 'https://v2.jinrishici.com/one.json',
+          data_contents: '["data","content"]'
+        },
+      },
+      qrcode: {
+        enable: true,
+        type: 'url',
+        image: 'https://i.loli.net/2021/11/08/d6Y2VekyzoBU5KA.gif',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        type: 'simple'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      },
+      search: {
+        enable: true,
+        path: '/search.xml'
+      }
+    }
+  </script>
+
+  
+
+  
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body class="lock-screen">
+  <div class="loading" id="loading"></div>
+  
+    
+
+
+  <nav class="navbar">
+    <div class="left">
+      
+        <i class="iconfont iconhome j-navbar-back-home"></i>
+      
+      
+        <i class="iconfont iconqrcode j-navbar-qrcode"></i>
+      
+      
+        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+      
+      
+        <i class="iconfont iconsearch j-navbar-search"></i>
+      
+    </div>
+    <div class="center">小程序开发学习笔记</div>
+    <div class="right">
+      <i class="iconfont iconmenu j-navbar-menu"></i>
+    </div>
+    
+      <div id="qrcode-navbar"></div>
+    
+  </nav>
+
+  
+  
+
+<nav class="menu">
+  <div class="menu-container">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline "> 首页</a>
+      </li><li class="menu-item">
+        <a href="/galleries/ " class="underline "> 摄影</a>
+      </li><li class="menu-item">
+        <a href="/archives/ " class="underline "> 归档</a>
+      </li><li class="menu-item">
+        <a href="/tags/ " class="underline "> 标签</a>
+      </li><li class="menu-item">
+        <a href="/categories/ " class="underline "> 分类</a>
+      </li><li class="menu-item">
+        <a href="/about/ " class="underline "> 关于</a>
+      </li></ul>
+    
+      <div class="menu-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+    
+  </div>
+</nav>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/theme/post-image/post%20(11).jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">小程序开发学习笔记</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>December 31, 2021</span>
+      
+        <span class="post-info-item">
+          <i class="iconfont iconeye"></i><span id="/2021/12/31/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="leancloud-counter" data-flag-title="小程序开发学习笔记"></span>
+        </span>
+        <span class="post-info-item">
+          <i class="iconfont iconheart"></i><span id="/2021/12/31/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="leancloud-like" data-flag-title="小程序开发学习笔记"></span>
+        </span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>46005</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        <h1 id="小程序开发学习笔记"><a href="#小程序开发学习笔记" class="headerlink" title="小程序开发学习笔记"></a>小程序开发学习笔记</h1><h2 id="基础课程部分"><a href="#基础课程部分" class="headerlink" title="基础课程部分"></a>基础课程部分</h2><h4 id="微信公众平台"><a href="#微信公众平台" class="headerlink" title="微信公众平台"></a>微信公众平台</h4><p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/">https://mp.weixin.qq.com/(opens new window)</a></p>
+<p>注册时可选择类型：订阅号、服务号、小程序、企业微信</p>
+<p><strong>每个邮箱仅能注册一个小程序。</strong></p>
+<p>个人类型小程序：无法使用微信支付、无法使用卡包功能</p>
+<h5 id="小程序文档API"><a href="#小程序文档API" class="headerlink" title="小程序文档API"></a>小程序文档API</h5><p><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/framework/quickstart/">小程序开发文档(opens new window)</a></p>
+<h5 id="微信开放社区"><a href="#微信开放社区" class="headerlink" title="微信开放社区"></a>微信开放社区</h5><p><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/community/develop/question">微信开发社区(opens new window)</a></p>
+<h4 id="目录说明"><a href="#目录说明" class="headerlink" title="#目录说明"></a><a href="#%E7%9B%AE%E5%BD%95%E8%AF%B4%E6%98%8E">#</a>目录说明</h4><p><strong>默认目录</strong></p>
+<p>pages———————–页面相关</p>
+<p>​    index —————– 首页文件夹</p>
+<p>​    index.js ————首页js</p>
+<p>​    index.json———首页配置</p>
+<p>​    index.wxml——-首页html</p>
+<p>​    index.wxss——–首页css</p>
+<p>utils————————工具相关</p>
+<p>app.js ———————-项目总js</p>
+<p>app.json——————-全局配置( 页面路由以及头部、底部导航的配置等)</p>
+<p>app.wxss —————–项目总样式css</p>
+<p>project.config.json —-项目配置</p>
+<p><strong>代码构成</strong></p>
+<p>.json ：配置文件，以json格式存储配置</p>
+<p>​    项目中有三种配置：项目配置（project.config.json）、全局配置（app.json）、页面配置（index.json）</p>
+<p>.wxml: 相当于html文件</p>
+<p>.wxss: 相当于css</p>
+<p>.js : 就是js</p>
+<h4 id="文件说明"><a href="#文件说明" class="headerlink" title="#文件说明"></a><a href="#%E6%96%87%E4%BB%B6%E8%AF%B4%E6%98%8E">#</a>文件说明</h4><p><strong>project.config.json项目配置 部分代码说明</strong></p>
+<p>setting：{</p>
+<p>urlCheck 是否检测安全的域名</p>
+<p>es6 是否把es6转es5</p>
+<p>postcss 是否把css样式自动补全</p>
+<p>minified 是否压缩</p>
+<p>}</p>
+<p><strong>app.json 全局配置</strong></p>
+<p><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html">全局配置API(opens new window)</a></p>
+<p><strong>wxml 相关介绍</strong></p>
+<p><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxml/">wxmlAPI(opens new window)</a></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>&#123;&#123;motto&#125;&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br><br>循环渲染<br><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">wx:for</span>=<span class="hljs-string">&quot;&#123;&#123;list&#125;&#125;&quot;</span> <span class="hljs-attr">wx:key</span>=<span class="hljs-string">&quot;&#123;&#123;index&#125;&#125;&quot;</span>&gt;</span><br>      &#123;&#123;index&#125;&#125; &#123;&#123;item&#125;&#125;<br><span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br><br>改变for循环item和index的名称<br><span class="hljs-tag">&lt;<span class="hljs-name">block</span> <span class="hljs-attr">wx:for</span>=<span class="hljs-string">&quot;&#123;&#123;list&#125;&#125;&quot;</span> <span class="hljs-attr">wx:for-item</span>=<span class="hljs-string">&quot;data&quot;</span> <span class="hljs-attr">wx:for-index</span>=<span class="hljs-string">&quot;inx&quot;</span>&gt;</span><br>	&#123;&#123;inx&#125;&#125; &#123;&#123;data&#125;&#125;<br><span class="hljs-tag">&lt;/<span class="hljs-name">block</span>&gt;</span><br><br>条件渲染 (类似vue的v-if、v-else)<br><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">wx:if</span>=<span class="hljs-string">&quot;&#123;&#123;isLogin&#125;&#125;&quot;</span>&gt;</span>已登录<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">wx:else</span>&gt;</span>请登录<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br><br>条件显示（类似vue的v-show）<br><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">hidden</span>=<span class="hljs-string">&quot;&#123;&#123;isLogin&#125;&#125;&quot;</span>&gt;</span>显示内容<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br><br>绑定点击事件<br><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">“tapName”</span>&gt;</span>按钮<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br><br>Page(&#123;<br>  tapName: function(event) &#123;<br>    console.log(event)<br>  &#125;<br>&#125;)<br>...<br></code></pre></td></tr></table></figure>
+
+<p><strong>wxss 相关介绍</strong></p>
+<p><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxss.html">wxssAPI(opens new window)</a></p>
+<p>尺寸单位：rpx，根据屏幕宽度自适应。</p>
+<p>引入外部wxss：@import ’…‘</p>
+<p><strong>js相关介绍</strong></p>
+<p>WXS（WeiXin Script）是小程序的一套脚本语言</p>
+<p><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxs/">wxsAPI(opens new window)</a></p>
+<p>绑定点击事件</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">“onTapHandler”</span>&gt;</span>点我+1<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>&#123;&#123;count&#125;&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs js">Page(&#123;<br>  <span class="hljs-attr">data</span>: &#123;<br>    <span class="hljs-attr">count</span>: <span class="hljs-number">0</span><br>  &#125;,<br>  <span class="hljs-attr">onTapHandler</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;<br>  	<span class="hljs-built_in">this</span>.setData(&#123;<br>  		<span class="hljs-attr">count</span>: <span class="hljs-built_in">this</span>.data.count++<br>  	&#125;)<br>  &#125;<br>&#125;)<br></code></pre></td></tr></table></figure>
+
+<h5 id="阻止事件冒泡"><a href="#阻止事件冒泡" class="headerlink" title="#阻止事件冒泡"></a><a href="#%E9%98%BB%E6%AD%A2%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1">#</a>阻止事件冒泡</h5><p>把绑定方式 bindtap 换成 catchtap 即可。</p>
+<h4 id="第三方库"><a href="#第三方库" class="headerlink" title="#第三方库"></a><a href="#%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93">#</a>第三方库</h4><p><strong>WeUI</strong></p>
+<p>weUI是一套同微信原生视觉体验一致的基础样式库</p>
+<p><strong>iView Weapp</strong></p>
+<p>一套高质量的微信小程序UI组件库</p>
+<p><strong>Vant Weapp</strong></p>
+<p>轻量、可靠的小程序UI组件库</p>
+<h4 id="云开发"><a href="#云开发" class="headerlink" title="#云开发"></a><a href="#%E4%BA%91%E5%BC%80%E5%8F%91">#</a>云开发</h4><p><strong>小程序传统开发模式</strong></p>
+<p>客户端 —–&gt; 服务端（后端代码、数据库）——&gt; 运维（DB维护、文件存储、内容加速、网络防护、容器服务、负载均衡、安全加固等…）</p>
+<p><strong>小程序云开发模式</strong></p>
+<p>客户端 —–&gt; 云开发（云函数、云数据库、云存储）</p>
+<p><strong>传统开发 VS 云开发</strong></p>
+<p>开发效率低 Serverless（无服务）</p>
+<p>运维成本高 开发者更关注业务逻辑</p>
+<p><strong>无服务（Serverless）开发是未来的发展趋势</strong></p>
+<h5 id="云开发三大基础能力"><a href="#云开发三大基础能力" class="headerlink" title="#云开发三大基础能力"></a><a href="#%E4%BA%91%E5%BC%80%E5%8F%91%E4%B8%89%E5%A4%A7%E5%9F%BA%E7%A1%80%E8%83%BD%E5%8A%9B">#</a><strong>云开发三大基础能力</strong></h5><h5 id="云函数"><a href="#云函数" class="headerlink" title="#云函数"></a><a href="#%E4%BA%91%E5%87%BD%E6%95%B0">#</a>云函数</h5><p>（相当于传统开发中的后台接口）</p>
+<p>获取appid、获取openid、生成分享图、调用腾讯云SDK …</p>
+<h5 id="云数据库"><a href="#云数据库" class="headerlink" title="#云数据库"></a><a href="#%E4%BA%91%E6%95%B0%E6%8D%AE%E5%BA%93">#</a>云数据库</h5><p>数据的增、删、改、查 …</p>
+<h5 id="云存储"><a href="#云存储" class="headerlink" title="#云存储"></a><a href="#%E4%BA%91%E5%AD%98%E5%82%A8">#</a>云存储</h5><p>管理文件、上传文件、下载文件、分享文件 …</p>
+<p><strong>每个小程序账号可免费创建两个环境，建议：开发环境、生成环境</strong></p>
+<h4 id="云数据库能力"><a href="#云数据库能力" class="headerlink" title="#云数据库能力"></a><a href="#%E4%BA%91%E6%95%B0%E6%8D%AE%E5%BA%93%E8%83%BD%E5%8A%9B">#</a>云数据库能力</h4><p>云开发提供了一个json数据库，提供2GB免费存储空间。</p>
+<h4 id="数据类型"><a href="#数据类型" class="headerlink" title="#数据类型"></a><a href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B">#</a>数据类型</h4><p>String 字符串</p>
+<p>Number 数字</p>
+<p>Object 对象</p>
+<p>Array 数组</p>
+<p>Boolean 布尔值</p>
+<p>GeoPoint 地理位置点</p>
+<p>Date 时间 （精确到毫秒ms，客户端时间）</p>
+<p>Null 空</p>
+<h4 id="操作云数据库"><a href="#操作云数据库" class="headerlink" title="#操作云数据库"></a><a href="#%E6%93%8D%E4%BD%9C%E4%BA%91%E6%95%B0%E6%8D%AE%E5%BA%93">#</a>操作云数据库</h4><p>小程序控制（读写数据库受权限限制）</p>
+<p>云函数控制（拥有所有读写数据库的权限）</p>
+<p>控制台控制（拥有所有读写数据库的权限）</p>
+<h4 id="云数据库权限管理"><a href="#云数据库权限管理" class="headerlink" title="#云数据库权限管理"></a><a href="#%E4%BA%91%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86">#</a>云数据库权限管理</h4><p>仅创建者可写，所有人可读 （适合于文章）</p>
+<p>仅创建者可读写 (适用于私密内容)</p>
+<p>仅管理端可写，所有人可读（适用于商品信息）</p>
+<p>仅管理端可读写（适用于后台敏感数据）</p>
+<h4 id="操作云数据库-1"><a href="#操作云数据库-1" class="headerlink" title="#操作云数据库"></a><a href="#%E6%93%8D%E4%BD%9C%E4%BA%91%E6%95%B0%E6%8D%AE%E5%BA%93-2">#</a>操作云数据库</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">//初始化数据库</span><br><span class="hljs-keyword">const</span> db = wx.cloud.database() <span class="hljs-comment">// 小程序端初始化数据库，如果在云函数端不需要加wx</span><br><br><span class="hljs-comment">//切换环境(开发环境/生产环境)</span><br><span class="hljs-keyword">const</span> testDB = wx.cloud.database(&#123;<br>	<span class="hljs-attr">env</span>: <span class="hljs-string">&#x27;test&#x27;</span><br>&#125;)<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="实战课程部分"><a href="#实战课程部分" class="headerlink" title="#实战课程部分"></a><a href="#%E5%AE%9E%E6%88%98%E8%AF%BE%E7%A8%8B%E9%83%A8%E5%88%86">#</a>实战课程部分</h2><h4 id="serverless（无服务）"><a href="#serverless（无服务）" class="headerlink" title="#serverless（无服务）"></a><a href="#serverless-%E6%97%A0%E6%9C%8D%E5%8A%A1">#</a>serverless（无服务）</h4><p>概念：函数即服务，当需要后端服务的时候，不需要关心后端的IP地址、域名，只需要像调用普通函数一样既可以实现调用。</p>
+<h4 id="云开发优势"><a href="#云开发优势" class="headerlink" title="#云开发优势"></a><a href="#%E4%BA%91%E5%BC%80%E5%8F%91%E4%BC%98%E5%8A%BF">#</a>云开发优势</h4><p>快速上线、专注核心业务、独立开发一个完整的微信小程序、不需要学习新的语言，只需要会javascript、无需运维， 节约成本、数据安全、</p>
+<h4 id="云开发提供能力"><a href="#云开发提供能力" class="headerlink" title="#云开发提供能力"></a><a href="#%E4%BA%91%E5%BC%80%E5%8F%91%E6%8F%90%E4%BE%9B%E8%83%BD%E5%8A%9B">#</a>云开发提供能力</h4><p>云函数：在云端运行的代码，微信私有协议天然鉴权 （理解：相当于后端部分）</p>
+<p>云数据库：一个既可以在小程序端操作又可以在云函数中操作的JSON数据库</p>
+<p>云存储：在云端存储文件，可以在云端控制台可视化管理</p>
+<p>云调用：基于云函数免鉴权使用小程序开放接口的能力（比如说给用户推送消息等）</p>
+<p>HTTP API：使用HTTP API开发者可在已有服务器上访问云资源，实现与云开发的互通（作用：对原有传统模式下开发的小程序，可以与云开发进行互通）</p>
+<h4 id="appID"><a href="#appID" class="headerlink" title="#appID"></a><a href="#appid">#</a>appID</h4><p>每个小程序唯一的id</p>
+<h4 id="云开发项目默认目录结构"><a href="#云开发项目默认目录结构" class="headerlink" title="#云开发项目默认目录结构"></a><a href="#%E4%BA%91%E5%BC%80%E5%8F%91%E9%A1%B9%E7%9B%AE%E9%BB%98%E8%AE%A4%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84">#</a>云开发项目默认目录结构</h4><p>cloudfunctions —————————-云函数</p>
+<p>​    callback ———————————- 回调函数</p>
+<p>​    config.json —————————</p>
+<p>​    index.js ——————————–</p>
+<p>​    package.json ————————</p>
+<p>​    echo —————————————-</p>
+<p>​    login —————————————-</p>
+<p>​    openapi ———————————–</p>
+<p>miniprogram ——————————- 小程序</p>
+<p>​    images ————————————- 图片</p>
+<p>​    pages ————————————— 页面</p>
+<p>​    style —————————————– 样式</p>
+<p>​    app.js ————————————— 项目js</p>
+<p>​    app.json ———————————– 全局配置</p>
+<p>​    app.wxss ———————————- 项目样式</p>
+<p>​    sitemap.json —————————– （小程序SEO相关）</p>
+<p>project.config.json ———————– 项目配置</p>
+<h4 id="云开发环境"><a href="#云开发环境" class="headerlink" title="#云开发环境"></a><a href="#%E4%BA%91%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83">#</a>云开发环境</h4><p>云开发可创建两个环境，建议一个为开发环境，一个为生产环境</p>
+<h4 id="开发前的准备"><a href="#开发前的准备" class="headerlink" title="#开发前的准备"></a><a href="#%E5%BC%80%E5%8F%91%E5%89%8D%E7%9A%84%E5%87%86%E5%A4%87">#</a>开发前的准备</h4><p>开发工具 &gt; 右上角详情 &gt; 本地设置 &gt; 调试基础库 设置为最新版本</p>
+<p>app.js &gt; wx.cloud.init &gt; env 设置环境ID</p>
+<h4 id="project-config-json-文件说明"><a href="#project-config-json-文件说明" class="headerlink" title="#project.config.json 文件说明"></a><a href="#project-config-json-%E6%96%87%E4%BB%B6%E8%AF%B4%E6%98%8E">#</a>project.config.json 文件说明</h4><p>miniprogramRoot 小程序前端代码目录</p>
+<p>cloudfunctionRoot 云函数代码目录</p>
+<h4 id="app-json"><a href="#app-json" class="headerlink" title="#app.json"></a><a href="#app-json">#</a>app.json</h4><p>pages 设置页面 ，设置后会自动在pages目录下生成相应的目录和文件</p>
+<p>设置底部导航按钮：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-string">&quot;tabBar&quot;</span>: &#123;<br>    <span class="hljs-attr">&quot;color&quot;</span>: <span class="hljs-string">&quot;#474747&quot;</span>, <span class="hljs-comment">// 文字颜色</span><br>    <span class="hljs-attr">&quot;selectedColor&quot;</span>: <span class="hljs-string">&quot;#d43c43&quot;</span>, <span class="hljs-comment">// 文字选中颜色</span><br>    <span class="hljs-attr">&quot;list&quot;</span>: [&#123; <span class="hljs-comment">// 按钮列表，2-5项</span><br>      <span class="hljs-attr">&quot;pagePath&quot;</span>: <span class="hljs-string">&quot;pages/playlist/playlist&quot;</span>, <span class="hljs-comment">// 按钮对应页面</span><br>      <span class="hljs-attr">&quot;text&quot;</span>: <span class="hljs-string">&quot;音乐&quot;</span>, <span class="hljs-comment">// 文字</span><br>      <span class="hljs-attr">&quot;iconPath&quot;</span>: <span class="hljs-string">&quot;images/music.png&quot;</span>, <span class="hljs-comment">// 图标路径</span><br>      <span class="hljs-attr">&quot;selectedIconPath&quot;</span>: <span class="hljs-string">&quot;images/music-actived.png&quot;</span> <span class="hljs-comment">// 选中图标的路径</span><br>    &#125;,<br>    &#123;<br>      <span class="hljs-attr">&quot;pagePath&quot;</span>: <span class="hljs-string">&quot;pages/blog/blog&quot;</span>,<br>      <span class="hljs-attr">&quot;text&quot;</span>: <span class="hljs-string">&quot;发现&quot;</span>,<br>      <span class="hljs-attr">&quot;iconPath&quot;</span>: <span class="hljs-string">&quot;images/blog.png&quot;</span>,<br>      <span class="hljs-attr">&quot;selectedIconPath&quot;</span>: <span class="hljs-string">&quot;images/blog-actived.png&quot;</span><br>    &#125;,<br>    &#123;<br>      <span class="hljs-attr">&quot;pagePath&quot;</span>: <span class="hljs-string">&quot;pages/profile/profile&quot;</span>,<br>      <span class="hljs-attr">&quot;text&quot;</span>: <span class="hljs-string">&quot;我的&quot;</span>,<br>      <span class="hljs-attr">&quot;iconPath&quot;</span>: <span class="hljs-string">&quot;images/profile.png&quot;</span>,<br>      <span class="hljs-attr">&quot;selectedIconPath&quot;</span>: <span class="hljs-string">&quot;images/profile-actived.png&quot;</span><br>    &#125;]<br>  &#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>图标来自于 <a target="_blank" rel="noopener" href="https://www.iconfont.cn/">https://www.iconfont.cn(opens new window)</a></p>
+<p>阿里巴巴图标库，包含矢量图标、字体图标、字体等</p>
+</blockquote>
+<h4 id="代码规范"><a href="#代码规范" class="headerlink" title="#代码规范"></a><a href="#%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83">#</a>代码规范</h4><p>很多公司借鉴的代码规范：<a target="_blank" rel="noopener" href="https://github.com/airbnb/javascript">https://github.com/airbnb/javascript(opens new window)</a></p>
+<h4 id="《音乐》页面开发"><a href="#《音乐》页面开发" class="headerlink" title="#《音乐》页面开发"></a><a href="#%E3%80%8A%E9%9F%B3%E4%B9%90%E3%80%8B%E9%A1%B5%E9%9D%A2%E5%BC%80%E5%8F%91">#</a>《音乐》页面开发</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs html"> <span class="hljs-comment">&lt;!-- 轮播图组件 参数：indicator-dots 小圆点，autoplay 自动播放, interval 间隔时间，duration 动画时长 --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">swiper</span> <span class="hljs-attr">indicator-dots</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">circular</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">interval</span>=<span class="hljs-string">&quot;3000&quot;</span> <span class="hljs-attr">duration</span>=<span class="hljs-string">&quot;500&quot;</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">block</span> <span class="hljs-attr">wx:for</span>=<span class="hljs-string">&quot;&#123;&#123;swiperImgUrls&#125;&#125;&quot;</span> <span class="hljs-attr">wx:key</span>=<span class="hljs-string">&quot;&#123;&#123;index&#125;&#125;&quot;</span>&gt;</span> <span class="hljs-comment">&lt;!-- 空节点 --&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">swiper-item</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">image</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;&#123;&#123;item.url&#125;&#125;&quot;</span> <span class="hljs-attr">mode</span>=<span class="hljs-string">&quot;widthFix&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;img&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">image</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">swiper-item</span>&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">block</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">swiper</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="自定义组件"><a href="#自定义组件" class="headerlink" title="#自定义组件"></a><a href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6">#</a>自定义组件</h4><p><strong>创建组件</strong></p>
+<p>创建目录 components &gt; 组件目录名称 &gt; 右键 <code>新建Component</code></p>
+<h5 id="引入组件"><a href="#引入组件" class="headerlink" title="#引入组件"></a><a href="#%E5%BC%95%E5%85%A5%E7%BB%84%E4%BB%B6">#</a><strong>引入组件</strong></h5><p>在page的json文件中：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs json">&#123;<br>  <span class="hljs-attr">&quot;usingComponents&quot;</span>: &#123;<br>    <span class="hljs-attr">&quot;x-playlist&quot;</span>:<span class="hljs-string">&quot;/components/playlist/playlist&quot;</span><br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>在page的wxml中：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">x-playlist</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-name">x-playlist</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>页面引入组件以及组件内部在引用子组件的方法是一样的，同样需要设置json文件。</strong></p>
+<h5 id="组件传值"><a href="#组件传值" class="headerlink" title="#组件传值"></a><a href="#%E7%BB%84%E4%BB%B6%E4%BC%A0%E5%80%BC">#</a><strong>组件传值</strong></h5><p>父组件中：在引入组件的时候自定义属性名称，并把数据传入子组件</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- 参数：playlist 自定义名称，传入组件的数据 --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">x-playlist</span> <span class="hljs-attr">playlist</span>=<span class="hljs-string">&quot;&#123;&#123;传入的数据&#125;&#125;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">x-playlist</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>子组件中： 子组件的js文件：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs js"> <span class="hljs-comment">/**</span><br><span class="hljs-comment">  * 组件的属性列表</span><br><span class="hljs-comment">  */</span><br> <span class="hljs-attr">properties</span>: &#123;<br>   <span class="hljs-attr">playlist</span>:&#123; <span class="hljs-comment">// 接收父组件传输的数据</span><br>     <span class="hljs-attr">type</span>: <span class="hljs-built_in">Object</span> <span class="hljs-comment">// 数据类型</span><br>   &#125;<br>  &#125;,<br><br><span class="hljs-comment">//子组件的wxml文件可直接引入数据&#123;&#123;playlist&#125;&#125;</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="wx-key-的使用"><a href="#wx-key-的使用" class="headerlink" title="#wx:key 的使用"></a><a href="#wx-key-%E7%9A%84%E4%BD%BF%E7%94%A8">#</a>wx:key 的使用</h4><p>key的值不建议使用index，因为当数据发生变化会dom结构产生变化时，使用index的地方不会随之变化。</p>
+<p>可以使用数据内部每项不一样的一个数值，如id</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">block</span> <span class="hljs-attr">wx:for</span>=<span class="hljs-string">&quot;&#123;&#123;swiperImgUrls&#125;&#125;&quot;</span> <span class="hljs-attr">wx:key</span>=<span class="hljs-string">&quot;url&quot;</span>&gt;</span> 这里url不需要双大括号，如使用index则需要&#123;&#123;&#125;&#125;<br>    <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">image</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;&#123;&#123;item.url&#125;&#125;&quot;</span> <span class="hljs-attr">mode</span>=<span class="hljs-string">&quot;widthFix&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;img&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">image</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">block</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;playlist-container&quot;</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">block</span> <span class="hljs-attr">wx:for</span>=<span class="hljs-string">&quot;&#123;&#123;playlist&#125;&#125;&quot;</span> <span class="hljs-attr">wx:key</span>=<span class="hljs-string">&quot;_id&quot;</span>&gt;</span><br>    <span class="hljs-comment">&lt;!-- 参数：playlist 自定义名称，传入组件的数据 --&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">x-playlist</span> <span class="hljs-attr">playlist</span>=<span class="hljs-string">&quot;&#123;&#123;item&#125;&#125;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">x-playlist</span>&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">block</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="async-await-语法"><a href="#async-await-语法" class="headerlink" title="#async/await 语法"></a><a href="#async-await-%E8%AF%AD%E6%B3%95">#</a>async/await 语法</h4><p>目前，在云函数里，由于 Node 版本最低是 8.9，因此是天然支持 async/await 语法的。而在小程序端则不然。在微信开发者工具里，以及 Android 端手机（浏览器内核是 QQ浏览器的 X5），async/await是天然支持的，但 iOS 端手机在较低版本则不支持，因此需要引入额外的 文件。</p>
+<p>可把这个 <a target="_blank" rel="noopener" href="https://github.com/xiecheng328/miniprogram/blob/master/regenerator/runtime.js">runtime.js (opens new window)</a>文件引用到有使用 async/await 的文件当中。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 注意，必须命名为 regeneratorRuntime</span><br><span class="hljs-keyword">import</span> regeneratorRuntime <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;../../utils/runtime.js&#x27;</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="云函数的使用"><a href="#云函数的使用" class="headerlink" title="#云函数的使用"></a><a href="#%E4%BA%91%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8">#</a>云函数的使用</h4><p>cloudfunctions目录 右键 <code>新建 Node.js 云函数</code> &gt; 输入目录名 <code>getPlaylist</code></p>
+<p>在云函数中向第三方服务器发送请求要依赖第三方库</p>
+<p><strong>安装依赖包</strong></p>
+<p>云函数目录 <code>getPlaylist</code> 右键 <code>在终端打开</code> 打开命令行 输入命令：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sh">npm install --save request<br>npm install --save request-promise<br></code></pre></td></tr></table></figure>
+
+
+
+<p>github request-promise：<a target="_blank" rel="noopener" href="https://github.com/request/request-promise">https://github.com/request/request-promise(opens new window)</a></p>
+<p>然后写相应代码</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 云函数入口文件</span><br><span class="hljs-keyword">const</span> cloud = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;wx-server-sdk&#x27;</span>)<br><br>cloud.init()<br><br><span class="hljs-keyword">const</span> rp = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;request-promise&#x27;</span>) <span class="hljs-comment">// 需安装依赖包</span><br><br><span class="hljs-keyword">const</span> URL = <span class="hljs-string">&#x27;http://musicapi.xiecheng.live/personalized&#x27;</span><br><br><span class="hljs-comment">// 云函数入口函数</span><br><span class="hljs-built_in">exports</span>.main = <span class="hljs-keyword">async</span> (event, context) =&gt; &#123;<br>  <span class="hljs-keyword">const</span> playlist = <span class="hljs-keyword">await</span> rp(URL).then(<span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> &#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">JSON</span>.parse(res).result<br>  &#125;)<br>  <span class="hljs-built_in">console</span>.log(playlist)<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<p>写完代码，云函数目录 <code>getPlaylist</code> 右键 <code>上传并部署：云端安装依赖（不上传node_modules）</code> 进行上传部署代码到云端，等待上传成功，打开云开发控制台即可看到已经上传的云函数，并可对云函数进行测试。</p>
+<h5 id="数据库操作"><a href="#数据库操作" class="headerlink" title="#数据库操作"></a><a href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C">#</a>数据库操作</h5><p>数据库&gt; 创建集合 &gt; playlist</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 云函数入口文件</span><br><span class="hljs-keyword">const</span> cloud = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;wx-server-sdk&#x27;</span>)<br><br>cloud.init()<br><br><span class="hljs-keyword">const</span> db = cloud.database() <span class="hljs-comment">// 初始化数据库,如果在小程序端初始化数据库需要在前面加wx.</span><br><br><span class="hljs-keyword">const</span> rp = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;request-promise&#x27;</span>) <span class="hljs-comment">// 需安装依赖包</span><br><br><span class="hljs-keyword">const</span> URL = <span class="hljs-string">&#x27;http://musicapi.xiecheng.live/personalized&#x27;</span> <span class="hljs-comment">// 第三方服务器地址（老师从网易云获取的数据部署在其服务器，每天的数据会更新）</span><br><br><span class="hljs-keyword">const</span> playlistCollection = db.collection(<span class="hljs-string">&#x27;playlist&#x27;</span>) <span class="hljs-comment">// 获取到数据库playlist集合</span><br><br><span class="hljs-keyword">const</span> MAX_LIMIT = <span class="hljs-number">10</span> <span class="hljs-comment">// 定义常量，获取数据库条数最大的限制</span><br><br><span class="hljs-comment">// 云函数入口函数</span><br><span class="hljs-built_in">exports</span>.main = <span class="hljs-keyword">async</span> (event, context) =&gt; &#123;<br>  <span class="hljs-comment">/**</span><br><span class="hljs-comment">   * 注：</span><br><span class="hljs-comment">   * - 关于数据库的操作都是异步操作，都需添加await关键字</span><br><span class="hljs-comment">   * - console.log 打印在云开发控制台 云函数测试内查看</span><br><span class="hljs-comment">   * - 单次获取数据库数据有条数限制，云函数端最多获取100条，小程序端最多获取20条</span><br><span class="hljs-comment">   */</span><br><br>  <span class="hljs-comment">// const list = await playlistCollection.get() // 获取数据库集合的数据 （因为有条数限制，不直接用此方法）</span><br><br>  <span class="hljs-comment">// 突破条数限制 （为了读取到全部数据然后与第三方服务器获取的数据进行对比去重）</span><br>  <span class="hljs-keyword">const</span> countResult = <span class="hljs-keyword">await</span> playlistCollection.count() <span class="hljs-comment">// 获取数据总条数 返回为对象</span><br>  <span class="hljs-keyword">const</span> total = countResult.total <span class="hljs-comment">// 取得总条数</span><br>  <span class="hljs-keyword">const</span> batchTimes = <span class="hljs-built_in">Math</span>.ceil(total / MAX_LIMIT)<br>  <span class="hljs-keyword">const</span> tasks = []<br>  <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; batchTimes; i++) &#123;<br>    <span class="hljs-keyword">let</span> promise = playlistCollection.skip(i * MAX_LIMIT).limit(MAX_LIMIT).get() <span class="hljs-comment">// 从第 skip 条开始取，最多取 limit 条数据</span><br>    tasks.push(promise)<br>  &#125;<br>  <span class="hljs-keyword">let</span> list = &#123;<br>    <span class="hljs-attr">data</span>: []<br>  &#125;<br>  <span class="hljs-keyword">if</span> (tasks.length &gt; <span class="hljs-number">0</span>) &#123;<br>    list = (<span class="hljs-keyword">await</span> <span class="hljs-built_in">Promise</span>.all(tasks)).reduce(<span class="hljs-function">(<span class="hljs-params">acc, cur</span>) =&gt;</span> &#123; <span class="hljs-comment">// reduce数组方法 累积拼接</span><br>      <span class="hljs-keyword">return</span> &#123;<br>        <span class="hljs-attr">data</span>: acc.data.concat(cur.data)<br>      &#125;<br>    &#125;)<br>  &#125;<br><br>  <span class="hljs-comment">// 获取第三方服务器端数据</span><br>  <span class="hljs-keyword">const</span> playlist = <span class="hljs-keyword">await</span> rp(URL).then(<span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> &#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">JSON</span>.parse(res).result<br>  &#125;)<br><br>  <span class="hljs-comment">// 数据库与服务器数据对比去重（数据已存在数据库的无需再重复添加）</span><br>  <span class="hljs-keyword">const</span> newData = []<br>  <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>, len1 = playlist.length; i &lt; len1; i++) &#123;<br>    <span class="hljs-keyword">let</span> flag = <span class="hljs-literal">true</span><br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> j = <span class="hljs-number">0</span>, len2 = list.data.length; j &lt; len2; j++) &#123;<br>      <span class="hljs-keyword">if</span>(playlist[i].id === list.data[j].id)&#123;<br>        flag = <span class="hljs-literal">false</span><br>        <span class="hljs-keyword">break</span><br>      &#125;<br>    &#125;<br>    <span class="hljs-keyword">if</span>(flag)&#123;<br>      newData.push(playlist[i])<br>    &#125;<br>  &#125;<br><br>  <span class="hljs-comment">// 把数据插入数据库，需要单条插入</span><br>  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>, len = newData.length; i &lt; len; i++) &#123;<br>    <span class="hljs-keyword">await</span> playlistCollection.add(&#123; <span class="hljs-comment">// 给数据库集合添加数据</span><br>      <span class="hljs-attr">data</span>: &#123;<br>        ...newData[i],<br>        <span class="hljs-attr">createTime</span>: db.serverDate(), <span class="hljs-comment">// db.serverDate() 获取服务器时间</span><br>      &#125;<br>    &#125;).then(<span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> &#123; <span class="hljs-comment">// 数据添加成功</span><br>      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;数据添加成功&#x27;</span>)<br>    &#125;).catch(<span class="hljs-function">(<span class="hljs-params">err</span>) =&gt;</span> &#123; <span class="hljs-comment">// 失败</span><br>      <span class="hljs-built_in">console</span>.error(err)<br>    &#125;)<br>  &#125;<br>  <span class="hljs-keyword">return</span> newData.length <span class="hljs-comment">// 插入多少条数据</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h5 id="查询数据库"><a href="#查询数据库" class="headerlink" title="#查询数据库"></a><a href="#%E6%9F%A5%E8%AF%A2%E6%95%B0%E6%8D%AE%E5%BA%93">#</a>查询数据库</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">//云函数中查询数据库的例子：</span><br><br><span class="hljs-comment">// 云函数入口文件</span><br><span class="hljs-keyword">const</span> cloud = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;wx-server-sdk&#x27;</span>)<br><br>cloud.init()<br><br><span class="hljs-keyword">const</span> TcbRouter = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;tcb-router&#x27;</span>)<br><span class="hljs-keyword">const</span> db = cloud.database() <span class="hljs-comment">// 初始化数据库</span><br><span class="hljs-keyword">const</span> blogCollection = db.collection(<span class="hljs-string">&#x27;blog&#x27;</span>) <span class="hljs-comment">// 博客的数据库集合</span><br><br><span class="hljs-comment">// 云函数入口函数</span><br><span class="hljs-built_in">exports</span>.main = <span class="hljs-keyword">async</span> (event, context) =&gt; &#123;<br>  <span class="hljs-keyword">const</span> app = <span class="hljs-keyword">new</span> TcbRouter(&#123; event &#125;) <span class="hljs-comment">// 初始化TcbRouter</span><br><br>  app.router(<span class="hljs-string">&#x27;list&#x27;</span>, <span class="hljs-keyword">async</span> (ctx, next) =&gt; &#123;<br>    <span class="hljs-comment">// skip 从第几条开始查，limit 查几条数据，orderBy(排序字段，排序方式) 排序，排序方式desc降序/asc升序</span><br>    ctx.body =  <span class="hljs-keyword">await</span> blogCollection.skip(event.start).limit(event.count)<br>    .orderBy(<span class="hljs-string">&#x27;createTime&#x27;</span>, <span class="hljs-string">&#x27;desc&#x27;</span>).get().then(<span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> &#123;<br>      <span class="hljs-keyword">return</span> res.data<br>    &#125;)<br><br>  &#125;)<br><br><br>  <span class="hljs-keyword">return</span> app.serve() <span class="hljs-comment">// 必需返回</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h5 id="云函数调试"><a href="#云函数调试" class="headerlink" title="#云函数调试"></a><a href="#%E4%BA%91%E5%87%BD%E6%95%B0%E8%B0%83%E8%AF%95">#</a>云函数调试</h5><p>云控制台中可会云函数进行云端测试</p>
+<p>在小程序调用云函数后，可查看云函数<strong>日志</strong></p>
+<h4 id="定时触发云函数"><a href="#定时触发云函数" class="headerlink" title="#定时触发云函数"></a><a href="#%E5%AE%9A%E6%97%B6%E8%A7%A6%E5%8F%91%E4%BA%91%E5%87%BD%E6%95%B0">#</a>定时触发云函数</h4><p>如果云函数需要定时 / 定期执行，也就是定时触发，我们可以使用云函数定时触发器。配置了定时触发器的云函数，会在相应时间点被自动触发，函数的返回结果不会返回给调用方</p>
+<p>云函数目录下新建 config.json</p>
+<p><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/wxcloud/guide/functions/triggers.html">API(opens new window)</a></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs json">&#123;<br>  <span class="hljs-attr">&quot;triggers&quot;</span>: [<br>    &#123;<br>      <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;myTriggers&quot;</span>,<br>      <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;timer&quot;</span>,<br>      <span class="hljs-attr">&quot;config&quot;</span>:<span class="hljs-string">&quot;0 0 10,14,16,20 * * * *&quot;</span> <span class="hljs-comment">//表示每天的10点、14点、16点、20点触发一次</span><br>    &#125;<br>  ]<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<p>编辑好触发器之后，要在云函数目录 &gt; 右键 &gt; <code>上传触发器</code></p>
+<h4 id="配置云函数超时时间"><a href="#配置云函数超时时间" class="headerlink" title="#配置云函数超时时间"></a><a href="#%E9%85%8D%E7%BD%AE%E4%BA%91%E5%87%BD%E6%95%B0%E8%B6%85%E6%97%B6%E6%97%B6%E9%97%B4">#</a>配置云函数超时时间</h4><p>当云函数比较复杂的时候，默认的超时时间3秒可能不能够满足需求，可以适当的设置更为合理的时间</p>
+<p>云开发控制台 &gt; 云函数 &gt; 配置 &gt; 超时时间</p>
+<h4 id="上拉加载与下拉刷新"><a href="#上拉加载与下拉刷新" class="headerlink" title="#上拉加载与下拉刷新"></a><a href="#%E4%B8%8A%E6%8B%89%E5%8A%A0%E8%BD%BD%E4%B8%8E%E4%B8%8B%E6%8B%89%E5%88%B7%E6%96%B0">#</a>上拉加载与下拉刷新</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs js">page页面json中：<br><span class="hljs-string">&quot;enablePullDownRefresh&quot;</span>: <span class="hljs-literal">true</span><br><br><br>page页面js中有这两个函数：<br><br> <span class="hljs-comment">/**</span><br><span class="hljs-comment">   * 页面相关事件处理函数--监听用户下拉动作</span><br><span class="hljs-comment">   */</span><br>  <span class="hljs-attr">onPullDownRefresh</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;<br>	 <span class="hljs-built_in">this</span>.setData(&#123;<br>      <span class="hljs-attr">playlist</span>: []<br>    &#125;)<br>    <span class="hljs-built_in">this</span>._getPlaylist()<br>  &#125;,<br><br>  <span class="hljs-comment">/**</span><br><span class="hljs-comment">   * 页面上拉触底事件的处理函数</span><br><span class="hljs-comment">   */</span><br>  <span class="hljs-attr">onReachBottom</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;<br>    <span class="hljs-built_in">this</span>._getPlaylist()<br>  &#125;,<br><br><br><br> 下拉刷新请求完数据后<br> wx.stopPullDownRefresh() <span class="hljs-comment">// 停止下拉刷新动画</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="云函数路由优化tcb-router"><a href="#云函数路由优化tcb-router" class="headerlink" title="#云函数路由优化tcb-router"></a><a href="#%E4%BA%91%E5%87%BD%E6%95%B0%E8%B7%AF%E7%94%B1%E4%BC%98%E5%8C%96tcb-router">#</a>云函数路由优化tcb-router</h4><p>一个用户在一个云环境只能创建50个云函数</p>
+<p>假如小程序非常复杂，50个云函数不能够满足业务需求怎么办？</p>
+<p>相似的请求归类到同一个云函数处理</p>
+<p>tcb-router是一个koa风格的云函数路由库</p>
+<p>通俗理解就是可以把很多个接口归类到同一个云函数内。</p>
+<p>github-tcb-router: <a target="_blank" rel="noopener" href="https://github.com/TencentCloudBase/tcb-router">https://github.com/TencentCloudBase/tcb-router(opens new window)</a></p>
+<p>koa洋葱模型…</p>
+<p>安装：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sh">在使用到tcb-router的云函数目录下打开命令行，输入命令进行安装<br>npm install --save tcb-router<br></code></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 云函数的 index.js</span><br><span class="hljs-keyword">const</span> TcbRouter = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;router&#x27;</span>); <span class="hljs-comment">// 必需</span><br><br><span class="hljs-built_in">exports</span>.main = <span class="hljs-function">(<span class="hljs-params">event, context</span>) =&gt;</span> &#123;<br>    <span class="hljs-keyword">const</span> app = <span class="hljs-keyword">new</span> TcbRouter(&#123; event &#125;);<span class="hljs-comment">// 必需</span><br><br>    <span class="hljs-comment">// app.use 表示该中间件会适用于所有的路由(全局中间件) 非必需</span><br>    app.use(<span class="hljs-keyword">async</span> (ctx, next) =&gt; &#123; <span class="hljs-comment">// 这个中间件表示所有路由都会调用到，而路由中间件为单独调用</span><br>        ctx.data = &#123;&#125;; <span class="hljs-comment">// 获取要传给小程序端的数据</span><br>        ctx.data.openId = event.userInfo.openId <span class="hljs-comment">// 这里获取到的openId将分布到所有路由</span><br>        <span class="hljs-keyword">await</span> next(); <span class="hljs-comment">// 执行下一中间件</span><br>    &#125;);<br><br>    <span class="hljs-comment">// 路由为数组表示，该中间件适用于 user 和 timer 两个路由</span><br>    app.router([<span class="hljs-string">&#x27;user&#x27;</span>, <span class="hljs-string">&#x27;timer&#x27;</span>], <span class="hljs-keyword">async</span> (ctx, next) =&gt; &#123;<br>        ctx.data.company = <span class="hljs-string">&#x27;Tencent&#x27;</span>; <span class="hljs-comment">// 这里获取到的数据将分布到 user 和 timer 两个路由</span><br>        <span class="hljs-keyword">await</span> next(); <span class="hljs-comment">// 执行下一中间件</span><br>    &#125;);<br><br>    <span class="hljs-comment">// 路由为字符串，该中间件只适用于 user 路由</span><br>    app.router(<span class="hljs-string">&#x27;user&#x27;</span>, <span class="hljs-keyword">async</span> (ctx, next) =&gt; &#123;<br>        ctx.data.name = <span class="hljs-string">&#x27;heyli&#x27;</span>;  <span class="hljs-comment">// 获取要传给小程序端的数据</span><br>        <span class="hljs-keyword">await</span> next(); <span class="hljs-comment">// 执行下一中间件</span><br>    &#125;, <span class="hljs-keyword">async</span> (ctx, next) =&gt; &#123;<br>        ctx.data.sex = <span class="hljs-string">&#x27;male&#x27;</span>; <span class="hljs-comment">// 获取要传给小程序端的数据</span><br>        <span class="hljs-keyword">await</span> next(); <span class="hljs-comment">// 执行下一中间件</span><br>    &#125;, <span class="hljs-keyword">async</span> (ctx) =&gt; &#123;<br>        ctx.data.city = <span class="hljs-string">&#x27;Foshan&#x27;</span>; <span class="hljs-comment">// 获取要传给小程序端的数据</span><br>        <span class="hljs-comment">// ctx.body 返回数据到小程序端</span><br>        ctx.body = &#123; <span class="hljs-attr">code</span>: <span class="hljs-number">0</span>, <span class="hljs-attr">data</span>: ctx.data&#125;;  <span class="hljs-comment">// 要传给小程序端的数据</span><br>    &#125;);<br><br>    <span class="hljs-comment">// 路由为字符串，该中间件只适用于 timer 路由</span><br>    app.router(<span class="hljs-string">&#x27;timer&#x27;</span>, <span class="hljs-keyword">async</span> (ctx, next) =&gt; &#123;<br>        ctx.data.name = <span class="hljs-string">&#x27;flytam&#x27;</span>;<br>        <span class="hljs-keyword">await</span> next(); <span class="hljs-comment">// 执行下一中间件</span><br>    &#125;, <span class="hljs-keyword">async</span> (ctx, next) =&gt; &#123;<br>        ctx.data.sex = <span class="hljs-keyword">await</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-params">resolve</span> =&gt;</span> &#123;<br>        <span class="hljs-comment">// 等待500ms，再执行下一中间件</span><br>        <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> &#123;<br>            resolve(<span class="hljs-string">&#x27;male&#x27;</span>);<br>        &#125;, <span class="hljs-number">500</span>);<br>        &#125;);<br>        <span class="hljs-keyword">await</span> next(); <span class="hljs-comment">// 执行下一中间件</span><br>    &#125;, <span class="hljs-keyword">async</span> (ctx)=&gt;  &#123;<br>        ctx.data.city = <span class="hljs-string">&#x27;Taishan&#x27;</span>;<br><br>        <span class="hljs-comment">// ctx.body 返回数据到小程序端</span><br>        ctx.body = &#123; <span class="hljs-attr">code</span>: <span class="hljs-number">0</span>, <span class="hljs-attr">data</span>: ctx.data &#125;;<br>    &#125;);<br><br>    <span class="hljs-keyword">return</span> app.serve(); <span class="hljs-comment">// 必需</span><br><br>&#125;<br><br><br>小程序端：<br><br><span class="hljs-comment">// 调用名为 router 的云函数，路由名为 user</span><br>wx.cloud.callFunction(&#123;<br>    <span class="hljs-comment">// 要调用的云函数名称</span><br>    <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;router&quot;</span>,<br>    <span class="hljs-comment">// 传递给云函数的参数</span><br>    <span class="hljs-attr">data</span>: &#123;<br>        <span class="hljs-attr">$url</span>: <span class="hljs-string">&quot;user&quot;</span>, <span class="hljs-comment">// 要调用的路由的路径，传入准确路径或者通配符*</span><br>        <span class="hljs-attr">other</span>: <span class="hljs-string">&quot;xxx&quot;</span><br>    &#125;<br>&#125;).then(<span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> &#123;<br>	<span class="hljs-built_in">console</span>.log(res)<br>&#125;)<br></code></pre></td></tr></table></figure>
+
+<p>上面tcb-router代码会按照洋葱模型执行，即先从上往下逐个进入中间件，再从下往上逐个退出中间件。</p>
+<h4 id="本地存储（缓存）"><a href="#本地存储（缓存）" class="headerlink" title="#本地存储（缓存）"></a><a href="#%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8-%E7%BC%93%E5%AD%98">#</a>本地存储（缓存）</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 存储：</span><br>wx.setStorageSync(key, data) <span class="hljs-comment">// 同步存储（存储成功再继续下一步操作）</span><br>wx.setStorage(key, data) <span class="hljs-comment">// 异步存储（即使存储没成功也会执行下一步代码）、</span><br><br><span class="hljs-comment">// 读取：</span><br>wx.getStorageSync(key) <span class="hljs-comment">// 同步 （读取到数据在进行下一步操作）</span><br>wx.setStorage(key) <span class="hljs-comment">// 异步</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="api设置title"><a href="#api设置title" class="headerlink" title="#api设置title"></a><a href="#api%E8%AE%BE%E7%BD%AEtitle">#</a>api设置title</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs js">wx.setNavigationBarTitle(&#123;<br>      <span class="hljs-attr">title</span>: <span class="hljs-string">&#x27;&#x27;</span>,<br>&#125;)<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="背景播放音"><a href="#背景播放音" class="headerlink" title="#背景播放音"></a><a href="#%E8%83%8C%E6%99%AF%E6%92%AD%E6%94%BE%E9%9F%B3">#</a>背景播放音</h4><p><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api/media/background-audio/BackgroundAudioManager.html">BackgroundAudioManager (opens new window)</a>全局唯一的背景音频管理器</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-comment">// 需要在app.json配置，才能使用后台音乐播放的能力</span><br><br><span class="hljs-string">&quot;requiredBackgroundModes&quot;</span>: [<span class="hljs-string">&quot;audio&quot;</span>, <span class="hljs-string">&quot;location&quot;</span>]<br></code></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 获取全局唯一的背景音频管理器</span><br><span class="hljs-keyword">const</span> backgroundAudioManager = wx.getBackgroundAudioManager()<br><br><br>backgroundAudioManager.src = 音频链接<br>backgroundAudioManager.title = 音频标题<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="createSelectorQuery查询节点信息"><a href="#createSelectorQuery查询节点信息" class="headerlink" title="#createSelectorQuery查询节点信息"></a><a href="#createselectorquery%E6%9F%A5%E8%AF%A2%E8%8A%82%E7%82%B9%E4%BF%A1%E6%81%AF">#</a>createSelectorQuery查询节点信息</h4><p><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api/wxml/wx.createSelectorQuery.html">createSelectorQuery (opens new window)</a>小程序的方法，用于查询节点等操作</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> query = wx.createSelectorQuery()<br>query.select(<span class="hljs-string">&#x27;#the-id&#x27;</span>).boundingClientRect() <span class="hljs-comment">// 节点的布局信息</span><br>query.selectViewport().scrollOffset()<br>query.exec(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>)</span>&#123;<br>  res[<span class="hljs-number">0</span>].top       <span class="hljs-comment">// #the-id节点的上边界坐标</span><br>  res[<span class="hljs-number">1</span>].scrollTop <span class="hljs-comment">// 显示区域的竖直滚动位置</span><br>&#125;)<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="组件内的方法"><a href="#组件内的方法" class="headerlink" title="#组件内的方法"></a><a href="#%E7%BB%84%E4%BB%B6%E5%86%85%E7%9A%84%E6%96%B9%E6%B3%95">#</a>组件内的方法</h4><p><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/reference/api/Component.html">Component(Object object)(opens new window)</a></p>
+<h4 id="组件生命周期"><a href="#组件生命周期" class="headerlink" title="#组件生命周期"></a><a href="#%E7%BB%84%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F">#</a>组件生命周期</h4><p><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/lifetimes.html">lifetimes(opens new window)</a></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 生命周期</span><br><span class="hljs-attr">lifetimes</span>: &#123;<br>    <span class="hljs-function"><span class="hljs-title">ready</span>(<span class="hljs-params"></span>)</span> &#123; <span class="hljs-comment">// 在组件在视图层布局完成后执行</span><br>   	 ...<br>    &#125;<br>&#125;,<br></code></pre></td></tr></table></figure>
+
+
+
+<h5 id="组件所在页面的生命周期"><a href="#组件所在页面的生命周期" class="headerlink" title="#组件所在页面的生命周期"></a><a href="#%E7%BB%84%E4%BB%B6%E6%89%80%E5%9C%A8%E9%A1%B5%E9%9D%A2%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F">#</a>组件所在页面的生命周期</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs js">Component(&#123;<br>  <span class="hljs-attr">pageLifetimes</span>: &#123;<br>    <span class="hljs-attr">show</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;<br>      <span class="hljs-comment">// 页面被展示</span><br>    &#125;,<br>    <span class="hljs-attr">hide</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;<br>      <span class="hljs-comment">// 页面被隐藏</span><br>    &#125;,<br>    <span class="hljs-attr">resize</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">size</span>) </span>&#123;<br>      <span class="hljs-comment">// 页面尺寸变化</span><br>    &#125;<br>  &#125;<br>&#125;)<br></code></pre></td></tr></table></figure>
+
+<h4 id="对数据的监听"><a href="#对数据的监听" class="headerlink" title="对数据的监听"></a>对数据的监听</h4><p><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/observer.html">observers(opens new window)</a></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs js">observers: &#123; <span class="hljs-comment">// 对数据的监听(数据初次加载完成也会执行)</span><br>    监听的数据对象(newData)&#123;<br>      <span class="hljs-built_in">console</span>.log(newData)<br>    &#125;<br>&#125;,<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="子组件自定义事件传递给父组件"><a href="#子组件自定义事件传递给父组件" class="headerlink" title="#子组件自定义事件传递给父组件"></a><a href="#%E5%AD%90%E7%BB%84%E4%BB%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BA%8B%E4%BB%B6%E4%BC%A0%E9%80%92%E7%BB%99%E7%88%B6%E7%BB%84%E4%BB%B6">#</a>子组件自定义事件传递给父组件</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs text">子组件js：<br>// 触发自定义事件 向父组件传值， 参数x（可选，传递给父组件的参数，可以是对象或其他）<br>this.triggerEvent(&#x27;自定义事件名&#x27;, 参数x)<br><br><br>父组件wxml：<br>&lt;子组件标签 bind:自定义事件名=&quot;执行的事件&quot; /&gt;<br><br>父组件js：<br>执行的事件(event) &#123;<br>	console.log(event.detil.参数)<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="父组件自定义事件传递给子组件"><a href="#父组件自定义事件传递给子组件" class="headerlink" title="#父组件自定义事件传递给子组件"></a><a href="#%E7%88%B6%E7%BB%84%E4%BB%B6%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BA%8B%E4%BB%B6%E4%BC%A0%E9%80%92%E7%BB%99%E5%AD%90%E7%BB%84%E4%BB%B6">#</a>父组件自定义事件传递给子组件</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs text">父组件wxml：<br>&lt;子组件标签 class=&quot;子组件类名&quot;&gt;<br><br>父组件JS：<br>// 选择组件，并传入事件和参数<br>this.selectComponent(&#x27;.子组件类名&#x27;).自定义事件名(传入参数)<br><br>子组件js：<br>methods: &#123;<br>	自定义事件名(参数x)&#123;<br>		console.log(参数x)<br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="兄弟组件间传递事件和传值"><a href="#兄弟组件间传递事件和传值" class="headerlink" title="#兄弟组件间传递事件和传值"></a><a href="#%E5%85%84%E5%BC%9F%E7%BB%84%E4%BB%B6%E9%97%B4%E4%BC%A0%E9%80%92%E4%BA%8B%E4%BB%B6%E5%92%8C%E4%BC%A0%E5%80%BC">#</a>兄弟组件间传递事件和传值</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs text">例子：子组件1向子组件2传递参数<br><br>父组件wxml中：<br>&lt;子组件标签1 bind:自定义事件名1=&quot;执行的事件&quot;&gt;<br>&lt;子组件标签2 class=&quot;子组件2类名&quot;&gt;<br><br>父组件js：<br>执行的事件(event) &#123;<br>	this.selectComponent(&#x27;.子组件2类名&#x27;).自定义事件名2(event.detil.参数x) // 向子组件2传值<br>&#125;<br><br>子组件1js：<br>// 触发自定义事件 向父组件传值， 参数x（可选，传递给父组件的参数，可以是对象或其他）<br>this.triggerEvent(&#x27;自定义事件名1&#x27;, 参数x)<br><br><br><br>子组件2js：<br>methods: &#123;<br>	自定义事件名2(参数x)&#123;<br>		console.log(参数x)  // 接收父组件传入的值<br>	&#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+<h4 id="获取手机信息"><a href="#获取手机信息" class="headerlink" title="#获取手机信息"></a><a href="#%E8%8E%B7%E5%8F%96%E6%89%8B%E6%9C%BA%E4%BF%A1%E6%81%AF">#</a>获取手机信息</h4><p><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api/base/system/system-info/wx.getSystemInfo.html">wx.getSystemInfo(Object object)(opens new window)</a></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs js">wx.getSystemInfo(&#123;<br>	<span class="hljs-function"><span class="hljs-title">success</span>(<span class="hljs-params">res</span>)</span>&#123;<br>		<span class="hljs-built_in">console</span>.log(res) <span class="hljs-comment">//手机信息</span><br>	&#125;<br>&#125;)<br></code></pre></td></tr></table></figure>
+
+<h4 id="滚动组件"><a href="#滚动组件" class="headerlink" title="#滚动组件"></a><a href="#%E6%BB%9A%E5%8A%A8%E7%BB%84%E4%BB%B6">#</a>滚动组件</h4><p><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html">scroll-view(opens new window)</a></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">scroll-view</span> <span class="hljs-attr">scroll-y</span> <span class="hljs-attr">scroll-top</span>=<span class="hljs-string">&quot;&#123;&#123;scrollTop&#125;&#125;&quot;</span> <span class="hljs-attr">scroll-with-animation</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">scroll-view</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="全局属性、方法（类似vuex）"><a href="#全局属性、方法（类似vuex）" class="headerlink" title="#全局属性、方法（类似vuex）"></a><a href="#%E5%85%A8%E5%B1%80%E5%B1%9E%E6%80%A7%E3%80%81%E6%96%B9%E6%B3%95-%E7%B1%BB%E4%BC%BCvuex">#</a>全局属性、方法（类似vuex）</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs text">在app.js中：<br><br>onLaunch: function () &#123;<br>	this.globalData = &#123;// 设置全局属性、方法<br>		test: 0<br>	&#125;<br>&#125;,<br>setGlobalData(dataItem, val) &#123; // 设置全局属性<br>	this.globalData[dataItem] = val<br>&#125;,<br>getGlobalData(dataItem) &#123; // 获取全局属性<br>	return this.globalData[dataItem]<br>&#125;<br><br><br>在需要调用的页面js中：<br>const app = getApp() // 在最顶部先调用app方法<br><br>// 设置全局属性<br>app.setGlobalData(&#x27;test&#x27;, 1)<br><br>// 获取全局属性<br>app.getGlobalData(&#x27;test&#x27;)<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="消息提示框"><a href="#消息提示框" class="headerlink" title="#消息提示框"></a><a href="#%E6%B6%88%E6%81%AF%E6%8F%90%E7%A4%BA%E6%A1%86">#</a>消息提示框</h4><p><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api/ui/interaction/wx.showToast.html">showToast(opens new window)</a></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs js">wx.showToast(&#123;<br>  <span class="hljs-attr">title</span>: <span class="hljs-string">&#x27;成功&#x27;</span>,<br>  <span class="hljs-attr">icon</span>: <span class="hljs-string">&#x27;success&#x27;</span>, <span class="hljs-comment">//图标： success 成功、loading 加载中、none 无</span><br>  <span class="hljs-attr">duration</span>: <span class="hljs-number">2000</span><br>&#125;)<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="《发现》页面"><a href="#《发现》页面" class="headerlink" title="#《发现》页面"></a><a href="#%E3%80%8A%E5%8F%91%E7%8E%B0%E3%80%8B%E9%A1%B5%E9%9D%A2">#</a>《发现》页面</h2><h4 id="调用组件外部的样式"><a href="#调用组件外部的样式" class="headerlink" title="#调用组件外部的样式"></a><a href="#%E8%B0%83%E7%94%A8%E7%BB%84%E4%BB%B6%E5%A4%96%E9%83%A8%E7%9A%84%E6%A0%B7%E5%BC%8F">#</a>调用组件外部的样式</h4><p>components内部的组件无法直接调用外部的样式。可通过以下方式调用组件外部样式：</p>
+<p><strong>方法一：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs text">父组件wxml：<br>&lt;!-- iconfont 和 icon-sousuo 是传入组件内部的样式名称，iconfont（自定义名称）=&quot;iconfont（外部样式文件中定义的样式名）&quot;  --&gt;<br>&lt;x-search iconfont=&quot;iconfont&quot; icon-sousuo=&quot;icon-sousuo&quot;/&gt;<br><br><br>子组件js:<br>// 组件外部样式<br>  externalClasses: [<br>    &#x27;iconfont&#x27;, // 对应的是上面等号前面的名称<br>    &#x27;icon-sousuo&#x27;<br>  ],<br><br> 子组件wxml： 即可实现调用组件外的样式<br> &lt;i class=&quot;iconfont icon-sousuo&quot; /&gt;<br><br><br>  注意：如果想在组件内部再次修改样式，不能够引用外部传进来的class名称进行修改，可以另起一个class名称进行修改。<br></code></pre></td></tr></table></figure>
+
+
+
+<p><strong>方法二：</strong></p>
+<p><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/wxml-wxss.html#%E7%BB%84%E4%BB%B6%E6%A0%B7%E5%BC%8F%E9%9A%94%E7%A6%BB">消除样式隔离(opens new window)</a></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs js">组件内:<br>Component(&#123;<br>  <span class="hljs-attr">options</span>: &#123;<br>    <span class="hljs-attr">styleIsolation</span>: <span class="hljs-string">&#x27;apply-shared&#x27;</span><br>  &#125;<br>&#125;)<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="组件插槽slot"><a href="#组件插槽slot" class="headerlink" title="#组件插槽slot"></a><a href="#%E7%BB%84%E4%BB%B6%E6%8F%92%E6%A7%BDslot">#</a>组件插槽slot</h4><p><strong>单个插槽</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs text">父组件调用传入插槽内容:<br>&lt;组件标签&gt;<br>    &lt;view&gt;<br>      &lt;view&gt;插槽内容&lt;/view&gt;<br>      &lt;view&gt;插槽内容&lt;/view&gt;<br>    &lt;/view&gt;<br>&lt;/组件标签&gt;<br><br> 组件内部定义slot标签:<br> &lt;view&gt;<br>    &lt;!-- slot插槽 --&gt;<br>    &lt;slot&gt;&lt;/slot&gt;<br>&lt;/view&gt;<br></code></pre></td></tr></table></figure>
+
+
+
+<p><strong>如果需要实现多个插槽</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs text">父组件调用传入插槽内容:<br>&lt;组件标签&gt;<br>    &lt;view slot=&quot;slot2&quot;&gt;<br>      &lt;view&gt;插槽1内容&lt;/view&gt;<br>      &lt;view&gt;插槽1内容&lt;/view&gt;<br>    &lt;/view&gt;<br><br>     &lt;view slot=&quot;slot1&quot;&gt;<br>      &lt;view&gt;插槽2内容&lt;/view&gt;<br>      &lt;view&gt;插槽2内容&lt;/view&gt;<br>    &lt;/view&gt;<br>&lt;/组件标签&gt;<br><br>组件js :<br>options: &#123;// 设置<br>    multipleSlots: true // 打开多个插槽功能<br>&#125;,<br><br><br>组件内部定义slot标签:<br>&lt;view&gt;<br>    &lt;!-- slot插槽 具名插槽--&gt;<br>    &lt;slot name=&quot;slot1&quot;&gt;&lt;/slot&gt;<br>    &lt;slot name=&quot;slot2&quot;&gt;&lt;/slot&gt;<br>&lt;/view&gt;<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="判断用户授权"><a href="#判断用户授权" class="headerlink" title="#判断用户授权"></a><a href="#%E5%88%A4%E6%96%AD%E7%94%A8%E6%88%B7%E6%8E%88%E6%9D%83">#</a>判断用户授权</h4><p><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/authorize.html">授权(opens new window)</a></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 判断用户是否授权</span><br>    wx.getSetting(&#123;<br>      <span class="hljs-attr">success</span>: <span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> &#123; <span class="hljs-comment">// 这里使用箭头函数可改变内部this指向为外部的this</span><br>        <span class="hljs-built_in">console</span>.log(res)<br>        <span class="hljs-keyword">if</span> (res.authSetting[<span class="hljs-string">&#x27;scope.userInfo&#x27;</span>]) &#123; <span class="hljs-comment">// 已授权</span><br>         wx.getUserInfo(&#123; <span class="hljs-comment">// 获取用户信息</span><br>           <span class="hljs-function"><span class="hljs-title">success</span>(<span class="hljs-params">res</span>)</span> &#123;<br>             <span class="hljs-built_in">console</span>.log(res)<br>           &#125;<br>         &#125;)<br>        &#125; <span class="hljs-keyword">else</span> &#123; <span class="hljs-comment">// 未授权</span><br><br>        &#125;<br>      &#125;<br>    &#125;)<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="button的开发能力（获取用户信息）1"><a href="#button的开发能力（获取用户信息）1" class="headerlink" title="#button的开发能力（获取用户信息）1"></a><a href="#button%E7%9A%84%E5%BC%80%E5%8F%91%E8%83%BD%E5%8A%9B-%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF-1">#</a>button的开发能力（获取用户信息）1</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs js">&lt;button <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;login&quot;</span><br>    open-type=<span class="hljs-string">&quot;getUserInfo&quot;</span><br>    bindgetuserinfo=<span class="hljs-string">&quot;onGetUserInfo&quot;</span>     <span class="hljs-comment">// bindgetuserinfo 为固定的</span><br>&gt;<br>	获取微信授权信息<br>&lt;/button&gt;<br><br><br>bindgetuserinfo 事件会询问用户是否同意授权<br><br><br>js中：<br>    <span class="hljs-function"><span class="hljs-title">onGetUserInfo</span>(<span class="hljs-params">event</span>)</span> &#123; <span class="hljs-comment">// 获取用户信息</span><br>      <span class="hljs-keyword">const</span> userInfo = event.detail.userInfo<br>      <span class="hljs-keyword">if</span> (userInfo) &#123; <span class="hljs-comment">// 用户允许授权</span><br>        <span class="hljs-built_in">this</span>.setData(&#123;<br>          <span class="hljs-attr">modalShow</span>: <span class="hljs-literal">false</span><br>        &#125;)<br>        <span class="hljs-built_in">this</span>.triggerEvent(<span class="hljs-string">&#x27;loginSuccess&#x27;</span>, userInfo) <span class="hljs-comment">// 给父组件传用户数据</span><br>      &#125; <span class="hljs-keyword">else</span> &#123; <span class="hljs-comment">// 用户拒绝授权</span><br>        <span class="hljs-built_in">this</span>.triggerEvent(<span class="hljs-string">&#x27;loginFail&#x27;</span>)<br>      &#125;<br>    &#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="原生组件"><a href="#原生组件" class="headerlink" title="#原生组件"></a><a href="#%E5%8E%9F%E7%94%9F%E7%BB%84%E4%BB%B6">#</a>原生组件</h4><p><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/component/native-component.html">原生组件(opens new window)</a></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs html">auto-focus 自动获取焦点<br><br><span class="hljs-tag">&lt;<span class="hljs-name">textarea</span></span><br><span class="hljs-tag">    <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;content&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;分享新鲜事...&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">maxlength</span>=<span class="hljs-string">&quot;140&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">auto-focus</span></span><br><span class="hljs-tag">    <span class="hljs-attr">bindinput</span>=<span class="hljs-string">&quot;onInput&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">bindfocus</span>=<span class="hljs-string">&quot;onFocus&quot;</span></span><br><span class="hljs-tag">    <span class="hljs-attr">bindblur</span>=<span class="hljs-string">&quot;onBlur&quot;</span></span><br><span class="hljs-tag">  &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="选择上传图片"><a href="#选择上传图片" class="headerlink" title="#选择上传图片"></a><a href="#%E9%80%89%E6%8B%A9%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87">#</a>选择上传图片</h4><p><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api/media/image/wx.chooseImage.html">上传图片(opens new window)</a></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">let</span> max = <span class="hljs-number">9</span> - <span class="hljs-built_in">this</span>.data.images.length <span class="hljs-comment">// 还能再选几张图片</span><br>wx.chooseImage(&#123;<br>      <span class="hljs-attr">count</span>: max, <span class="hljs-comment">// 还能再选几张图片</span><br>      <span class="hljs-attr">sizeType</span>: [<span class="hljs-string">&#x27;original&#x27;</span>, <span class="hljs-string">&#x27;compressed&#x27;</span>], <span class="hljs-comment">// 初始值 and 压缩过的</span><br>      <span class="hljs-attr">sourceType</span>: [<span class="hljs-string">&#x27;album&#x27;</span>, <span class="hljs-string">&#x27;camera&#x27;</span>], <span class="hljs-comment">// 手机相册选择 and 拍照选择</span><br>      <span class="hljs-attr">success</span>: <span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> &#123; <span class="hljs-comment">// 箭头函数改变this指向</span><br>        <span class="hljs-built_in">console</span>.log(res)<br>      &#125;,<br>    &#125;)<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="图片裁剪"><a href="#图片裁剪" class="headerlink" title="#图片裁剪"></a><a href="#%E5%9B%BE%E7%89%87%E8%A3%81%E5%89%AA">#</a>图片裁剪</h4><p><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/component/image.html">图片裁剪(opens new window)</a></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- mode 图片裁剪 aspectFill 保证短边完整显示 --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">image</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;image&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;&#123;&#123;item&#125;&#125;&quot;</span> <span class="hljs-attr">mode</span>=<span class="hljs-string">&quot;aspectFill&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">image</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="获取标签自定义属性data-（删除图片的实现）"><a href="#获取标签自定义属性data-（删除图片的实现）" class="headerlink" title="#获取标签自定义属性data-* （删除图片的实现）"></a><a href="#%E8%8E%B7%E5%8F%96%E6%A0%87%E7%AD%BE%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7data-%E5%88%A0%E9%99%A4%E5%9B%BE%E7%89%87%E7%9A%84%E5%AE%9E%E7%8E%B0">#</a>获取标签自定义属性data-* （删除图片的实现）</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs text">&lt;!-- 显示图片 --&gt;<br>    &lt;block wx:for=&quot;&#123;&#123;images&#125;&#125;&quot; wx:key=&quot;*this&quot;&gt;<br>      &lt;view class=&quot;image-wrap&quot;&gt;<br>        &lt;!-- mode 图片裁剪 aspectFill 保证短边完整显示 --&gt;<br>        &lt;image class=&quot;image&quot; src=&quot;&#123;&#123;item&#125;&#125;&quot; mode=&quot;aspectFill&quot;&gt;&lt;/image&gt;<br>        &lt;icon class=&quot;iconfont icon-shanchu&quot; bindtap=&quot;onDelImage&quot; data-index=&quot;&#123;&#123;index&#125;&#125;&quot;&gt;&lt;/icon&gt;<br>      &lt;/view&gt;<br>    &lt;/block&gt;<br><br><br>    // 删除图片<br>  onDelImage(event) &#123;<br>  	// event.target.dataset.index 获取标签属性data-index的值<br>    this.data.images.splice(event.target.dataset.index, 1) // splice会改变原有数组<br>    this.setData(&#123;<br>      images: this.data.images<br>    &#125;)<br>  &#125;,<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="全屏预览图片-点击图片放大预览"><a href="#全屏预览图片-点击图片放大预览" class="headerlink" title="#)全屏预览图片(点击图片放大预览)"></a><a href="#%E5%85%A8%E5%B1%8F%E9%A2%84%E8%A7%88%E5%9B%BE%E7%89%87-%E7%82%B9%E5%87%BB%E5%9B%BE%E7%89%87%E6%94%BE%E5%A4%A7%E9%A2%84%E8%A7%88">#</a>)全屏预览图片(点击图片放大预览)</h4><p><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api/media/image/wx.previewImage.html">全屏预览图片(opens new window)</a></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 全屏预览图片</span><br>  <span class="hljs-function"><span class="hljs-title">onPreviewImage</span>(<span class="hljs-params">event</span>)</span> &#123;<br>    wx.previewImage(&#123;<br>      <span class="hljs-attr">urls</span>: <span class="hljs-built_in">this</span>.data.images, <span class="hljs-comment">// 图片地址列表</span><br>      <span class="hljs-attr">current</span>: event.target.dataset.imgsrc <span class="hljs-comment">// 当前预览图片地址</span><br>    &#125;)<br>  &#125;,<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="文件上传云存储（发布博客例子）"><a href="#文件上传云存储（发布博客例子）" class="headerlink" title="#文件上传云存储（发布博客例子）"></a><a href="#%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E4%BA%91%E5%AD%98%E5%82%A8-%E5%8F%91%E5%B8%83%E5%8D%9A%E5%AE%A2%E4%BE%8B%E5%AD%90">#</a>文件上传云存储（发布博客例子）</h4><p><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/wxcloud/reference-client-api/storage/uploadFile.html">文件上传云存储(opens new window)</a></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">//  结合&#x27;发布&#x27;的例子：</span><br> <span class="hljs-function"><span class="hljs-title">send</span>(<span class="hljs-params"></span>)</span> &#123;<br>   <span class="hljs-comment">// 验证是否输入内容</span><br>   <span class="hljs-keyword">if</span> (content.trim() === <span class="hljs-string">&#x27;&#x27;</span>) &#123; <span class="hljs-comment">// trim() 去掉字符串空格</span><br>     wx.showToast(&#123;<br>       <span class="hljs-attr">title</span>: <span class="hljs-string">&#x27;请输入内容&#x27;</span>,<br>       <span class="hljs-attr">icon</span>: <span class="hljs-string">&#x27;none&#x27;</span><br>     &#125;)<br>     <span class="hljs-keyword">return</span><br>   &#125;<br>   wx.showLoading(&#123;<br>     <span class="hljs-attr">title</span>: <span class="hljs-string">&#x27;发布中&#x27;</span>,<br>   &#125;)<br>   <span class="hljs-comment">/**</span><br><span class="hljs-comment">    * 实现思路及步骤：</span><br><span class="hljs-comment">    * 1、图片 -&gt; 上传 云存储  -&gt; 生成 图片fineID（云文件ID）</span><br><span class="hljs-comment">    * 2、数据 -&gt; 录入 云数据库</span><br><span class="hljs-comment">    *    数据包括：文字内容、图片fineID、昵称、头像、发布时间、openId(用户唯一标识，在插入数据库是系统会自动添加_openId字段，不需要另外插入)</span><br><span class="hljs-comment">    */</span><br>   <span class="hljs-keyword">let</span> promiseArr = []<br>   <span class="hljs-keyword">let</span> fileIds = []<br>   <span class="hljs-comment">// 图片上传云存储</span><br>   <span class="hljs-built_in">this</span>.data.images.forEach(<span class="hljs-function">(<span class="hljs-params">item</span>) =&gt;</span> &#123;<br>     <span class="hljs-keyword">let</span> p = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> &#123;<br>       <span class="hljs-keyword">let</span> suffix = <span class="hljs-regexp">/\.\w+$/</span>.exec(item)[<span class="hljs-number">0</span>] <span class="hljs-comment">// 文件扩展名(文件后缀)</span><br>       wx.cloud.uploadFile(&#123; <span class="hljs-comment">// 每次只能上传一个文件</span><br>         <span class="hljs-comment">/**</span><br><span class="hljs-comment">          * cloudPath 云路径。如果路径相同，后上传的文件会覆盖原文件</span><br><span class="hljs-comment">          * 路径：blog/云存储中的文件夹 + Date.now()时间戳 + Math.random()*1000000随机数 + 文件后缀</span><br><span class="hljs-comment">          */</span><br>         <span class="hljs-attr">cloudPath</span>: <span class="hljs-string">&#x27;blog/&#x27;</span> + <span class="hljs-built_in">Date</span>.now() + <span class="hljs-string">&#x27;-&#x27;</span> + <span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">1000000</span> + suffix,<br>         <span class="hljs-attr">filePath</span>: item, <span class="hljs-comment">// 文件本地临时路径</span><br>         <span class="hljs-attr">success</span>: <span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> &#123;<br>           fileIds.push(res.fileID)<br>           resolve()<br>         &#125;,<br>         <span class="hljs-attr">fail</span>: <span class="hljs-function">(<span class="hljs-params">err</span>) =&gt;</span> &#123;<br>           <span class="hljs-built_in">console</span>.error(err)<br>           reject()<br>         &#125;<br>       &#125;)<br>     &#125;)<br>     promiseArr.push(p)<br>   &#125;)<br><br>   <span class="hljs-comment">// 存入云数据库</span><br>   <span class="hljs-built_in">Promise</span>.all(promiseArr).then(<span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> &#123;<br>     db.collection(<span class="hljs-string">&#x27;blog&#x27;</span>).add(&#123;<br>       <span class="hljs-attr">data</span>: &#123;<br>         ...userInfo, <span class="hljs-comment">// 昵称、头像</span><br>         content, <span class="hljs-comment">// 内容</span><br>         <span class="hljs-attr">img</span>: fileIds, <span class="hljs-comment">// 图片fileID列表</span><br>         <span class="hljs-attr">createTime</span>: db.serverDate() <span class="hljs-comment">// 创建时间，取服务端时间</span><br>       &#125;<br>     &#125;).then(<span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> &#123;<br>       wx.hideLoading()<br>       wx.showToast(&#123;<br>         <span class="hljs-attr">title</span>: <span class="hljs-string">&#x27;发布成功&#x27;</span>,<br>       &#125;)<br>       <span class="hljs-comment">// 返回博客页面，并刷新</span><br>       wx.navigateBack()<br><br>     &#125;)<br>   &#125;).catch(<span class="hljs-function">(<span class="hljs-params">err</span>) =&gt;</span> &#123;<br>     wx.hideLoading()<br>     wx.showToast(&#123;<br>       <span class="hljs-attr">title</span>: <span class="hljs-string">&#x27;抱歉，发布失败&#x27;</span>,<br>       <span class="hljs-attr">icon</span>: <span class="hljs-string">&#x27;none&#x27;</span><br>     &#125;)<br>   &#125;)<br> &#125;,<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="js模块化-（时间格式化）"><a href="#js模块化-（时间格式化）" class="headerlink" title="#js模块化 （时间格式化）"></a><a href="#js%E6%A8%A1%E5%9D%97%E5%8C%96-%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F%E5%8C%96">#</a>js模块化 （时间格式化）</h4><p>在目录utils 中新建formatTime.js文件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 时间格式化 模块封装</span><br><span class="hljs-built_in">module</span>.exports = <span class="hljs-function">(<span class="hljs-params">date</span>) =&gt;</span> &#123; <span class="hljs-comment">// date 数据格式为 date</span><br>  <span class="hljs-keyword">let</span> fmt = <span class="hljs-string">&#x27;yyyy-MM-dd hh:mm:ss&#x27;</span> <span class="hljs-comment">// 预定格式</span><br>  <span class="hljs-keyword">const</span> o = &#123;<br>    <span class="hljs-comment">// + 正则中的1个或多个</span><br>    <span class="hljs-string">&#x27;M+&#x27;</span>: date.getMonth() + <span class="hljs-number">1</span>,<br>    <span class="hljs-string">&#x27;d+&#x27;</span>: date.getDate(),<br>    <span class="hljs-string">&#x27;h+&#x27;</span>: date.getHours(),<br>    <span class="hljs-string">&#x27;m+&#x27;</span>: date.getMinutes(),<br>    <span class="hljs-string">&#x27;s+&#x27;</span>: date.getSeconds()<br>  &#125;<br><br>  <span class="hljs-keyword">if</span> (<span class="hljs-regexp">/(y+)/</span>.test(fmt)) &#123;<br>    <span class="hljs-comment">// $1 表示正则中的第一个，即(y+)</span><br>    fmt = fmt.replace(<span class="hljs-built_in">RegExp</span>.$1, date.getFullYear()) <span class="hljs-comment">// replace 替换</span><br>  &#125;<br><br>  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> k <span class="hljs-keyword">in</span> o) &#123;<br>    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(<span class="hljs-string">&#x27;(&#x27;</span>+ k +<span class="hljs-string">&#x27;)&#x27;</span>).test(fmt)) &#123;<br>      fmt = fmt.replace(<span class="hljs-built_in">RegExp</span>.$1, o[k].toString().length === <span class="hljs-number">1</span> ? <span class="hljs-string">&#x27;0&#x27;</span> + o[k] : o[k])<br>    &#125;<br>  &#125;<br><br>  <span class="hljs-keyword">return</span> fmt<br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+<p>在组件引入js模块</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">import</span> formatTime <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;../../utils/formatTime.js&#x27;</span><br><br>使用：<br>formatTime(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-string">&#x27;Wed Aug 28 2019 16:23:06 GMT+0800 (中国标准时间)&#x27;</span>))<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="阻止事件冒泡-1"><a href="#阻止事件冒泡-1" class="headerlink" title="#阻止事件冒泡"></a><a href="#%E9%98%BB%E6%AD%A2%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1-2">#</a>阻止事件冒泡</h4><p><code>bind</code> 和 <code>catch</code> 都可以绑定事件，它们的区别是 <code>bind</code> 有事件冒泡，而 <code>catch</code> 没有</p>
+<h4 id="返回上一个页面并执行方法"><a href="#返回上一个页面并执行方法" class="headerlink" title="#返回上一个页面并执行方法"></a><a href="#%E8%BF%94%E5%9B%9E%E4%B8%8A%E4%B8%80%E4%B8%AA%E9%A1%B5%E9%9D%A2%E5%B9%B6%E6%89%A7%E8%A1%8C%E6%96%B9%E6%B3%95">#</a>返回上一个页面并执行方法</h4><p><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api/route/wx.navigateBack.html">API(opens new window)</a></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 返回博客页面，并刷新</span><br>wx.navigateBack()<br><span class="hljs-keyword">const</span> pages = getCurrentPages() <span class="hljs-comment">// 获取当前页面栈</span><br><span class="hljs-keyword">const</span> prevPage = pages[pages.length - <span class="hljs-number">2</span>]  <span class="hljs-comment">// 取到上一个页面</span><br>prevPage.onPullDownRefresh() <span class="hljs-comment">// 执行上一个页面的方法 onPullDownRefresh</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="图片懒加载"><a href="#图片懒加载" class="headerlink" title="#图片懒加载"></a><a href="#%E5%9B%BE%E7%89%87%E6%87%92%E5%8A%A0%E8%BD%BD">#</a>图片懒加载</h4><p><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/component/image.html">API(opens new window)</a></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs html">给image标签设置 lazy-load 为 true<br><span class="hljs-tag">&lt;<span class="hljs-name">image</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;img&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;&#123;&#123;item&#125;&#125;&quot;</span> <span class="hljs-attr">lazy-load</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">image</span>&gt;</span><br><br>.img &#123;<br>  background: #eee;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<p><strong>懒加载占位图可以给image设置背景图或背景色</strong></p>
+<h4 id="模糊查询"><a href="#模糊查询" class="headerlink" title="#模糊查询"></a><a href="#%E6%A8%A1%E7%B3%8A%E6%9F%A5%E8%AF%A2">#</a>模糊查询</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 获取博客列表</span><br>  app.router(<span class="hljs-string">&#x27;blogList&#x27;</span>, <span class="hljs-keyword">async</span> (ctx, next) =&gt; &#123;<br>    <span class="hljs-keyword">const</span> keyword = event.keyword <span class="hljs-comment">// 搜索关键字 调用接口时传递来的数据</span><br>    <span class="hljs-keyword">let</span> w = &#123;&#125;<br>    <span class="hljs-keyword">if</span> (keyword.trim() != <span class="hljs-string">&#x27;&#x27;</span>) &#123;<br>      w = &#123;<br>        <span class="hljs-attr">content</span>: db.RegExp(&#123; <span class="hljs-comment">// 正则</span><br>          <span class="hljs-attr">regexp</span>: keyword,<br>          <span class="hljs-attr">options</span>: <span class="hljs-string">&#x27;i&#x27;</span> <span class="hljs-comment">// i表示忽略大小写</span><br>        &#125;)<br>      &#125;<br>    &#125;<br><br>    <span class="hljs-comment">// where查询条件 skip 从第几条开始查，limit 查几条数据，orderBy(排序字段，排序方式) 排序，排序方式desc降序/asc升序</span><br>    ctx.body =  <span class="hljs-keyword">await</span> blogCollection.where(w).skip(event.start).limit(event.count)<br>    .orderBy(<span class="hljs-string">&#x27;createTime&#x27;</span>, <span class="hljs-string">&#x27;desc&#x27;</span>).get().then(<span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> &#123;<br>      <span class="hljs-keyword">return</span> res.data<br>    &#125;)<br><br>  &#125;)<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="提升模糊查询的效率-（添加索引，对数据量大的查询效果明显）"><a href="#提升模糊查询的效率-（添加索引，对数据量大的查询效果明显）" class="headerlink" title="#提升模糊查询的效率 （添加索引，对数据量大的查询效果明显）"></a><a href="#%E6%8F%90%E5%8D%87%E6%A8%A1%E7%B3%8A%E6%9F%A5%E8%AF%A2%E7%9A%84%E6%95%88%E7%8E%87-%E6%B7%BB%E5%8A%A0%E7%B4%A2%E5%BC%95-%E5%AF%B9%E6%95%B0%E6%8D%AE%E9%87%8F%E5%A4%A7%E7%9A%84%E6%9F%A5%E8%AF%A2%E6%95%88%E6%9E%9C%E6%98%8E%E6%98%BE">#</a>提升模糊查询的效率 （添加索引，对数据量大的查询效果明显）</h4><p>云开发控制台 &gt; 数据库相应的集合 &gt; 索引管理 &gt; 添加索引 &gt; 输入自定义索引名称、该字段的值是否唯一、被查询的字段名、升序/降序 &gt; ok</p>
+<h4 id="小程序端调用云数据库"><a href="#小程序端调用云数据库" class="headerlink" title="#小程序端调用云数据库"></a><a href="#%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%AB%AF%E8%B0%83%E7%94%A8%E4%BA%91%E6%95%B0%E6%8D%AE%E5%BA%93">#</a>小程序端调用云数据库</h4><p>一般调用云数据库的操作都写在云函数内，其实小程序端也可以对数据库进行操作。</p>
+<p>小程序端一次最多只能查询20条数据，云函数端最多可查询100条数据，可使用多次查询拼接的方式突破限制。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 小程序端调用云数据库示例</span><br>    <span class="hljs-keyword">const</span> db = wx.cloud.database() <span class="hljs-comment">// 初始化数据库</span><br>    db.collection(<span class="hljs-string">&#x27;blog&#x27;</span>).orderBy(<span class="hljs-string">&#x27;createTime&#x27;</span>,<span class="hljs-string">&#x27;deac&#x27;</span>).get().then(<span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> &#123;<br>      <span class="hljs-built_in">console</span>.log(res)<br>    &#125;)<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="云数据库权限管理-1"><a href="#云数据库权限管理-1" class="headerlink" title="#云数据库权限管理"></a><a href="#%E4%BA%91%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86-2">#</a>云数据库权限管理</h4><p><strong>注意：云控制台和服务端（云函数）始终有所有数据读写权限，</strong></p>
+<p><strong>但权限的管理仅对小程序端发起的请求有效。</strong></p>
+<ul>
+<li>仅创建者可写，所有人可读 （适合于文章）</li>
+<li>仅创建者可读写 (适用于私密内容)</li>
+<li>仅管理端可写，所有人可读（适用于商品信息）</li>
+<li>仅管理端可读写（适用于后台敏感数据）</li>
+</ul>
+<h4 id="数据库中1对N关系的三种设计方式"><a href="#数据库中1对N关系的三种设计方式" class="headerlink" title="#数据库中1对N关系的三种设计方式"></a><a href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%AD1%E5%AF%B9n%E5%85%B3%E7%B3%BB%E7%9A%84%E4%B8%89%E7%A7%8D%E8%AE%BE%E8%AE%A1%E6%96%B9%E5%BC%8F">#</a>数据库中1对N关系的三种设计方式</h4><h5 id="第一种：N的数量较少-几十个以内"><a href="#第一种：N的数量较少-几十个以内" class="headerlink" title="#第一种：N的数量较少 几十个以内"></a><a href="#%E7%AC%AC%E4%B8%80%E7%A7%8D-n%E7%9A%84%E6%95%B0%E9%87%8F%E8%BE%83%E5%B0%91-%E5%87%A0%E5%8D%81%E4%B8%AA%E4%BB%A5%E5%86%85">#</a>第一种：N的数量较少 几十个以内</h5><p><strong>1 条记录存储 N 个子数据</strong></p>
+<p>​    如一条博客中，最多有9张图片，这9张图片可和其他数据放在一个记录中。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs js">[<br>	&#123;<br>		<span class="hljs-attr">id</span>:...<br>		<span class="hljs-attr">img</span>:[<br>		<span class="hljs-string">&#x27;...&#x27;</span>, <span class="hljs-string">&#x27;...&#x27;</span>, <span class="hljs-string">&#x27;...&#x27;</span>, <span class="hljs-string">&#x27;...&#x27;</span>, <span class="hljs-string">&#x27;...&#x27;</span>, <span class="hljs-string">&#x27;...&#x27;</span>, <span class="hljs-string">&#x27;...&#x27;</span>, <span class="hljs-string">&#x27;...&#x27;</span>, <span class="hljs-string">&#x27;...&#x27;</span><br>		]<br>	&#125;<br>]<br></code></pre></td></tr></table></figure>
+
+
+
+<h5 id="第二种：N的数量较多-几十到几百个"><a href="#第二种：N的数量较多-几十到几百个" class="headerlink" title="#第二种：N的数量较多 几十到几百个"></a><a href="#%E7%AC%AC%E4%BA%8C%E7%A7%8D-n%E7%9A%84%E6%95%B0%E9%87%8F%E8%BE%83%E5%A4%9A-%E5%87%A0%E5%8D%81%E5%88%B0%E5%87%A0%E7%99%BE%E4%B8%AA">#</a>第二种：N的数量较多 几十到几百个</h5><p><strong>1 存储 每个N的 id</strong></p>
+<p>可分两个数据库集合，</p>
+<p>一个为 ‘目录’ 集合，存放 ‘详情’ 集合下的每条数据的 id 目录</p>
+<p>一个为 ‘详情’ 集合，每条数据对应一个单独的 id 和 详细数据</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs js">目录集合：<br>[<br>	&#123;<br>		<span class="hljs-string">&#x27;id&#x27;</span>:<span class="hljs-string">&quot;11&quot;</span>,<br>		<span class="hljs-string">&#x27;name&#x27;</span>: <span class="hljs-string">&#x27;产品1&#x27;</span>,<br>		<span class="hljs-string">&#x27;xqs&#x27;</span>: [<span class="hljs-string">&#x27;111&#x27;</span>,<span class="hljs-string">&#x27;222&#x27;</span>,<span class="hljs-string">&#x27;333&#x27;</span>, ... ]  <span class="hljs-comment">// 存放 详情集合 中的每条数据 id</span><br>	&#125;<br>]<br><br><br><br>详情集合：<br>[<br>&#123;<span class="hljs-string">&#x27;id&#x27;</span>:<span class="hljs-string">&quot;111&quot;</span>,<span class="hljs-attr">name</span>:<span class="hljs-string">&#x27;零件1&#x27;</span>,<span class="hljs-attr">title</span>:<span class="hljs-string">&#x27;...&#x27;</span> ...&#125;,<br>&#123;<span class="hljs-string">&#x27;id&#x27;</span>:<span class="hljs-string">&quot;222&quot;</span>,<span class="hljs-attr">name</span>:<span class="hljs-string">&#x27;零件2&#x27;</span>,<span class="hljs-attr">title</span>:<span class="hljs-string">&#x27;...&#x27;</span> ...&#125;,<br>&#123;<span class="hljs-string">&#x27;id&#x27;</span>:<span class="hljs-string">&quot;333&quot;</span>,<span class="hljs-attr">name</span>:<span class="hljs-string">&#x27;零件3&#x27;</span>,<span class="hljs-attr">title</span>:<span class="hljs-string">&#x27;...&#x27;</span> ...&#125;,<br>...<br>]<br></code></pre></td></tr></table></figure>
+
+
+
+<p>如歌单列表，与歌曲详情的数据组合设计。</p>
+<h5 id="第三种：N的数量巨大-几百成千上万个"><a href="#第三种：N的数量巨大-几百成千上万个" class="headerlink" title="#第三种：N的数量巨大 几百成千上万个"></a><a href="#%E7%AC%AC%E4%B8%89%E7%A7%8D-n%E7%9A%84%E6%95%B0%E9%87%8F%E5%B7%A8%E5%A4%A7-%E5%87%A0%E7%99%BE%E6%88%90%E5%8D%83%E4%B8%8A%E4%B8%87%E4%B8%AA">#</a>第三种：N的数量巨大 几百成千上万个</h5><p><strong>每个 N 都存储 1 的 id</strong></p>
+<p>如新浪博客中的一条博客下面有几千条评论</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs js">一条新浪博客：<br>[&#123;<br>	<span class="hljs-string">&#x27;id&#x27;</span>:<span class="hljs-string">&#x27;11&#x27;</span>,<br>	<span class="hljs-string">&#x27;content&#x27;</span>:<span class="hljs-string">&#x27;博客内容&#x27;</span><br>	...<br>&#125;]<br><br><br>上千条评价：<br>[<br>&#123;<br>	<span class="hljs-string">&#x27;id&#x27;</span>:<span class="hljs-string">&#x27;111111&#x27;</span><br>	<span class="hljs-string">&#x27;blogId&#x27;</span>:<span class="hljs-string">&#x27;11&#x27;</span>, <span class="hljs-comment">// 这个id对应的是那一条博客的id</span><br>	<span class="hljs-string">&#x27;content&#x27;</span>: <span class="hljs-string">&#x27;评价内容1&#x27;</span><br>&#125;,<br>&#123;<br>	<span class="hljs-string">&#x27;id&#x27;</span>:<span class="hljs-string">&#x27;222222&#x27;</span><br>	<span class="hljs-string">&#x27;blogId&#x27;</span>:<span class="hljs-string">&#x27;11&#x27;</span>, <span class="hljs-comment">// 这个id对应的是那一条博客的id</span><br>	<span class="hljs-string">&#x27;content&#x27;</span>: <span class="hljs-string">&#x27;评价内容2&#x27;</span><br>&#125;,<br>&#123;<br>	<span class="hljs-string">&#x27;id&#x27;</span>:<span class="hljs-string">&#x27;33333&#x27;</span><br>	<span class="hljs-string">&#x27;blogId&#x27;</span>:<span class="hljs-string">&#x27;11&#x27;</span>, <span class="hljs-comment">// 这个id对应的是那一条博客的id</span><br>	<span class="hljs-string">&#x27;content&#x27;</span>: <span class="hljs-string">&#x27;评价内容3&#x27;</span><br>&#125;,<br>...<br>]<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="云调用"><a href="#云调用" class="headerlink" title="#云调用"></a><a href="#%E4%BA%91%E8%B0%83%E7%94%A8">#</a>云调用</h4><p>通过云函数调用服务端的开发接口</p>
+<p>这些接口如：模板消息推送、生成小程序码…</p>
+<h4 id="模板消息推送"><a href="#模板消息推送" class="headerlink" title="#模板消息推送"></a><a href="#%E6%A8%A1%E6%9D%BF%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81">#</a>模板消息推送</h4><p><strong>1、使用from表单才能触发消息推送，并设置report-submit=”true”</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">&quot;modal-content&quot;</span> <span class="hljs-attr">report-submit</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">bind:submit</span>=<span class="hljs-string">&quot;onSend&quot;</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;content&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;comment-content&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;写评论&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;&#123;&#123;content&#125;&#125;&quot;</span> <span class="hljs-attr">fixed</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;send&quot;</span> <span class="hljs-attr">form-type</span>=<span class="hljs-string">&quot;submit&quot;</span>&gt;</span>发送<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+
+
+<p><strong>2、需要到微信公众平台做相应的设置：</strong></p>
+<p>微信公众平台 &gt; 功能 &gt; 模板消息 &gt; 添加模板 &gt; 选择相应的模板&gt; 添加成功后会有一个模板ID</p>
+<p><strong>3、新建一个云函数，用于云调用。在该云函数下新建配置文件：config.json ，用于配置权限</strong></p>
+<p>config.json ：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs json">&#123;<br>  <span class="hljs-attr">&quot;permissions&quot;</span>: &#123;<br>    <span class="hljs-attr">&quot;openapi&quot;</span>: [<br>      <span class="hljs-string">&quot;templateMessage.send&quot;</span><br>    ]<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<p>云函数设置消息推送：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 云函数入口函数</span><br><span class="hljs-built_in">exports</span>.main = <span class="hljs-keyword">async</span> (event, context) =&gt; &#123;<br>  <span class="hljs-comment">// 获取openid</span><br>  <span class="hljs-keyword">const</span> &#123; OPENID &#125; = cloud.getWXContext()<br><br>  <span class="hljs-comment">// 模板推送消息</span><br>  <span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> cloud.openapi.templateMessage.send(&#123;<br>    <span class="hljs-attr">touser</span>: OPENID,<br>    <span class="hljs-attr">page</span>: <span class="hljs-string">`/pages/blog-comment/blog-comment?blogId=<span class="hljs-subst">$&#123;event.blogId&#125;</span>`</span>, <span class="hljs-comment">// 用户点击推送消息打开的页面</span><br>    <span class="hljs-attr">data</span>: &#123; <span class="hljs-comment">// 模板的内容，keyword为在公众平台设置模板时对应的字段</span><br>      <span class="hljs-attr">keyword1</span>: &#123; <span class="hljs-comment">// 评价内容</span><br>        <span class="hljs-attr">value</span>: event.context<br>      &#125;,<br>      <span class="hljs-attr">keyword2</span>: &#123; <span class="hljs-comment">// 评价时间</span><br>        <span class="hljs-attr">value</span>: event.time<br>      &#125;<br>    &#125;,<br>    <span class="hljs-attr">templateId</span>: <span class="hljs-string">&#x27;LNwKMcYwlz-0HabgBhmZi6CWZrlNSBiNJ2h0SMorcxQ&#x27;</span>, <span class="hljs-comment">// 模板id，到公众平台模板消息上获取</span><br>    <span class="hljs-attr">formId</span>: event.formId <span class="hljs-comment">// 触发消息推送的form表单的id</span><br>  &#125;)<br><br>  <span class="hljs-keyword">return</span> result<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<p><strong>4、在提交表单事件完成后调用消息推送云函数</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs js">wx.cloud.callFunction(&#123;<br>         <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;sendMessage&#x27;</span>,<br>         <span class="hljs-attr">data</span>: &#123;<br>           content,<br>           formId,<br>           <span class="hljs-attr">blogId</span>: <span class="hljs-built_in">this</span>.properties.blogId<br>         &#125;<br>       &#125;).then(<span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> &#123;<br>         <span class="hljs-built_in">console</span>.log(res)<br>       &#125;)<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="云函数多集合查询数据库"><a href="#云函数多集合查询数据库" class="headerlink" title="#云函数多集合查询数据库"></a><a href="#%E4%BA%91%E5%87%BD%E6%95%B0%E5%A4%9A%E9%9B%86%E5%90%88%E6%9F%A5%E8%AF%A2%E6%95%B0%E6%8D%AE%E5%BA%93">#</a>云函数多集合查询数据库</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 博客详情(博客内容、评论)</span><br>  app.router(<span class="hljs-string">&#x27;blogDetail&#x27;</span>, <span class="hljs-keyword">async</span>(ctx, next) =&gt; &#123;<br>    <span class="hljs-keyword">let</span> blogId = event.blogId<br><br>    <span class="hljs-comment">// 博客内容</span><br>    <span class="hljs-keyword">let</span> detail = <span class="hljs-keyword">await</span> blogCollection.where(&#123;<br>      <span class="hljs-attr">_id</span>: blogId<br>    &#125;).get().then(<span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> &#123;<br>      <span class="hljs-keyword">return</span> res.data<br>    &#125;)<br><br>    <span class="hljs-comment">// 评论查询</span><br>    <span class="hljs-keyword">const</span> countResult = <span class="hljs-keyword">await</span> blogCollection.count()<br>    <span class="hljs-keyword">const</span> total = countResult.total<br>    <span class="hljs-keyword">let</span> commentList = &#123;<br>      <span class="hljs-attr">data</span>: []<br>    &#125;<br>    <span class="hljs-keyword">if</span> (total &gt; <span class="hljs-number">0</span>) &#123;<br>      <span class="hljs-comment">// 突破100条限制</span><br>      <span class="hljs-keyword">const</span> batchTimes = <span class="hljs-built_in">Math</span>.ceil(total / MAX_LIMIT)<br>      <span class="hljs-keyword">const</span> tasks = []<br>      <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; batchTimes; i++) &#123;<br>        <span class="hljs-keyword">let</span> promise = db.collection(<span class="hljs-string">&#x27;blog-comment&#x27;</span>).skip(i * MAX_LIMIT)<br>          .limit(MAX_LIMIT).where(&#123;<br>            blogId<br>          &#125;).orderBy(<span class="hljs-string">&#x27;createTime&#x27;</span>, <span class="hljs-string">&#x27;desc&#x27;</span>).get()<br>        tasks.push(promise)<br>      &#125;<br>      <span class="hljs-keyword">if</span> (tasks.length &gt; <span class="hljs-number">0</span>) &#123;<br>        commentList = (<span class="hljs-keyword">await</span> <span class="hljs-built_in">Promise</span>.all(tasks)).reduce(<span class="hljs-function">(<span class="hljs-params">acc, cur</span>) =&gt;</span> &#123;<br>          <span class="hljs-keyword">return</span> &#123;<br>            <span class="hljs-attr">data</span>: acc.data.concat(cur.data)<br>          &#125;<br>        &#125;)<br>      &#125;<br><br>    &#125;<br>    ctx.body = &#123;<br>      detail,<br>      commentList<br>    &#125;<br>  &#125;)<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="分享功能"><a href="#分享功能" class="headerlink" title="#分享功能"></a><a href="#%E5%88%86%E4%BA%AB%E5%8A%9F%E8%83%BD">#</a>分享功能</h4><p>分享功能需要button标签，设置open-type=”share”</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">open-type</span>=<span class="hljs-string">&quot;share&quot;</span> <span class="hljs-attr">data-blogid</span>=<span class="hljs-string">&quot;&#123;&#123;blogId&#125;&#125;&quot;</span> <span class="hljs-attr">data-blog</span>=<span class="hljs-string">&quot;&#123;&#123;blog&#125;&#125;&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;share-btn&quot;</span> <span class="hljs-attr">hover-class</span>=<span class="hljs-string">&quot;share-hover&quot;</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;iconfont icon-fenxiang icon&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>分享<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+
+
+<p>在js中有onShareAppMessage方法，点击button会自动执行此方法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs js">onShareAppMessage: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">event</span>) </span>&#123;<br>    <span class="hljs-built_in">console</span>.log(event)<br><br>    <span class="hljs-comment">// 对分享卡片的设置</span><br>    <span class="hljs-keyword">let</span> blogObj = event.target.dataset.blog<br>    <span class="hljs-keyword">return</span> &#123;<br>      <span class="hljs-attr">title</span>: blogObj.content,<br>      <span class="hljs-attr">path</span>: <span class="hljs-string">`/pages/blog-comment/blog-comment?blogId=<span class="hljs-subst">$&#123;blogObj._id&#125;</span>`</span>,<br>      <span class="hljs-comment">// imageUrl: &#x27;&#x27; // 自定义图片，不支持云存储的图片</span><br>    &#125;<br>  &#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="不同场景获取用户信息的方式"><a href="#不同场景获取用户信息的方式" class="headerlink" title="#不同场景获取用户信息的方式"></a><a href="#%E4%B8%8D%E5%90%8C%E5%9C%BA%E6%99%AF%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF%E7%9A%84%E6%96%B9%E5%BC%8F">#</a>不同场景获取用户信息的方式</h4><h5 id="场景一：只想在界面上显示自己的昵称和头像"><a href="#场景一：只想在界面上显示自己的昵称和头像" class="headerlink" title="#场景一：只想在界面上显示自己的昵称和头像"></a><a href="#%E5%9C%BA%E6%99%AF%E4%B8%80-%E5%8F%AA%E6%83%B3%E5%9C%A8%E7%95%8C%E9%9D%A2%E4%B8%8A%E6%98%BE%E7%A4%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%98%B5%E7%A7%B0%E5%92%8C%E5%A4%B4%E5%83%8F">#</a>场景一：只想在界面上显示自己的昵称和头像</h5><p>以组件的方式：根据type类型获取不同用户数据</p>
+<p><strong>该方式不需要授权，只能用于在wxml显示自己的信息</strong></p>
+<p><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/component/open-data.html">open-data(opens new window)</a></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">open-data</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;userAvatarUrl&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">open-data</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">open-data</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;userNickName&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">open-data</span>&gt;</span><br>...<br></code></pre></td></tr></table></figure>
+
+
+
+<h5 id="场景二：在JS中获取用户信息"><a href="#场景二：在JS中获取用户信息" class="headerlink" title="#场景二：在JS中获取用户信息"></a><a href="#%E5%9C%BA%E6%99%AF%E4%BA%8C-%E5%9C%A8js%E4%B8%AD%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF">#</a>场景二：在JS中获取用户信息</h5><p>该方式要在用户授权以后才能获取用户信息</p>
+<p><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api/open-api/user-info/wx.getUserInfo.html">wx.getUserInfo(opens new window)</a></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs js">wx.getUserInfo(&#123;<br>      <span class="hljs-attr">success</span>: <span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> &#123;<br>        <span class="hljs-built_in">console</span>.log(res)<br>      &#125;<br>    &#125;)<br></code></pre></td></tr></table></figure>
+
+
+
+<p>在未授权的情况下需要用户先授权：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 判断用户是否授权</span><br>      wx.getSetting(&#123;<br>        <span class="hljs-attr">success</span>: <span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> &#123; <span class="hljs-comment">// 这里使用箭头函数可改变内部this指向为外部的this</span><br>          <span class="hljs-keyword">if</span> (res.authSetting[<span class="hljs-string">&#x27;scope.userInfo&#x27;</span>]) &#123; <span class="hljs-comment">// 已授权</span><br>            wx.getUserInfo(&#123; <span class="hljs-comment">// 获取用户信息</span><br>              <span class="hljs-attr">success</span>: <span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> &#123; <span class="hljs-comment">// 这里使用箭头函数可改变内部this指向为外部的this</span><br><br>                app.setGlobalData(<span class="hljs-string">&#x27;userInfo&#x27;</span>, res.userInfo) <span class="hljs-comment">// 设置app全局属性</span><br><br>                <span class="hljs-built_in">this</span>.onLoginSuccess(&#123;<br>                  <span class="hljs-attr">detail</span>: res.userInfo<br>                &#125;)<br>              &#125;<br>            &#125;)<br>          &#125; <span class="hljs-keyword">else</span> &#123; <span class="hljs-comment">// 未授权</span><br>            <span class="hljs-built_in">this</span>.setData(&#123; <span class="hljs-comment">// 打开弹出层，显示获取用户信息按钮</span><br>              <span class="hljs-attr">modalShow</span>: <span class="hljs-literal">true</span><br>            &#125;)<br>          &#125;<br>        &#125;<br>      &#125;)<br><br><br>  授权按钮<br> &lt;button <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;login&quot;</span> open-type=<span class="hljs-string">&quot;getUserInfo&quot;</span> bindgetuserinfo=<span class="hljs-string">&quot;onGetUserInfo&quot;</span>&gt;获取微信授权信息&lt;/button&gt;<br><br><br>    <span class="hljs-function"><span class="hljs-title">onGetUserInfo</span>(<span class="hljs-params">event</span>)</span> &#123; <span class="hljs-comment">// 获取用户信息</span><br>      <span class="hljs-keyword">const</span> userInfo = event.detail.userInfo<br>      <span class="hljs-keyword">if</span> (userInfo) &#123; <span class="hljs-comment">// 用户允许授权</span><br>        <span class="hljs-built_in">this</span>.setData(&#123;<br>          <span class="hljs-attr">modalShow</span>: <span class="hljs-literal">false</span><br>        &#125;)<br>        <span class="hljs-built_in">this</span>.triggerEvent(<span class="hljs-string">&#x27;loginSuccess&#x27;</span>, userInfo) <span class="hljs-comment">// 给父组件传用户数据</span><br>      &#125; <span class="hljs-keyword">else</span> &#123; <span class="hljs-comment">// 用户拒绝授权</span><br>        <span class="hljs-built_in">this</span>.triggerEvent(<span class="hljs-string">&#x27;loginFail&#x27;</span>)<br>      &#125;<br>    &#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>注意：上面这种方式没有获取到openId</p>
+</blockquote>
+<h5 id="场景三：获取openId"><a href="#场景三：获取openId" class="headerlink" title="#场景三：获取openId"></a><a href="#%E5%9C%BA%E6%99%AF%E4%B8%89-%E8%8E%B7%E5%8F%96openid">#</a>场景三：获取openId</h5><p><strong>获取openId不需要用户授权</strong></p>
+<p>1、传统开发方式获取openId，后台服务器由自己开发，没使用云开发</p>
+<p>小程序端 微信服务器 后端服务器</p>
+<p>步骤：</p>
+<p>小程序端 调用 wx.login 向微信服务器 获取code</p>
+<p>小程序端 调用 wx.request 将 code 传递给 后端服务器</p>
+<p>后端服务器 使用code 向微信服务器 换取openid和session_key</p>
+<p>后端服务器 将openid 发送给 小程序端</p>
+<p>2、云开发方式获取openId</p>
+<p>云函数login中</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 获取 WX Context (微信调用上下文)，包括 OPENID、APPID、及 UNIONID（需满足 UNIONID 获取条件）</span><br>  <span class="hljs-keyword">const</span> wxContext = cloud.getWXContext()<br><br>  <span class="hljs-keyword">return</span> &#123;<br>    event,<br>    <span class="hljs-attr">openid</span>: wxContext.OPENID,<br>    <span class="hljs-attr">appid</span>: wxContext.APPID,<br>    <span class="hljs-attr">unionid</span>: wxContext.UNIONID,<br>  &#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs js">普通按钮<br>&lt;button bindtap=<span class="hljs-string">&quot;getOpenid&quot;</span>&gt;获取openid&lt;/button&gt;<br><br><span class="hljs-function"><span class="hljs-title">getOpenid</span>(<span class="hljs-params"></span>)</span> &#123;<br>	wx.cloud.callFunction(&#123;<br>		<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;login&#x27;</span><br>	&#125;).then(<span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> &#123;<br>		<span class="hljs-built_in">console</span>.log(res)<br>	&#125;)<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>openid 在小程序和公众号下是不一样的</p>
+<p>unionid 在小程序和公众号下都是一样的</p>
+</blockquote>
+<h2 id="《我的》页面"><a href="#《我的》页面" class="headerlink" title="#《我的》页面"></a><a href="#%E3%80%8A%E6%88%91%E7%9A%84%E3%80%8B%E9%A1%B5%E9%9D%A2">#</a>《我的》页面</h2><p>json文件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-string">&quot;navigationBarTitleText&quot;</span>: <span class="hljs-string">&quot;我的&quot;</span>,<br>  <span class="hljs-string">&quot;disableScroll&quot;</span>: <span class="hljs-literal">true</span>  <span class="hljs-comment">// 使页面无法滚动</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="导航页面链接跳转"><a href="#导航页面链接跳转" class="headerlink" title="#导航页面链接跳转"></a><a href="#%E5%AF%BC%E8%88%AA%E9%A1%B5%E9%9D%A2%E9%93%BE%E6%8E%A5%E8%B7%B3%E8%BD%AC">#</a>导航页面链接跳转</h4><p><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/component/navigator.html">navigator(opens new window)</a></p>
+<h4 id="背景图片"><a href="#背景图片" class="headerlink" title="#背景图片"></a><a href="#%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87">#</a>背景图片</h4><p>wxss背景图片不支持本地相对路径的图片，只支持网络图片和base64图片</p>
+<p>建议使用base64图片，图片文件最好不要太大。</p>
+<h4 id="每个页面都有的page标签"><a href="#每个页面都有的page标签" class="headerlink" title="#每个页面都有的page标签"></a><a href="#%E6%AF%8F%E4%B8%AA%E9%A1%B5%E9%9D%A2%E9%83%BD%E6%9C%89%E7%9A%84page%E6%A0%87%E7%AD%BE">#</a>每个页面都有的page标签</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs js">page &#123;<br>  background-color: #f1f1f1;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="播放历史与本地存储"><a href="#播放历史与本地存储" class="headerlink" title="#播放历史与本地存储"></a><a href="#%E6%92%AD%E6%94%BE%E5%8E%86%E5%8F%B2%E4%B8%8E%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8">#</a>播放历史与本地存储</h4><p>方案一：播放历史存储在数据库当中，这样在不同设备访问都可查看播放历史。读取速度相对较慢</p>
+<p>方案二：播放历史存储在本地，仅当前设备可查看播放历史。读取速度较快</p>
+<p>本项目采用本地存储：</p>
+<p>使用openid作为本地存储的key，播放历史存入value</p>
+<p>在app.js中获取openid，即打开小程序就获取openid。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// app.js</span><br><span class="hljs-attr">onLaunch</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;<br>	<span class="hljs-built_in">this</span>.getOpenid() <span class="hljs-comment">// 获取openid并存储</span><br>&#125;,<br><span class="hljs-function"><span class="hljs-title">getOpenid</span>(<span class="hljs-params"></span>)</span> &#123; <span class="hljs-comment">// 获取openid并存储</span><br>    wx.cloud.callFunction(&#123;<br>      <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;login&#x27;</span><br>    &#125;).then(<span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> &#123;<br>      <span class="hljs-keyword">const</span> openid = res.result.openid<br>      <span class="hljs-built_in">this</span>.globalData.openid = openid <span class="hljs-comment">// 保存到全局变量</span><br>      <span class="hljs-keyword">if</span> (wx.getStorageSync(openid) == <span class="hljs-string">&#x27;&#x27;</span>) &#123; <span class="hljs-comment">// 该用户从未打开过小程序，未存储过openid在本地</span><br>        wx.setStorageSync(openid, []) <span class="hljs-comment">// 存储openid到本地</span><br>      &#125;<br>    &#125;)<br>  &#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<p>歌曲播放时</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 保存播放历史到本地存储</span><br>  <span class="hljs-function"><span class="hljs-title">savePlayHistory</span>(<span class="hljs-params"></span>)</span> &#123;<br>    <span class="hljs-keyword">const</span> currentSong = musiclist[nowPlayingIndex] <span class="hljs-comment">// 当前播放歌曲</span><br>    <span class="hljs-keyword">const</span> openid = app.globalData.openid <span class="hljs-comment">// 从全局属性获取openid</span><br>    <span class="hljs-keyword">const</span> playHistory = wx.getStorageSync(openid) <span class="hljs-comment">// 从本地存储获取播放历史数组</span><br><br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>, len = playHistory.length; i &lt; len; i++) &#123;<br>      <span class="hljs-keyword">if</span> (playHistory[i].id === currentSong.id) &#123; <span class="hljs-comment">// 当前播放歌曲已存在播放历史中</span><br>        playHistory.splice(i, <span class="hljs-number">1</span>) <span class="hljs-comment">// 删除原纪录</span><br>        <span class="hljs-keyword">break</span><br>      &#125;<br>    &#125;<br><br>    playHistory.unshift(currentSong) <span class="hljs-comment">// 在数组开头插入</span><br>    wx.setStorage(&#123; <span class="hljs-comment">// 存入本地</span><br>      <span class="hljs-attr">key</span>: openid,<br>      <span class="hljs-attr">data</span>: playHistory<br>    &#125;)<br><br>  &#125;,<br></code></pre></td></tr></table></figure>
+
+
+
+<p>播放历史页面获取</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs js">onLoad: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">options</span>) </span>&#123;<br><br>    <span class="hljs-keyword">const</span> openid = app.globalData.openid <span class="hljs-comment">//从全局属性获取openid</span><br>    <span class="hljs-keyword">const</span> playHistory = wx.getStorageSync(openid) <span class="hljs-comment">// 读取本地播放历史数据</span><br><br>    <span class="hljs-keyword">if</span> (playHistory.length !== <span class="hljs-number">0</span>) &#123; <span class="hljs-comment">// 有播放历史</span><br>      <span class="hljs-built_in">this</span>.setData(&#123;<br>        playHistory<br>      &#125;)<br>      wx.setStorage(&#123; <span class="hljs-comment">// storage里把musiclist（播放列表）的内容换成播放历史的列表</span><br>        <span class="hljs-attr">key</span>: <span class="hljs-string">&#x27;musiclist&#x27;</span>,<br>        <span class="hljs-attr">data</span>: playHistory,<br>      &#125;)<br>    &#125;<br><br>  &#125;,<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="我的发现"><a href="#我的发现" class="headerlink" title="#我的发现"></a><a href="#%E6%88%91%E7%9A%84%E5%8F%91%E7%8E%B0">#</a>我的发现</h4><p>代码分别演示了从云函数和小程序端获取数据，从小程序端获取数据享有<strong>权限管理</strong>的能力，不需要传openid。</p>
+<h4 id="小程序码"><a href="#小程序码" class="headerlink" title="#小程序码"></a><a href="#%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%A0%81">#</a>小程序码</h4><p><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/qr-code.html">获取小程序码(opens new window)</a></p>
+<p>本项目演示使用<a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api-backend/open-api/qr-code/wxacode.getUnlimited.html">接口 B：适用于需要的码数量极多的业务场景 (opens new window)</a><code>云调用</code> 的方式。</p>
+<p>步骤：</p>
+<ul>
+<li>创建云函数 gteQRCode</li>
+<li>gteQRCode云函数下创建config.json配置权限，代码如下：</li>
+</ul>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs json">&#123;<br>  <span class="hljs-attr">&quot;permissions&quot;</span>:&#123;<br>    <span class="hljs-attr">&quot;openapi&quot;</span>:[<br>      <span class="hljs-string">&quot;wxacode.getUnlimited&quot;</span><br>    ]<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 云函数入口函数</span><br><span class="hljs-built_in">exports</span>.main = <span class="hljs-keyword">async</span> (event, context) =&gt; &#123;<br>  <span class="hljs-keyword">const</span> wxContext = cloud.getWXContext()<br><br>  <span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> cloud.openapi.wxacode.getUnlimited(&#123;<br>    <span class="hljs-attr">scene</span>: wxContext.OPENID, <span class="hljs-comment">// 链接参数 不一定传openid，可传其他任意数据，然后通过此数据，在别人扫码进入时就可用于判断</span><br>    <span class="hljs-comment">// page: &quot;pages/blog/blog&quot; // 默认进入主页</span><br>    <span class="hljs-comment">// lineColor: &#123; // 线条颜色</span><br>    <span class="hljs-comment">//   &#x27;r&#x27;: 211,</span><br>    <span class="hljs-comment">//   &#x27;g&#x27;: 60,</span><br>    <span class="hljs-comment">//   &#x27;b&#x27;: 57</span><br>    <span class="hljs-comment">// &#125;,</span><br>    <span class="hljs-comment">// isHyaline: true // 是否透明</span><br>  &#125;)<br><br>  <span class="hljs-comment">// result为二进制数据, 先上传到云存储</span><br><br>  <span class="hljs-comment">// 上传云存储</span><br>  <span class="hljs-keyword">const</span> upload = <span class="hljs-keyword">await</span> cloud.uploadFile(&#123;<br>    <span class="hljs-attr">cloudPath</span>: <span class="hljs-string">&#x27;qrcode/qrcode&#x27;</span> + <span class="hljs-built_in">Date</span>.now() + <span class="hljs-built_in">Math</span>.random() + <span class="hljs-string">&#x27;.png&#x27;</span>,<br>    <span class="hljs-attr">fileContent</span>: result.buffer<br>  &#125;)<br><br>  <span class="hljs-keyword">return</span> upload.fileID<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h5 id="判断是从扫码小程序码进入，以及参数获取"><a href="#判断是从扫码小程序码进入，以及参数获取" class="headerlink" title="#判断是从扫码小程序码进入，以及参数获取"></a><a href="#%E5%88%A4%E6%96%AD%E6%98%AF%E4%BB%8E%E6%89%AB%E7%A0%81%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%A0%81%E8%BF%9B%E5%85%A5-%E4%BB%A5%E5%8F%8A%E5%8F%82%E6%95%B0%E8%8E%B7%E5%8F%96">#</a>判断是从扫码小程序码进入，以及参数获取</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 在从小程序码进入的页面js，onLoad方法中，</span><br><br><span class="hljs-attr">onLoad</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">options</span>) </span>&#123;<br>	<span class="hljs-built_in">console</span>.log(options.scene) <span class="hljs-comment">// 获取到小程序码进入的参数</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="版本更新检测"><a href="#版本更新检测" class="headerlink" title="#版本更新检测"></a><a href="#%E7%89%88%E6%9C%AC%E6%9B%B4%E6%96%B0%E6%A3%80%E6%B5%8B">#</a>版本更新检测</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// app.js</span><br><span class="hljs-attr">onLaunch</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">options</span>) </span>&#123;<br>    <span class="hljs-built_in">this</span>.checkUpate()<br>&#125;,<br><span class="hljs-function"><span class="hljs-title">checkUpate</span>(<span class="hljs-params"></span>)</span>&#123;<br>    <span class="hljs-keyword">const</span> updateManager = wx.getUpdateManager()<br>    <span class="hljs-comment">// 检测版本更新</span><br>    updateManager.onCheckForUpdate(<span class="hljs-function">(<span class="hljs-params">res</span>)=&gt;</span>&#123;<br>      <span class="hljs-keyword">if</span> (res.hasUpdate)&#123;<br>        updateManager.onUpdateReady(<span class="hljs-function">()=&gt;</span>&#123;<br>          wx.showModal(&#123;<br>            <span class="hljs-attr">title</span>: <span class="hljs-string">&#x27;更新提示&#x27;</span>,<br>            <span class="hljs-attr">content</span>: <span class="hljs-string">&#x27;新版本已经准备好，是否重启应用&#x27;</span>,<br>            <span class="hljs-function"><span class="hljs-title">success</span>(<span class="hljs-params">res</span>)</span>&#123;<br>              <span class="hljs-keyword">if</span>(res.confirm)&#123;<br>                updateManager.applyUpdate()<br>              &#125;<br>            &#125;<br>          &#125;)<br>        &#125;)<br>      &#125;<br>    &#125;)<br>  &#125;,<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="性能优化"><a href="#性能优化" class="headerlink" title="#性能优化"></a><a href="#%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96">#</a>性能优化</h3><p><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/framework/performance/tips.html">官网文档优化建议(opens new window)</a></p>
+<p>使用开发者工具的调试器，Audits进行评分，然后根据提示针对项目进行优化。</p>
+<h3 id="场景值scene的作用与应用场景"><a href="#场景值scene的作用与应用场景" class="headerlink" title="#场景值scene的作用与应用场景"></a><a href="#%E5%9C%BA%E6%99%AF%E5%80%BCscene%E7%9A%84%E4%BD%9C%E7%94%A8%E4%B8%8E%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF">#</a>场景值scene的作用与应用场景</h3><p><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/framework/app-service/scene.html">场景值(opens new window)</a></p>
+<p>场景值用来描述用户进入小程序的路径。完整场景值的含义请查看<a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/reference/scene-list.html">场景值列表 (opens new window)</a>。</p>
+<p>可根据不同场景进入实现不同业务处理，比如一个点餐小程序，店家内贴了小程序码，用户通过扫码进入，可立即进入点餐页面，等等</p>
+<p>在app.js中的onLaunch(options) 、onShow(options)，options包含scene场景值</p>
+<p><strong>开发者工具中，切后台，可模拟进入场景。</strong></p>
+<h3 id="小程序的”SEO”—页面收录sitemap"><a href="#小程序的”SEO”—页面收录sitemap" class="headerlink" title="#小程序的”SEO”—页面收录sitemap"></a><a href="#%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84-seo-%E9%A1%B5%E9%9D%A2%E6%94%B6%E5%BD%95sitemap">#</a>小程序的”SEO”—页面收录sitemap</h3><p>在app.js的同级目录下有sitemap.json文件，用于配置收录规则</p>
+<p><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/framework/sitemap.html">stiemap配置(opens new window)</a></p>
+<p>作用：</p>
+<p>使小程序搜索可根据小程序的内容进行搜索到</p>
+<p>使用方法：</p>
+<p>1、在微信公众平台，小程序信息 &gt; 页面收录设置 &gt; 打开 (默认是已开启)</p>
+<p>2、打开sitemap.json文件，配置收录规则</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs json">&#123;<br>  <span class="hljs-attr">&quot;desc&quot;</span>: <span class="hljs-string">&quot;关于本文件的更多信息，请参考文档 https://developers.weixin.qq.com/miniprogram/dev/framework/sitemap.html&quot;</span>,<br>  <span class="hljs-attr">&quot;rules&quot;</span>: [&#123; <span class="hljs-comment">// 收录规则</span><br>  <span class="hljs-attr">&quot;action&quot;</span>: <span class="hljs-string">&quot;allow&quot;</span>,<span class="hljs-comment">// 是否被收录，allow允许被收录，disallow不允许</span><br>  <span class="hljs-attr">&quot;page&quot;</span>: <span class="hljs-string">&quot;*&quot;</span> <span class="hljs-comment">// *星号表示所有页面都被收录</span><br>  &#125;]<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs json">&#123;<br>  <span class="hljs-attr">&quot;desc&quot;</span>: <span class="hljs-string">&quot;关于本文件的更多信息，请参考文档 https://developers.weixin.qq.com/miniprogram/dev/framework/sitemap.html&quot;</span>,<br>  <span class="hljs-attr">&quot;rules&quot;</span>: [&#123; <span class="hljs-comment">// 收录规则，可添加多条</span><br>  <span class="hljs-attr">&quot;action&quot;</span>: <span class="hljs-string">&quot;allow&quot;</span>, <span class="hljs-comment">// 是否被收录</span><br>  <span class="hljs-attr">&quot;page&quot;</span>:<span class="hljs-string">&quot;pages/player/player&quot;</span>,  <span class="hljs-comment">// 页面</span><br>  <span class="hljs-attr">&quot;params&quot;</span>: [<span class="hljs-string">&quot;musicId&quot;</span>,<span class="hljs-string">&quot;index&quot;</span>], <span class="hljs-comment">// 链接的动态参数</span><br>   <span class="hljs-attr">&quot;matching&quot;</span>:&#x27;exact&#x27; <span class="hljs-comment">// 表示params的参数是否要准确的匹配</span><br>  &#125;，&#123;<br>  <span class="hljs-attr">&quot;action&quot;</span>: <span class="hljs-string">&quot;disallow&quot;</span>, <span class="hljs-comment">// 是否被收录</span><br>  <span class="hljs-attr">&quot;page&quot;</span>:<span class="hljs-string">&quot;*&quot;</span>,  /<br>  &#125;]<br>&#125;<br><br><span class="hljs-comment">// 上面配置规则表示除了player页面被收录外，其他页面不被收录</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="小程序上线审核流程"><a href="#小程序上线审核流程" class="headerlink" title="#小程序上线审核流程"></a><a href="#%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%8A%E7%BA%BF%E5%AE%A1%E6%A0%B8%E6%B5%81%E7%A8%8B">#</a>小程序上线审核流程</h3><p>微信公众平台，版本管理&gt;把小程序上传为体验版》提交审核》上线</p>
+<h2 id="后台管理系统"><a href="#后台管理系统" class="headerlink" title="#后台管理系统"></a><a href="#%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F">#</a>后台管理系统</h2><h4 id="架构示意图"><a href="#架构示意图" class="headerlink" title="#架构示意图"></a><a href="#%E6%9E%B6%E6%9E%84%E7%A4%BA%E6%84%8F%E5%9B%BE">#</a>架构示意图</h4><p>​    前端 后台 小程序云开发</p>
+<p>vue-admin-template &lt;—通过ajax–&gt; 基于Koa2；HTTP API 或 tcb-admin-node —-&gt;云函数、云数据库、云存储</p>
+<h4 id="vue-admin-template构建管理系统前端"><a href="#vue-admin-template构建管理系统前端" class="headerlink" title="#vue-admin-template构建管理系统前端"></a><a href="#vue-admin-template%E6%9E%84%E5%BB%BA%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E5%89%8D%E7%AB%AF">#</a>vue-admin-template构建管理系统前端</h4><p><a target="_blank" rel="noopener" href="https://github.com/PanJiaChen/vue-element-admin">vue-element-admin (opens new window)</a>基于element的后台管理系统模板</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/PanJiaChen/vue-admin-template">vue-admin-template (opens new window)</a>是 <a target="_blank" rel="noopener" href="https://github.com/PanJiaChen/vue-element-admin">vue-element-admin (opens new window)</a>的简化版</p>
+<p>使用方法查看官方文档。</p>
+<h4 id="Koa2构建管理系统后端"><a href="#Koa2构建管理系统后端" class="headerlink" title="#Koa2构建管理系统后端"></a><a href="#koa2%E6%9E%84%E5%BB%BA%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E5%90%8E%E7%AB%AF">#</a>Koa2构建管理系统后端</h4><p>官网： <a target="_blank" rel="noopener" href="https://koa.bootcss.com/">https://koa.bootcss.com/(opens new window)</a></p>
+<p>新建空文件夹wx-music-admin-backend，打开终端：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment"># 生成package.json文件，-y 表示默认的配置</span><br>npm init -y<br><br><span class="hljs-comment"># 安装koa</span><br>npm install koa<br><br><span class="hljs-comment"># 新建app.js文件 (win10系统命令)，作为项目入口文件</span><br><span class="hljs-built_in">type</span> nul &gt; app.js<br></code></pre></td></tr></table></figure>
+
+
+
+<p>app.js:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> Koa = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;koa&#x27;</span>)<br><span class="hljs-keyword">const</span> chalk = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;chalk&#x27;</span>) <span class="hljs-comment">// 使console.log打印文字有颜色的插件，需: npm i chalk</span><br><span class="hljs-keyword">const</span> app = <span class="hljs-keyword">new</span> Koa()<br><br>app.use(<span class="hljs-keyword">async</span> (ctx) =&gt; &#123;<br>  ctx.body = <span class="hljs-string">&#x27;Hello Wolrd&#x27;</span><br>&#125;)<br><span class="hljs-keyword">const</span> port = <span class="hljs-number">3000</span><br>app.listen(port, <span class="hljs-function">() =&gt;</span> &#123; <span class="hljs-comment">// 端口号，开启服务后的回调函数</span><br>  <span class="hljs-built_in">console</span>.log(chalk.green(<span class="hljs-string">`&gt; 服务已开启，访问：http://localhost:<span class="hljs-subst">$&#123;port&#125;</span>`</span>))<br>&#125;)<br></code></pre></td></tr></table></figure>
+
+
+
+<p>终端：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment"># node启动项目</span><br>node app.js<br><br><span class="hljs-comment"># 访问：http://localhost:3000</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="接口调用凭证-access-token-的缓存与更新"><a href="#接口调用凭证-access-token-的缓存与更新" class="headerlink" title="#接口调用凭证 access_token 的缓存与更新"></a><a href="#%E6%8E%A5%E5%8F%A3%E8%B0%83%E7%94%A8%E5%87%AD%E8%AF%81-access-token-%E7%9A%84%E7%BC%93%E5%AD%98%E4%B8%8E%E6%9B%B4%E6%96%B0">#</a>接口调用凭证 access_token 的缓存与更新</h4><p>access_token，微信的接口调用凭证，详情：<a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api-backend/open-api/access-token/auth.getAccessToken.html">https://developers.weixin.qq.com/miniprogram/dev/api-backend/open-api/access-token/auth.getAccessToken.html(opens new window)</a></p>
+<p>回到项目wx-music-admin-backend，打开终端：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment"># HTTP 请求 插件</span><br>npm i request<br>npm i request-promise<br></code></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * 获取微信接口调用凭证</span><br><span class="hljs-comment"> * 详情：https://developers.weixin.qq.com/miniprogram/dev/api-backend/open-api/access-token/auth.getAccessToken.html</span><br><span class="hljs-comment"> */</span><br><br><br><span class="hljs-keyword">const</span> rp = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;request-promise&#x27;</span>) <span class="hljs-comment">// node发送http请求的插件</span><br><span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;fs&#x27;</span>) <span class="hljs-comment">// node文件模块</span><br><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;path&#x27;</span>) <span class="hljs-comment">// node 路径模块</span><br><br><span class="hljs-comment">//fileName = __dirname 当前文件所在目录的绝对路径, 加上 &#x27;./access_token.json&#x27;</span><br><span class="hljs-keyword">const</span> fileName = path.resolve(__dirname, <span class="hljs-string">&#x27;./access_token.json&#x27;</span>)<br><br><span class="hljs-comment">// 这两个参数的获取：微信公众平台&gt;开发&gt;开发设置</span><br><span class="hljs-keyword">const</span> APPID = <span class="hljs-string">&#x27;wxc4e0b2d98063b103&#x27;</span><br><span class="hljs-keyword">const</span> APPSECRET = <span class="hljs-string">&#x27;xxx&#x27;</span> <span class="hljs-comment">//小程序密钥，注意保密!</span><br><br><span class="hljs-comment">// 微信 access_token 请求地址</span><br><span class="hljs-keyword">const</span> URL = <span class="hljs-string">`https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&amp;appid=<span class="hljs-subst">$&#123;APPID&#125;</span>&amp;secret=<span class="hljs-subst">$&#123;APPSECRET&#125;</span>`</span><br><br><span class="hljs-comment">// 发送请求获取AccessToken</span><br><span class="hljs-keyword">const</span> updateAccessToken = <span class="hljs-keyword">async</span> () =&gt; &#123;<br>  <span class="hljs-keyword">const</span> resStr = <span class="hljs-keyword">await</span> rp(URL)<br>  <span class="hljs-keyword">const</span> res = <span class="hljs-built_in">JSON</span>.parse(resStr)<br><br>  <span class="hljs-keyword">if</span> (res.access_token) &#123;<br>    <span class="hljs-comment">// node写文件,参数：1 文件路径，2 文件内容, 首次写文件为新建，往后为覆盖</span><br>    fs.writeFileSync(fileName, <span class="hljs-built_in">JSON</span>.stringify(&#123;<br>      <span class="hljs-attr">access_token</span>: res.access_token,<br>      <span class="hljs-attr">createTime</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()<br>    &#125;))<br>  &#125; <span class="hljs-keyword">else</span> &#123; <span class="hljs-comment">// 如获取不到，再次获取</span><br>    <span class="hljs-keyword">await</span> updateAccessToken()<br>  &#125;<br>&#125;<br><br><span class="hljs-comment">// 读取access_token</span><br><span class="hljs-keyword">const</span> getAccessToken = <span class="hljs-keyword">async</span> () =&gt; &#123;<br>  <span class="hljs-keyword">try</span> &#123;<br>     <span class="hljs-comment">// node读取文件,参数：1 读取的文件，2 字符集</span><br>    <span class="hljs-keyword">const</span> readRes = fs.readFileSync(fileName, <span class="hljs-string">&#x27;utf8&#x27;</span>)<br>    <span class="hljs-keyword">const</span> readObj = <span class="hljs-built_in">JSON</span>.parse(readRes)<br><br>    <span class="hljs-comment">// 如果服务器宕机导致setInterval无法定时更新，这里需要再次判断access_token的有效性</span><br>    <span class="hljs-keyword">const</span> createTime = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(readObj.createTime).getTime()<br>    <span class="hljs-keyword">const</span> nowTime = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>().getTime()<br>    <span class="hljs-keyword">if</span>((nowTime - createTime) / <span class="hljs-number">1000</span> / <span class="hljs-number">60</span> / <span class="hljs-number">60</span> &gt;= <span class="hljs-number">2</span>) &#123;<br>      <span class="hljs-keyword">await</span> updateAccessToken()<br>      <span class="hljs-keyword">await</span> getAccessToken()<br>      <span class="hljs-keyword">return</span><br>    &#125;<br>    <span class="hljs-keyword">return</span> readObj.access_token<br><br>  &#125; <span class="hljs-keyword">catch</span> (error) &#123; <span class="hljs-comment">//捕获异常，在未创建文件时，先创建文件</span><br>    <span class="hljs-keyword">await</span> updateAccessToken()<br>    <span class="hljs-keyword">await</span> getAccessToken()<br>  &#125;<br>&#125;<br><br><span class="hljs-comment">// access_token有效期为2个小时，定时更新</span><br><span class="hljs-built_in">setInterval</span>(<span class="hljs-keyword">async</span> () =&gt; &#123;<br>  <span class="hljs-keyword">await</span> updateAccessToken()<br>&#125;, (<span class="hljs-number">7200</span> - <span class="hljs-number">300</span>) * <span class="hljs-number">1000</span>)<br><br><span class="hljs-built_in">module</span>.exports = getAccessToken<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="后端代码通过HTTP-API-触发云函数获取数据"><a href="#后端代码通过HTTP-API-触发云函数获取数据" class="headerlink" title="#后端代码通过HTTP API 触发云函数获取数据"></a><a href="#%E5%90%8E%E7%AB%AF%E4%BB%A3%E7%A0%81%E9%80%9A%E8%BF%87http-api-%E8%A7%A6%E5%8F%91%E4%BA%91%E5%87%BD%E6%95%B0%E8%8E%B7%E5%8F%96%E6%95%B0%E6%8D%AE">#</a>后端代码通过HTTP API 触发云函数获取数据</h4><p><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/wxcloud/reference-http-api/functions/invokeCloudFunction.html">HTTP API 触发云函数(opens new window)</a></p>
+<h4 id="产生跨域和后端解决跨域问题"><a href="#产生跨域和后端解决跨域问题" class="headerlink" title="#产生跨域和后端解决跨域问题"></a><a href="#%E4%BA%A7%E7%94%9F%E8%B7%A8%E5%9F%9F%E5%92%8C%E5%90%8E%E7%AB%AF%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98">#</a>产生跨域和后端解决跨域问题</h4><p>管理系统前端向管理系统后端请求数据，产生了跨域问题</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs js">  <span class="hljs-comment">// 产生跨域的几种情况</span><br>  <span class="hljs-comment">// http://www.a.com  https://www.a.com 协议不同</span><br>  <span class="hljs-comment">// http://www.a.com  http://www.b.com 域名不同</span><br>  <span class="hljs-comment">// http://www.a.com  http://news.a.com 主域与子域不同</span><br>  <span class="hljs-comment">// http://www.a.com:8080  http://www.a.com:3000 端口不同</span><br><br><span class="hljs-comment">// 解决跨域的几种方法</span><br><span class="hljs-comment">// jsonp</span><br><span class="hljs-comment">// iframe</span><br><span class="hljs-comment">// postMessage跨域</span><br><span class="hljs-comment">// 跨域资源共享（CORS）</span><br></code></pre></td></tr></table></figure>
+
+<p>管理系统后端，安装</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sh">// 解决跨域问题的koa包<br>npm i koa2-cors<br></code></pre></td></tr></table></figure>
+
+<p>app.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">//处理跨域</span><br>app.use(cors(&#123;<br>  <span class="hljs-attr">origin</span>: [<span class="hljs-string">&#x27;http://localhost:9528&#x27;</span>], <span class="hljs-comment">// 允许访问本服务的域</span><br>  <span class="hljs-attr">credentials</span>: <span class="hljs-literal">true</span><br>&#125;))<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="云数据库的增删改查接口"><a href="#云数据库的增删改查接口" class="headerlink" title="#云数据库的增删改查接口"></a><a href="#%E4%BA%91%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5%E6%8E%A5%E5%8F%A3">#</a>云数据库的增删改查接口</h4><p><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/wxcloud/reference-http-api/database/databaseQuery.html">数据库查询记录(opens new window)</a></p>
+<h4 id="后端获取前端post请求传来的数据"><a href="#后端获取前端post请求传来的数据" class="headerlink" title="#后端获取前端post请求传来的数据"></a><a href="#%E5%90%8E%E7%AB%AF%E8%8E%B7%E5%8F%96%E5%89%8D%E7%AB%AFpost%E8%AF%B7%E6%B1%82%E4%BC%A0%E6%9D%A5%E7%9A%84%E6%95%B0%E6%8D%AE">#</a>后端获取前端post请求传来的数据</h4><p>get请求可以直接通过ctx.request.query获取，但是post请求需要安装koa-body</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">npm i koa-body<br></code></pre></td></tr></table></figure>
+
+<p>app.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> koaBody = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;koa-body&#x27;</span>) <span class="hljs-comment">// 对post请求前端传来的数据的获取，需要此依赖</span><br><br><span class="hljs-comment">// 接收post参数解析</span><br>app.use(koaBody(&#123;<br>  <span class="hljs-attr">multipart</span>: <span class="hljs-literal">true</span><br>&#125;))<br></code></pre></td></tr></table></figure>
+
+<p>接口.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs js">router.post(<span class="hljs-string">&#x27;/updatePlaylist&#x27;</span>, <span class="hljs-keyword">async</span> (ctx, next) =&gt; &#123;<br><br>  <span class="hljs-keyword">const</span> params = ctx.request.body <span class="hljs-comment">// post请求获取前端传来的数据，需安装和配置koa-body</span><br><br>&#125;)<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="后端获取云存储图片"><a href="#后端获取云存储图片" class="headerlink" title="#后端获取云存储图片"></a><a href="#%E5%90%8E%E7%AB%AF%E8%8E%B7%E5%8F%96%E4%BA%91%E5%AD%98%E5%82%A8%E5%9B%BE%E7%89%87">#</a>后端获取云存储图片</h4><p>云存储中上传图片，云数据库中新建图片的集合，并添加数据字段，字段包含云文件的fileid。</p>
+<p>后端项目通过调用云数据库的方式获取数据</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs js">router.get(<span class="hljs-string">&#x27;/list&#x27;</span>, <span class="hljs-keyword">async</span> (ctx, next) =&gt; &#123;<br>  <span class="hljs-comment">// 接口中读取数据库默认最多10条数据</span><br>  <span class="hljs-keyword">const</span> query = <span class="hljs-string">`db.collection(&#x27;swiper&#x27;).get()`</span><br>  <span class="hljs-keyword">const</span> res = <span class="hljs-keyword">await</span> callCloudDB(ctx, <span class="hljs-string">&#x27;databasequery&#x27;</span>, query)<br>  <span class="hljs-built_in">console</span>.log(res)<br><br>&#125;)<br></code></pre></td></tr></table></figure>
+
+
+
+<p>但获取到的数据为fileid，并不能用于显示图片，需要通过微信HTTP API获取云存储的接口来获取图片地址</p>
+
+      </section>
+      <section class="extra">
+        
+          <ul class="copyright">
+  
+    <li><strong>本文作者：</strong>xing</li>
+    <li><strong>本文链接：</strong><a href="https://47.104.3.107/2021/12/31/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html" title="https:&#x2F;&#x2F;47.104.3.107&#x2F;2021&#x2F;12&#x2F;31&#x2F;%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0&#x2F;index.html">https:&#x2F;&#x2F;47.104.3.107&#x2F;2021&#x2F;12&#x2F;31&#x2F;%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0&#x2F;index.html</a></li>
+    <li><strong>版权声明：</strong>本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="BY-NC-SA" target="_blank" rel="noopener">BY-NC-SA</a> 许可协议，转载请注明出处！</li>
+  
+</ul>
+        
+        
+          <section class="donate">
+  <div id="qrcode-donate">
+    <img   class="lazyload" data-original="https://i.loli.net/2021/11/11/9FSws7lKeEImAhD.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
+  </div>
+  <div class="icon">
+    <a href="javascript:;" id="alipay"><i class="iconfont iconalipay"></i></a>
+    <a href="javascript:;" id="wechat"><i class="iconfont iconwechat-fill"></i></a>
+  </div>
+</section>
+        
+        
+        
+  <nav class="nav">
+    <a href="/2021/12/31/%E9%9A%8F%E7%AC%94%E8%AE%B0/"><i class="iconfont iconleft"></i>随笔记</a>
+    <a href="/2021/12/31/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E7%9B%B8%E5%85%B3%E7%AC%94%E8%AE%B0/">数据挖掘课程设计相关笔记<i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">文章目录：</h3>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0"><span class="toc-text">小程序开发学习笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E8%AF%BE%E7%A8%8B%E9%83%A8%E5%88%86"><span class="toc-text">基础课程部分</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E6%88%98%E8%AF%BE%E7%A8%8B%E9%83%A8%E5%88%86"><span class="toc-text">实战课程部分</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%8A%E5%8F%91%E7%8E%B0%E3%80%8B%E9%A1%B5%E9%9D%A2"><span class="toc-text">《发现》页面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%8A%E6%88%91%E7%9A%84%E3%80%8B%E9%A1%B5%E9%9D%A2"><span class="toc-text">《我的》页面</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%88%E6%9C%AC%E6%9B%B4%E6%96%B0%E6%A3%80%E6%B5%8B"><span class="toc-text">版本更新检测</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96"><span class="toc-text">性能优化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%BA%E6%99%AF%E5%80%BCscene%E7%9A%84%E4%BD%9C%E7%94%A8%E4%B8%8E%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-text">场景值scene的作用与应用场景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E2%80%9DSEO%E2%80%9D%E2%80%94%E9%A1%B5%E9%9D%A2%E6%94%B6%E5%BD%95sitemap"><span class="toc-text">小程序的”SEO”—页面收录sitemap</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%8A%E7%BA%BF%E5%AE%A1%E6%A0%B8%E6%B5%81%E7%A8%8B"><span class="toc-text">小程序上线审核流程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F"><span class="toc-text">后台管理系统</span></a></li></ol></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
+  
+
+<footer class="footer">
+  <div class="footer-social"><a 
+        href="tencent://message/?Menu=yes&uin=1846730600 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#12B7F5'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconQQ "></i>
+      </a><a 
+        href="https://i.loli.net/2021/11/11/7hfawNSHkoeCrzl.jpg "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#09BB07'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconwechat-fill "></i>
+      </a><a 
+        href="https://github.com/zhangxingyu618 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#9f7be1'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  icongithub-fill "></i>
+      </a><a 
+        href="mailto:1846730600@qq.com "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#DA2E76'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconmail "></i>
+      </a></div>
+  
+    <div class="footer-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+  
+</footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+    <div class="fab fab-like">
+      <i class="iconfont iconheart"></i>
+    </div>
+  
+  
+    <div class="fab fab-daovoice">
+      <i class="iconfont iconcomment"></i>
+    </div>
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+    <div class="scrollbar j-scrollbar">
+  <div class="scrollbar-current j-scrollbar-current"></div>
+</div>
+  
+  
+    
+<script src="/js/color-mode.js"></script>
+
+  
+  
+    <div class="search">
+  <div class="search-container">
+    <div class="search-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <div class="search-input-wrapper">
+      <i class="search-input-icon iconfont iconsearch"></i>
+      <input class="search-input" type="search" id="search-input" placeholder="Search..." autofocus autocomplete="off"
+        autocorrect="off" autocapitalize="off">
+    </div>
+    <div class="search-output" id="search-output"></div>
+  </div>
+</div>
+  
+</body>
+
+<script src="/lib/jquery/jquery.js"></script>
+
+
+
+  
+<script src="/lib/lottie/lottie.js"></script>
+
+
+
+
+  
+<script src="/lib/lazyload/lazyload.js"></script>
+
+
+
+
+  
+<script src="/lib/fancybox/fancybox.js"></script>
+
+
+
+
+
+
+  
+<script src="/lib/qrcode/qrcode.js"></script>
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+  <script>
+  $.getScript("//cdn.jsdelivr.net/npm/leancloud-storage@4.1.0/dist/av-min.js", () => {
+
+    AV.init({
+      appId: 'XYmCtrvSgmSaocvAdvV2Mz3m-gzGzoHsz',
+      appKey: 'KwcsbELgwcycRgXH31uI2UzB',
+      serverURLs: 'https://leancloud.cn/',
+    });
+
+    const Counter = AV.Object.extend("Counter");
+    const Like = AV.Object.extend("Like");
+
+    const showCount = (Counter) => {
+      const asyncLimit = new AsyncLimit(2);
+      $(".leancloud-counter").each(async (e) => {
+        const url = $(".leancloud-counter").eq(e).attr('id').trim();
+        const query = new AV.Query("Counter");
+        query.equalTo("words", url);
+        let count = await asyncLimit.run(() => query.count());
+        $(".leancloud-counter").eq(e).text(count ? count : 0);
+      });
+    }
+
+    const addCount = (Counter) => {
+      const url = $(".leancloud-counter").length === 1 ? $(".leancloud-counter").attr('id').trim() : 'https://47.104.3.107';
+      var query = new Counter;
+      query.save({
+        words: url
+      });
+    }
+
+    const showLike = (Like) => {
+      const asyncLimit = new AsyncLimit(2);
+      $(".leancloud-like").each(async (e) => {
+        const url = $(".leancloud-like").eq(e).attr('id').trim();
+        const query = new AV.Query("Like");
+        query.equalTo("path", url);
+        let count = await asyncLimit.run(() => query.count());
+        $(".leancloud-like").eq(e).text(count ? count : 0);
+      });
+    }
+
+    const addLike = (Like) => {
+      const url = $(".leancloud-like").length === 1 ? $(".leancloud-like").attr('id').trim() : 'https://47.104.3.107';
+      var query = new Like;
+      query.save({
+        path: url,
+        nickName: 'Anonymous'
+      });
+      $(".leancloud-like").addClass('islike');
+      $(".fab-like").children(".iconfont").removeClass("iconheart").addClass("iconheart-fill").css("color", "#eb3223");
+      ZHAOO.zui.message({ text: '爱你哦~', type: 'success' });
+      setTimeout(() => showLike(Like), 1000);
+    }
+
+    const handleLikeClick = () => {
+      const isLike = $(".leancloud-like").length === 1 && $(".leancloud-like").hasClass('islike') ? true : false;
+      if (isLike) {
+        ZHAOO.zui.message({ text: '小心心不可以收回呢~', type: 'warning' });
+      } else {
+        addLike(Like);
+      }
+    }
+
+    $(function () {
+      addCount(Counter);
+      showCount(Counter);
+      showLike(Like);
+      $(".fab-like").on("click", function () {
+        handleLikeClick();
+      });
+    });
+
+  });
+</script>
+
+
+
+  
+
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i["DaoVoiceObject"] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    a.charset = "utf-8";
+    m.parentNode.insertBefore(a, m)
+  })(window, document, "script", "https://widget.daovoice.io/widget/731d55bd.js", "daovoice")
+  daovoice('init', {
+    app_id: "731d55bd"
+  }, {
+    launcher: {
+      disableLauncherIcon: true,
+    },
+  });
+  daovoice('update');
+</script>
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

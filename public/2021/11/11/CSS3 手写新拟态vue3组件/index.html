@@ -1,0 +1,525 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-Hans" color-mode=light>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS3手写新拟态vue3组件 - 1000STAR</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  
+  <meta name="description" content="CS3手写新拟态vue3组件image-2021071...">
+  <meta name="author" content="xing">
+  <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1445822_p6ry5n7lrr.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="/lib/fancybox/fancybox.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/atom-one-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      loading: {
+        gif: '',
+        lottie: 'https://assets4.lottiefiles.com/private_files/lf30_n3at4oi7.json'
+      },
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: {
+          gif: '/images/theme/loading.gif',
+          lottie: ''
+        }
+      },
+      donate: {
+        enable: true,
+        alipay: 'https://i.loli.net/2021/11/11/9FSws7lKeEImAhD.jpg',
+        wechat: 'https://i.loli.net/2021/11/11/yWeBOLCIqRpGlfu.png'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: true
+      },
+      preview: {
+        background: {
+          default: '',
+          api: ''
+        },
+        motto: {
+          default: '我在开了灯的床头下，想问问自己的心啊。',
+          typing: true,
+          api: 'https://v2.jinrishici.com/one.json',
+          data_contents: '["data","content"]'
+        },
+      },
+      qrcode: {
+        enable: true,
+        type: 'url',
+        image: 'https://i.loli.net/2021/11/08/d6Y2VekyzoBU5KA.gif',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        type: 'simple'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      },
+      search: {
+        enable: true,
+        path: '/search.xml'
+      }
+    }
+  </script>
+
+  
+
+  
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body class="lock-screen">
+  <div class="loading" id="loading"></div>
+  
+    
+
+
+  <nav class="navbar">
+    <div class="left">
+      
+        <i class="iconfont iconhome j-navbar-back-home"></i>
+      
+      
+        <i class="iconfont iconqrcode j-navbar-qrcode"></i>
+      
+      
+        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+      
+      
+        <i class="iconfont iconsearch j-navbar-search"></i>
+      
+    </div>
+    <div class="center">CSS3手写新拟态vue3组件</div>
+    <div class="right">
+      <i class="iconfont iconmenu j-navbar-menu"></i>
+    </div>
+    
+      <div id="qrcode-navbar"></div>
+    
+  </nav>
+
+  
+  
+
+<nav class="menu">
+  <div class="menu-container">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline "> 首页</a>
+      </li><li class="menu-item">
+        <a href="/galleries/ " class="underline "> 摄影</a>
+      </li><li class="menu-item">
+        <a href="/archives/ " class="underline "> 归档</a>
+      </li><li class="menu-item">
+        <a href="/tags/ " class="underline "> 标签</a>
+      </li><li class="menu-item">
+        <a href="/categories/ " class="underline "> 分类</a>
+      </li><li class="menu-item">
+        <a href="/about/ " class="underline "> 关于</a>
+      </li></ul>
+    
+      <div class="menu-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+    
+  </div>
+</nav>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/theme/post-image/post%20(8).jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">CSS3手写新拟态vue3组件</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>November 11, 2021</span>
+      
+        <span class="post-info-item">
+          <i class="iconfont iconeye"></i><span id="/2021/11/11/CSS3%20%E6%89%8B%E5%86%99%E6%96%B0%E6%8B%9F%E6%80%81vue3%E7%BB%84%E4%BB%B6/" class="leancloud-counter" data-flag-title="CSS3手写新拟态vue3组件"></span>
+        </span>
+        <span class="post-info-item">
+          <i class="iconfont iconheart"></i><span id="/2021/11/11/CSS3%20%E6%89%8B%E5%86%99%E6%96%B0%E6%8B%9F%E6%80%81vue3%E7%BB%84%E4%BB%B6/" class="leancloud-like" data-flag-title="CSS3手写新拟态vue3组件"></span>
+        </span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>5047</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        <h1 id="CS3手写新拟态vue3组件"><a href="#CS3手写新拟态vue3组件" class="headerlink" title="CS3手写新拟态vue3组件"></a>CS3手写新拟态vue3组件</h1><p><img    class="lazyload" data-original="https://i.loli.net/2021/11/11/4HA9cp58T1NyFPl.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">image-20210714163247179</span></p>
+<h4 id=""><a href="#" class="headerlink" title=""></a></h4><h4 id="按钮的拟态组件效果"><a href="#按钮的拟态组件效果" class="headerlink" title="按钮的拟态组件效果"></a>按钮的拟态组件效果</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><code class="hljs vue">&lt;template&gt;<br>  &lt;button&gt;<br>    &lt;slot&gt;&lt;/slot&gt;<br>  &lt;/button&gt;<br>&lt;/template&gt;<br><br>&lt;script lang=&quot;ts&quot;&gt;<br>import &#123; defineComponent &#125; from &quot;vue&quot;;<br><br>export default defineComponent(&#123;<br>  setup() &#123;<br>    //不能为空<br>  &#125;,<br>&#125;);<br>&lt;/script&gt;<br><br><br>&lt;style scoped&gt;<br>button &#123;<br>  border: none;<br>  padding: 20px 40px;<br>  cursor: pointer;<br>  font-weight: 500;<br>  letter-spacing: 2px;<br>  color: #5a84a2;<br>  font-size: 18px;<br>  border-radius: 60px;<br>  background-color: #ecf0f3;<br>  box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),<br>    -2px -2px 12px rgba(255, 255, 255, 0.5),<br>    inset 2px 2px 4px rgba(255, 255, 255, 0.1), 2px 2px 8px rgba(0, 0, 0, 0.15);<br>&#125;<br><br>button:hover &#123;<br>  box-shadow: inset -2px -2px 8px rgba(255, 255, 255, 1),<br>    inset -2px -2px 12px rgba(255, 255, 255, 0.5),<br>    inset 2px 2px 4px rgba(255, 255, 255, 0.1),<br>    inset 2px 2px 8px rgba(0, 0, 0, 0.15);<br>&#125;<br>&lt;/style&gt;<br><br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="下拉框拟态组件"><a href="#下拉框拟态组件" class="headerlink" title="下拉框拟态组件"></a>下拉框拟态组件</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><code class="hljs vue">&lt;template&gt;<br>  &lt;div class=&quot;dropdown&quot;&gt;<br>    &lt;button class=&quot;dropbtn&quot;&gt;<br>      &lt;slot name=&quot;title&quot;&gt;&lt;/slot&gt;<br>    &lt;/button&gt;<br>    &lt;div class=&quot;dropdown-content&quot;&gt;<br>      &lt;slot name=&quot;item&quot;&gt;&lt;/slot&gt;<br>    &lt;/div&gt;<br>  &lt;/div&gt;<br>&lt;/template&gt;<br>&lt;script lang=&quot;ts&quot;&gt;<br>import &#123; defineComponent &#125; from &quot;vue&quot;;<br><br>export default defineComponent(&#123;<br>  setup() &#123;<br>    // 不能为空<br>  &#125;,<br>&#125;);<br>&lt;/script&gt;<br><br>  &lt;style scoped&gt;<br>.dropbtn &#123;<br>  box-shadow: -5px -5px 12px rgba(255, 255, 255, 1),<br>    -5px -5px 16px rgba(255, 255, 255, 0.5),<br>    inset 5px 5px 8px rgba(255, 255, 255, 0.1), 5px 5px 12px rgba(0, 0, 0, 0.15);<br>  background: #ecf0f3;<br>  color: #5a84a2;<br>  border-radius: 10px;<br>  padding: 20px 30px;<br>  font-size: 16px;<br>  border: none;<br>  cursor: pointer;<br>&#125;<br><br>.dropdown &#123;<br>  position: relative;<br>  display: inline-block;<br>&#125;<br><br>.dropdown-content &#123;<br>  display: none;<br>  position: absolute;<br>  border-radius: 10px;<br>  cursor: pointer;<br>  color: #5a84a2;<br>  min-width: 130px;<br>  box-shadow: -5px -5px 12px rgba(255, 255, 255, 1),<br>    -5px -5px 16px rgba(255, 255, 255, 0.5),<br>    inset 5px 5px 8px rgba(255, 255, 255, 0.1), 5px 5px 12px rgba(0, 0, 0, 0.15);<br>&#125;<br><br>.dropdown-content div &#123;<br>  border-radius: 10px;<br>  color: #5a84a2;<br>  padding: 12px 16px;<br>  text-decoration: none;<br>  display: block;<br>&#125;<br><br>.dropdown-content div:hover &#123;<br>  box-shadow: inset -5px -5px 12px rgba(255, 255, 255, 1),<br>    inset -5px -5px 16px rgba(255, 255, 255, 0.5),<br>    inset 5px 5px 8px rgba(255, 255, 255, 0.1),<br>    inset 5px 5px 12px rgba(0, 0, 0, 0.15);<br>&#125;<br><br>.dropdown:hover .dropdown-content &#123;<br>  display: block;<br>&#125;<br><br>.dropdown:hover .dropbtn &#123;<br>  box-shadow: inset -5px -5px 12px rgba(255, 255, 255, 1),<br>    inset -5px -5px 16px rgba(255, 255, 255, 0.5),<br>    inset 5px 5px 8px rgba(255, 255, 255, 0.1),<br>    inset 5px 5px 12px rgba(0, 0, 0, 0.15);<br>&#125;<br>&lt;/style&gt;<br>  <br></code></pre></td></tr></table></figure>
+
+<p>在父组件中可以这样引用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs vue">&lt;!-- 按钮组件 --&gt;<br>&lt;Neu_button&gt; 按钮 &lt;/Neu_button&gt;<br>&lt;!-- 下拉框组件 --&gt;<br>    &lt;Neu_dropdown style=&quot;padding-left:50px&quot;&gt;<br>      &lt;template v-slot:title&gt; 下拉框 &lt;/template&gt;<br>      &lt;template v-slot:item&gt;<br>        &lt;!-- 需要加样式 --&gt;<br>        &lt;div&gt;111&lt;/div&gt;<br>        &lt;div&gt;111&lt;/div&gt;<br>        &lt;div&gt;222&lt;/div&gt;<br>        &lt;div&gt;111&lt;/div&gt;<br>        &lt;div&gt;111&lt;/div&gt;<br>      &lt;/template&gt;<br>    &lt;/Neu_dropdown&gt;<br><br></code></pre></td></tr></table></figure>
+
+<h4 id="拟态头像框"><a href="#拟态头像框" class="headerlink" title="拟态头像框"></a>拟态头像框</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><code class="hljs vue">&lt;div class=&quot;inner-shadow-ring item&quot;&gt; &lt;/div&gt;<br>    &lt;div class=&quot;inner-shadow-ring-2 item&quot;&gt; &lt;/div&gt;<br><br>&lt;style&gt;<br>.item &#123;<br>  position: relative;<br>  width: 200px;<br>  height: 200px;<br>  margin-left: 80px;<br>  margin-top: 80px;<br>  background: #ecf0f3;<br>&#125;<br>.inner-shadow-ring &#123;<br>  border-radius: 100%;<br>  box-shadow: 9px 9px 15px #d1d9e6, -9px -9px 15px #fff;<br>&#125;<br><br>.inner-shadow-ring:before &#123;<br>  content: &quot;&quot;;<br>  position: absolute;<br>  left: 10%;<br>  top: 10%;<br>  width: 80%;<br>  height: 80%;<br>  border-radius: 100%;<br>  background: #ecf0f3;<br>  background-image:url(../../public/head.jpg);<br>  background-position: 50% 50%;<br>  background-size:100% 100%;<br>  box-shadow: inset 9px 9px 15px #d1d9e6, inset -9px -9px 15px #fff;<br>&#125;<br>.inner-shadow-ring-2 &#123;<br>  border-radius: 100%;<br>  box-shadow: inset 9px 9px 15px #d1d9e6, inset -9px -9px 15px #fff;<br>&#125;<br><br>.inner-shadow-ring-2:before &#123;<br>  content: &quot;&quot;;<br>  position: absolute;<br>  left: 10%;<br>  top: 10%;<br>  width: 80%;<br>  height: 80%;<br>  border-radius: 100%;<br>  background: #ecf0f3;<br>  background-image:url(../../public/head.jpg);<br>  background-position: 50% 50%;<br>  background-size:100% 100%;<br>  box-shadow: 9px 9px 15px #d1d9e6, -9px -9px 15px rgb(247, 247, 247);<br>  /* box-shadow: inset 3px 3px 15px #d1d9e6, inset -3px -3px 15px #fff; */<br>&#125;<br>&lt;/style&gt;<br></code></pre></td></tr></table></figure>
+
+
+      </section>
+      <section class="extra">
+        
+          <ul class="copyright">
+  
+    <li><strong>本文作者：</strong>xing</li>
+    <li><strong>本文链接：</strong><a href="https://47.104.3.107/2021/11/11/CSS3%20%E6%89%8B%E5%86%99%E6%96%B0%E6%8B%9F%E6%80%81vue3%E7%BB%84%E4%BB%B6/index.html" title="https:&#x2F;&#x2F;47.104.3.107&#x2F;2021&#x2F;11&#x2F;11&#x2F;CSS3%20%E6%89%8B%E5%86%99%E6%96%B0%E6%8B%9F%E6%80%81vue3%E7%BB%84%E4%BB%B6&#x2F;index.html">https:&#x2F;&#x2F;47.104.3.107&#x2F;2021&#x2F;11&#x2F;11&#x2F;CSS3%20%E6%89%8B%E5%86%99%E6%96%B0%E6%8B%9F%E6%80%81vue3%E7%BB%84%E4%BB%B6&#x2F;index.html</a></li>
+    <li><strong>版权声明：</strong>本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="BY-NC-SA" target="_blank" rel="noopener">BY-NC-SA</a> 许可协议，转载请注明出处！</li>
+  
+</ul>
+        
+        
+          <section class="donate">
+  <div id="qrcode-donate">
+    <img   class="lazyload" data-original="https://i.loli.net/2021/11/11/9FSws7lKeEImAhD.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
+  </div>
+  <div class="icon">
+    <a href="javascript:;" id="alipay"><i class="iconfont iconalipay"></i></a>
+    <a href="javascript:;" id="wechat"><i class="iconfont iconwechat-fill"></i></a>
+  </div>
+</section>
+        
+        
+        
+  <nav class="nav">
+    <a href="/2021/11/11/G6%20%E5%AF%B9%E6%AF%94%20LogicFlow/"><i class="iconfont iconleft"></i>G6 对比 LogicFlow</a>
+    <a href="/2021/11/11/vue3%20+%20G6%20%E9%87%87%E5%9D%91%E7%AC%94%E8%AE%B0/">vue3 + G6 采坑笔记<i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">文章目录：</h3>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#CS3%E6%89%8B%E5%86%99%E6%96%B0%E6%8B%9F%E6%80%81vue3%E7%BB%84%E4%BB%B6"><span class="toc-text">CS3手写新拟态vue3组件</span></a></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
+  
+
+<footer class="footer">
+  <div class="footer-social"><a 
+        href="tencent://message/?Menu=yes&uin=1846730600 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#12B7F5'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconQQ "></i>
+      </a><a 
+        href="https://i.loli.net/2021/11/11/7hfawNSHkoeCrzl.jpg "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#09BB07'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconwechat-fill "></i>
+      </a><a 
+        href="https://github.com/zhangxingyu618 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#9f7be1'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  icongithub-fill "></i>
+      </a><a 
+        href="mailto:1846730600@qq.com "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#DA2E76'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconmail "></i>
+      </a></div>
+  
+    <div class="footer-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+  
+</footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+    <div class="fab fab-like">
+      <i class="iconfont iconheart"></i>
+    </div>
+  
+  
+    <div class="fab fab-daovoice">
+      <i class="iconfont iconcomment"></i>
+    </div>
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+    <div class="scrollbar j-scrollbar">
+  <div class="scrollbar-current j-scrollbar-current"></div>
+</div>
+  
+  
+    
+<script src="/js/color-mode.js"></script>
+
+  
+  
+    <div class="search">
+  <div class="search-container">
+    <div class="search-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <div class="search-input-wrapper">
+      <i class="search-input-icon iconfont iconsearch"></i>
+      <input class="search-input" type="search" id="search-input" placeholder="Search..." autofocus autocomplete="off"
+        autocorrect="off" autocapitalize="off">
+    </div>
+    <div class="search-output" id="search-output"></div>
+  </div>
+</div>
+  
+</body>
+
+<script src="/lib/jquery/jquery.js"></script>
+
+
+
+  
+<script src="/lib/lottie/lottie.js"></script>
+
+
+
+
+  
+<script src="/lib/lazyload/lazyload.js"></script>
+
+
+
+
+  
+<script src="/lib/fancybox/fancybox.js"></script>
+
+
+
+
+
+
+  
+<script src="/lib/qrcode/qrcode.js"></script>
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+  <script>
+  $.getScript("//cdn.jsdelivr.net/npm/leancloud-storage@4.1.0/dist/av-min.js", () => {
+
+    AV.init({
+      appId: 'XYmCtrvSgmSaocvAdvV2Mz3m-gzGzoHsz',
+      appKey: 'KwcsbELgwcycRgXH31uI2UzB',
+      serverURLs: 'https://leancloud.cn/',
+    });
+
+    const Counter = AV.Object.extend("Counter");
+    const Like = AV.Object.extend("Like");
+
+    const showCount = (Counter) => {
+      const asyncLimit = new AsyncLimit(2);
+      $(".leancloud-counter").each(async (e) => {
+        const url = $(".leancloud-counter").eq(e).attr('id').trim();
+        const query = new AV.Query("Counter");
+        query.equalTo("words", url);
+        let count = await asyncLimit.run(() => query.count());
+        $(".leancloud-counter").eq(e).text(count ? count : 0);
+      });
+    }
+
+    const addCount = (Counter) => {
+      const url = $(".leancloud-counter").length === 1 ? $(".leancloud-counter").attr('id').trim() : 'https://47.104.3.107';
+      var query = new Counter;
+      query.save({
+        words: url
+      });
+    }
+
+    const showLike = (Like) => {
+      const asyncLimit = new AsyncLimit(2);
+      $(".leancloud-like").each(async (e) => {
+        const url = $(".leancloud-like").eq(e).attr('id').trim();
+        const query = new AV.Query("Like");
+        query.equalTo("path", url);
+        let count = await asyncLimit.run(() => query.count());
+        $(".leancloud-like").eq(e).text(count ? count : 0);
+      });
+    }
+
+    const addLike = (Like) => {
+      const url = $(".leancloud-like").length === 1 ? $(".leancloud-like").attr('id').trim() : 'https://47.104.3.107';
+      var query = new Like;
+      query.save({
+        path: url,
+        nickName: 'Anonymous'
+      });
+      $(".leancloud-like").addClass('islike');
+      $(".fab-like").children(".iconfont").removeClass("iconheart").addClass("iconheart-fill").css("color", "#eb3223");
+      ZHAOO.zui.message({ text: '爱你哦~', type: 'success' });
+      setTimeout(() => showLike(Like), 1000);
+    }
+
+    const handleLikeClick = () => {
+      const isLike = $(".leancloud-like").length === 1 && $(".leancloud-like").hasClass('islike') ? true : false;
+      if (isLike) {
+        ZHAOO.zui.message({ text: '小心心不可以收回呢~', type: 'warning' });
+      } else {
+        addLike(Like);
+      }
+    }
+
+    $(function () {
+      addCount(Counter);
+      showCount(Counter);
+      showLike(Like);
+      $(".fab-like").on("click", function () {
+        handleLikeClick();
+      });
+    });
+
+  });
+</script>
+
+
+
+  
+
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i["DaoVoiceObject"] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    a.charset = "utf-8";
+    m.parentNode.insertBefore(a, m)
+  })(window, document, "script", "https://widget.daovoice.io/widget/731d55bd.js", "daovoice")
+  daovoice('init', {
+    app_id: "731d55bd"
+  }, {
+    launcher: {
+      disableLauncherIcon: true,
+    },
+  });
+  daovoice('update');
+</script>
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

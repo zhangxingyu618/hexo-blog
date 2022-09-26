@@ -1,0 +1,578 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-Hans" color-mode=light>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>数据挖掘课程设计相关笔记 - 1000STAR</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  
+  <meta name="description" content="数据挖掘课程设计相关笔记01 爬虫利用 xpath 进...">
+  <meta name="author" content="xing">
+  <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1445822_p6ry5n7lrr.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="/lib/fancybox/fancybox.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/atom-one-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      loading: {
+        gif: '',
+        lottie: 'https://assets4.lottiefiles.com/private_files/lf30_n3at4oi7.json'
+      },
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: {
+          gif: '/images/theme/loading.gif',
+          lottie: ''
+        }
+      },
+      donate: {
+        enable: true,
+        alipay: 'https://i.loli.net/2021/11/11/9FSws7lKeEImAhD.jpg',
+        wechat: 'https://i.loli.net/2021/11/11/yWeBOLCIqRpGlfu.png'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: true
+      },
+      preview: {
+        background: {
+          default: '',
+          api: ''
+        },
+        motto: {
+          default: '我在开了灯的床头下，想问问自己的心啊。',
+          typing: true,
+          api: 'https://v2.jinrishici.com/one.json',
+          data_contents: '["data","content"]'
+        },
+      },
+      qrcode: {
+        enable: true,
+        type: 'url',
+        image: 'https://i.loli.net/2021/11/08/d6Y2VekyzoBU5KA.gif',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        type: 'simple'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      },
+      search: {
+        enable: true,
+        path: '/search.xml'
+      }
+    }
+  </script>
+
+  
+
+  
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body class="lock-screen">
+  <div class="loading" id="loading"></div>
+  
+    
+
+
+  <nav class="navbar">
+    <div class="left">
+      
+        <i class="iconfont iconhome j-navbar-back-home"></i>
+      
+      
+        <i class="iconfont iconqrcode j-navbar-qrcode"></i>
+      
+      
+        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+      
+      
+        <i class="iconfont iconsearch j-navbar-search"></i>
+      
+    </div>
+    <div class="center">数据挖掘课程设计相关笔记</div>
+    <div class="right">
+      <i class="iconfont iconmenu j-navbar-menu"></i>
+    </div>
+    
+      <div id="qrcode-navbar"></div>
+    
+  </nav>
+
+  
+  
+
+<nav class="menu">
+  <div class="menu-container">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline "> 首页</a>
+      </li><li class="menu-item">
+        <a href="/galleries/ " class="underline "> 摄影</a>
+      </li><li class="menu-item">
+        <a href="/archives/ " class="underline "> 归档</a>
+      </li><li class="menu-item">
+        <a href="/tags/ " class="underline "> 标签</a>
+      </li><li class="menu-item">
+        <a href="/categories/ " class="underline "> 分类</a>
+      </li><li class="menu-item">
+        <a href="/about/ " class="underline "> 关于</a>
+      </li></ul>
+    
+      <div class="menu-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+    
+  </div>
+</nav>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/theme/post-image/post%20(1).jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">数据挖掘课程设计相关笔记</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>December 31, 2021</span>
+      
+        <span class="post-info-item">
+          <i class="iconfont iconeye"></i><span id="/2021/12/31/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E7%9B%B8%E5%85%B3%E7%AC%94%E8%AE%B0/" class="leancloud-counter" data-flag-title="数据挖掘课程设计相关笔记"></span>
+        </span>
+        <span class="post-info-item">
+          <i class="iconfont iconheart"></i><span id="/2021/12/31/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E7%9B%B8%E5%85%B3%E7%AC%94%E8%AE%B0/" class="leancloud-like" data-flag-title="数据挖掘课程设计相关笔记"></span>
+        </span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>4065</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        <h1 id="数据挖掘课程设计相关笔记"><a href="#数据挖掘课程设计相关笔记" class="headerlink" title="数据挖掘课程设计相关笔记"></a>数据挖掘课程设计相关笔记</h1><h2 id="01-爬虫"><a href="#01-爬虫" class="headerlink" title="01 爬虫"></a>01 爬虫</h2><p>利用 xpath 进行解构爬取数据，获取下一页的 url，不断循环爬取所有新闻文章。</p>
+<h2 id="02-jieba-分词、词云"><a href="#02-jieba-分词、词云" class="headerlink" title="02 jieba 分词、词云"></a>02 jieba 分词、词云</h2><h4 id="先读取-csv-文件中的新闻数据的标题和正文内容到-txt-文件中。"><a href="#先读取-csv-文件中的新闻数据的标题和正文内容到-txt-文件中。" class="headerlink" title="先读取 csv 文件中的新闻数据的标题和正文内容到 txt 文件中。"></a>先读取 csv 文件中的新闻数据的标题和正文内容到 txt 文件中。</h4><h4 id="然后进行-jieba-分词处理："><a href="#然后进行-jieba-分词处理：" class="headerlink" title="然后进行 jieba 分词处理："></a>然后进行 jieba 分词处理：</h4><ul>
+<li>精确模式，试图将句子最精确地切开，适合文本分析；</li>
+<li>全模式，把句子中所有的可以成词的词语都扫描出来, 速度非常快，但是不能解决歧义；</li>
+<li>搜索引擎模式，在精确模式的基础上，对长词再次切分，提高召回率，适合用于搜索引擎分词。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> jieba<br><br>jieba.cut(data, cut_all=<span class="hljs-literal">False</span>) <span class="hljs-comment"># 精准模式</span><br>jieba.cut(data, cut_all=<span class="hljs-literal">True</span>) <span class="hljs-comment"># 全模式</span><br>jieba.cut_for_search(data)	 <span class="hljs-comment"># 搜索引擎模式</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="分词之后进行简单的词频统计，此时过滤掉了字符串长度为-1-的字符。"><a href="#分词之后进行简单的词频统计，此时过滤掉了字符串长度为-1-的字符。" class="headerlink" title="分词之后进行简单的词频统计，此时过滤掉了字符串长度为 1 的字符。"></a>分词之后进行简单的词频统计，此时过滤掉了字符串长度为 1 的字符。</h4><h4 id="利用-pyecharts-进行绘制词云图，被保存-html-页面文件"><a href="#利用-pyecharts-进行绘制词云图，被保存-html-页面文件" class="headerlink" title="利用 pyecharts 进行绘制词云图，被保存 html 页面文件"></a>利用 pyecharts 进行绘制词云图，被保存 html 页面文件</h4><h2 id="03-TF-IDF"><a href="#03-TF-IDF" class="headerlink" title="03 TF-IDF"></a>03 TF-IDF</h2><h4 id="TF-IDF-Term-Frequency-Inverse-Document-Frequency-词频-逆文件频率"><a href="#TF-IDF-Term-Frequency-Inverse-Document-Frequency-词频-逆文件频率" class="headerlink" title="TF-IDF(Term Frequency-Inverse Document Frequency, 词频-逆文件频率)."></a>TF-IDF(Term Frequency-Inverse Document Frequency, 词频-逆文件频率).</h4><h5 id="TFIDF-的主要思想是：如果某个词或短语在一篇文章中出现的频率-TF-高，并且在其他文章中很少出现，则认为此词或者短语具有很好的类别区分能力，适合用来分类"><a href="#TFIDF-的主要思想是：如果某个词或短语在一篇文章中出现的频率-TF-高，并且在其他文章中很少出现，则认为此词或者短语具有很好的类别区分能力，适合用来分类" class="headerlink" title="TFIDF 的主要思想是：如果某个词或短语在一篇文章中出现的频率 TF 高，并且在其他文章中很少出现，则认为此词或者短语具有很好的类别区分能力，适合用来分类"></a>TFIDF 的主要思想是：如果某个词或短语在一篇文章中出现的频率 TF 高，并且在其他文章中很少出现，则认为此词或者短语具有很好的类别区分能力，适合用来分类</h5><p><strong>词频 (term frequency, TF)</strong> 指的是某一个给定的词语在该文件中出现的次数。</p>
+<p><strong>逆向文件频率 (inverse document frequency, IDF)</strong> 是一个词语普遍重要性的度量。某一特定词语的 IDF，可以由总文件数目除以包含该词语之文件的数目，再将得到的商取对数得到。</p>
+<h5 id="IDF-log（语料库中文档总数-包含该词的文档数-1-）"><a href="#IDF-log（语料库中文档总数-包含该词的文档数-1-）" class="headerlink" title="IDF = log（语料库中文档总数 / 包含该词的文档数 +1 ）"></a>IDF = log（语料库中文档总数 / 包含该词的文档数 +1 ）</h5><h5 id="TFIDF-实际上是：TF-IDF"><a href="#TFIDF-实际上是：TF-IDF" class="headerlink" title="TFIDF 实际上是：TF * IDF"></a>TFIDF 实际上是：TF * IDF</h5><h5 id="基于-TF-IDF（term-frequency–inverse-document-frequency）-算法的关键词抽取"><a href="#基于-TF-IDF（term-frequency–inverse-document-frequency）-算法的关键词抽取" class="headerlink" title="基于 TF-IDF（term frequency–inverse document frequency） 算法的关键词抽取"></a>基于 TF-IDF（term frequency–inverse document frequency） 算法的关键词抽取</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> jieba.analyse<br><br>jieba.analyse.extract_tags(sentence, topK=<span class="hljs-number">20</span>, withWeight=<span class="hljs-literal">False</span>, allowPOS=())<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>sentence</strong> ：为待提取的文本</li>
+<li><strong>topK</strong>： 为返回几个 TF/IDF 权重最大的关键词，默认值为 20</li>
+<li><strong>withWeight</strong> ： 为是否一并返回关键词权重值，默认值为 False</li>
+<li><strong>allowPOS</strong> ： 仅包括指定词性的词，默认值为空，即不筛选</li>
+</ul>
+<h2 id="04-K-means-聚类"><a href="#04-K-means-聚类" class="headerlink" title="04 K-means 聚类"></a>04 K-means 聚类</h2><p>k：要得到的簇的个数</p>
+<p>质心：均值，向量各维取平均值即可，不断更新的</p>
+<p>距离的度量：常用欧式距离和余弦的相似度</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 将文本中的词语转换为词频矩阵 矩阵元素a[i][j] 表示j词在i类文本下的词频</span><br>   vectorizer = CountVectorizer()<br>   <span class="hljs-comment"># 该类会统计每个词语的tf-idf权值</span><br>   transformer = TfidfTransformer()<br>   <span class="hljs-comment"># 第一个fit_transform是计算tf-idf 第二个fit_transform是将文本转为词频矩阵</span><br>   tfidf = transformer.fit_transform(vectorizer.fit_transform(corpus))<br>   <span class="hljs-comment"># 获取词袋模型中的所有词语</span><br>   word = vectorizer.get_feature_names()<br>   <span class="hljs-comment"># 将tf-idf矩阵抽取出来 元素a[i][j]表示j词在i类文本中的tf-idf权重</span><br>   weight = tfidf.toarray()<br></code></pre></td></tr></table></figure>
+
+<p>我们可以通过用 TD－IDF 衡量每个单词在文件中的重要程度。如果多个文件，它们的文件中的各个单词的重要程度相似，我就可以说这些文件是相似的。如何评价这些文件的相似度呢？一种很自然的想法是用两者的欧几里得距离来作为相异度，欧几里得距离的定义如下：</p>
+<!-- ![image-20210103154152791](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20210103154152791.png) -->
+
+<p>其意义就是两个元素在欧氏空间中的集合距离，因为其直观易懂且可解释性强，被广泛用于标识两个标量元素的相异度。我们可以将 X，Y 分别理解为两篇文本文件，xi,y 是每个文件单词的 TD－IDF 值。这样就可以算出两文件的相似度了。这样我们可以将文件聚类的问题转化为一般性的聚类过程，样本空间中的两点的距离可以欧式距离描述。除欧氏距离外，常用作度量标量相异度的还有曼哈顿距离和闵可夫斯基距离，两者定义如下：</p>
+<!-- ![image-20210103154217134](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20210103154217134.png) -->
+
+<p>整个文本聚类过程可以先后分为两步：1、计算文本集合各个文档中 TD－IDF 值，2，根据计算的结果，对文件集合用 k-means 聚类方法进行迭代聚类。</p>
+<p>有关 k-means 的详细介绍 <a target="_blank" rel="noopener" href="https://blog.csdn.net/freesum/article/details/7376006">https://blog.csdn.net/freesum/article/details/7376006</a></p>
+<h2 id="05-层次聚类"><a href="#05-层次聚类" class="headerlink" title="05 层次聚类"></a>05 层次聚类</h2><p>层次聚类的合并算法通过计算两类数据点间的相似性，对所有数据点中最为相似的两个数据点进行组合，并反复迭代这一过程。简单的说层次聚类的合并算法是通过计算每一个类别的数据点与所有数据点之间的距离来确定它们之间的相似性，距离越小，相似度越高。并将距离最近的两个数据点或类别进行组合，生成聚类树。</p>
+<h4 id="基本步骤"><a href="#基本步骤" class="headerlink" title="基本步骤"></a>基本步骤</h4><p>1.计算每两个观测之间的距离</p>
+<p>2.将最近的两个观测聚为一类，将其看作一个整体计算与其它观测(类)之间的距离</p>
+<p>3.一直重复上述过程，直至所有的观测被聚为一类</p>
+<h4 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> scipy.cluster.hierarchy <span class="hljs-keyword">import</span> dendrogram, linkage, fcluster<br><span class="hljs-keyword">from</span> matplotlib <span class="hljs-keyword">import</span> pyplot <span class="hljs-keyword">as</span> plt<br><br>X = [[i] <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> [<span class="hljs-number">2</span>, <span class="hljs-number">8</span>, <span class="hljs-number">0</span>, <span class="hljs-number">4</span>, <span class="hljs-number">1</span>, <span class="hljs-number">9</span>, <span class="hljs-number">9</span>, <span class="hljs-number">0</span>]]<br><span class="hljs-built_in">print</span>(X)<br>Z = linkage(X, <span class="hljs-string">&#x27;ward&#x27;</span>)<br><span class="hljs-built_in">print</span>(Z)<br>f = fcluster(Z, <span class="hljs-number">4</span>, <span class="hljs-string">&#x27;distance&#x27;</span>)<br><span class="hljs-built_in">print</span>(f)<br>fig = plt.figure(figsize=(<span class="hljs-number">5</span>, <span class="hljs-number">3</span>))<br>dn = dendrogram(Z)<br>plt.show()<br></code></pre></td></tr></table></figure>
+
+<p><img    class="lazyload" data-original="https://img-blog.csdnimg.cn/20190301181326559.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3lpYm80OTIzODc=,size_16,color_FFFFFF,t_70" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">img</span></p>
+<h2 id="06-lda-主题模型"><a href="#06-lda-主题模型" class="headerlink" title="06 lda 主题模型"></a>06 lda 主题模型</h2><p>LDA（Latent Dirichlet Allocation）是一种文档主题生成模型，也称为一个三层贝叶斯概率模型，包含词、主题和文档三层结构。所谓生成模型，就是说，我们认为一篇文章的每个词都是通过“以一定概率选择了某个主题，并从这个主题中以一定概率选择某个词语”这样一个过程得到。文档到主题服从多项式分布，主题到词服从多项式分布。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> pyLDAvis<br><span class="hljs-comment"># pyLDA需要先导入模型，支持的模型的来源有三种：</span><br>	<span class="hljs-comment"># sklearn的lda模型 （我们用的这种）</span><br>	<span class="hljs-comment"># gensim的lda模型</span><br>	<span class="hljs-comment"># graphlab的lda模型</span><br><span class="hljs-keyword">from</span> sklearn.decomposition <span class="hljs-keyword">import</span> LatentDirichletAllocation<br><span class="hljs-keyword">import</span> pyLDAvis.sklearn<br></code></pre></td></tr></table></figure>
+
+<p>文档主题生成模型（Latent Dirichlet Allocation，简称 LDA）又称为盘子表示法（Plate Notation），下图是模型的标示图，其中双圆圈表示可测变量，单圆圈表示潜在变量，箭头表示两个变量之间的依赖关系，矩形框表示重复抽样，对应的重复次数在矩形框的右下角显示。LDA 模型的具体实现步骤如下：</p>
+<blockquote>
+<p>从每篇网页 D 对应的多项分布 θ 中抽取每个单词对应的一个主题 z。</p>
+</blockquote>
+<blockquote>
+<p>从主题 z 对应的多项分布 φ 中抽取一个单词 w。</p>
+</blockquote>
+<blockquote>
+<p>重复步骤 1 和 2，共计 Nd 次，直至遍历网页中每一个单词。</p>
+</blockquote>
+<img    class="lazyload" data-original="C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20210103161446056.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="    style="zoom: 50%;" /><span class="image-caption">image-20210103161446056</span>
+
+<h5 id="有关-LDA-只提模型原理的介绍-https-zhuanlan-zhihu-com-p-31470216"><a href="#有关-LDA-只提模型原理的介绍-https-zhuanlan-zhihu-com-p-31470216" class="headerlink" title="有关 LDA 只提模型原理的介绍 https://zhuanlan.zhihu.com/p/31470216"></a>有关 LDA 只提模型原理的介绍 <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/31470216">https://zhuanlan.zhihu.com/p/31470216</a></h5><h5 id="在生成的网页中的相关知识"><a href="#在生成的网页中的相关知识" class="headerlink" title="在生成的网页中的相关知识"></a>在生成的网页中的相关知识</h5><img    class="lazyload" data-original="C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20210103162718104.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="    style="zoom:80%;" /><span class="image-caption">image-20210103162718104</span>
+
+<p>浅蓝色的表示这个词在整个文档中出现的频率（权重），深红色的表示这个词在这个主题中所占的权重。</p>
+<p>如果<code>λ</code>接近 1，那么在该主题下更频繁出现的词，跟主题更相关；<br>如果<code>λ</code>越接近 0，那么该主题下更特殊、更独有的词，跟主题更相关（有点 TF-IDF 的意思了）。</p>
+<p>所以我们可以通过调节<code>λ</code>的大小来改变词语跟主题的相关性，探索更加合理的主题意义。</p>
+<h2 id="07-结论"><a href="#07-结论" class="headerlink" title="07 结论"></a>07 结论</h2><p>在大数据时代下，当运用传统的数学方法遇到困难时，熟练地应用数据挖掘技术显得格外重要。文本数据挖掘并不是一件容易的事情，尤其是在分析方法方面，还有很多需要研究的专题。随着计算机计算能力的发展和业务复杂性的提高，数据的类型会越来越多、越来越复杂，数据挖掘将发挥出越来越大的作用。</p>
+<p>经过大家的不懈努力，对疫情新闻的相关分析也已经完成。</p>
+<p>通过本次对该项目的研究，我们利用文本挖掘将大量繁琐复杂的新闻通过词云的方式进行展示，以及在数据预处理上对其采集的数据进行了数据清洗，得到了更标准、高质量的数据来提升分析的结果。</p>
+<p>总的体会可以用一句话来表达，纸上得来终觉浅，绝知此事要躬行!通过对中国社会组织公共服务平台的爬虫，我们也是了解到了许多在疫情期间让人感概落泪的故事以及政府在全力保护人民安全和健康所做出的一系列决策。</p>
+<p>从 tf-idf 权重计算和词云的展示中可以看到可以看到“疫情”、“组织”、“捐赠”、“社会”、“协会”、“肺炎”、“复工”等都是社会和政府共同关注的主题；</p>
+<p>在层次聚类中可以看出不同领域的关键词有着不同的聚类最终也都汇聚成一块；</p>
+<p>我们还发现在 LDA 主题模型中输出结果分成了两类，在某种意义上可理解为一类是疫情，一类是民生，也表明了政府在防疫、控制疫情蔓延的同时十分关心人民群众的生活，在中国政府的眼里，人民的健康和安全永远摆在第一位！</p>
+
+      </section>
+      <section class="extra">
+        
+          <ul class="copyright">
+  
+    <li><strong>本文作者：</strong>xing</li>
+    <li><strong>本文链接：</strong><a href="https://47.104.3.107/2021/12/31/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E7%9B%B8%E5%85%B3%E7%AC%94%E8%AE%B0/index.html" title="https:&#x2F;&#x2F;47.104.3.107&#x2F;2021&#x2F;12&#x2F;31&#x2F;%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E7%9B%B8%E5%85%B3%E7%AC%94%E8%AE%B0&#x2F;index.html">https:&#x2F;&#x2F;47.104.3.107&#x2F;2021&#x2F;12&#x2F;31&#x2F;%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E7%9B%B8%E5%85%B3%E7%AC%94%E8%AE%B0&#x2F;index.html</a></li>
+    <li><strong>版权声明：</strong>本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="BY-NC-SA" target="_blank" rel="noopener">BY-NC-SA</a> 许可协议，转载请注明出处！</li>
+  
+</ul>
+        
+        
+          <section class="donate">
+  <div id="qrcode-donate">
+    <img   class="lazyload" data-original="https://i.loli.net/2021/11/11/9FSws7lKeEImAhD.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
+  </div>
+  <div class="icon">
+    <a href="javascript:;" id="alipay"><i class="iconfont iconalipay"></i></a>
+    <a href="javascript:;" id="wechat"><i class="iconfont iconwechat-fill"></i></a>
+  </div>
+</section>
+        
+        
+        
+  <nav class="nav">
+    <a href="/2021/12/31/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><i class="iconfont iconleft"></i>小程序开发学习笔记</a>
+    <a href="/2021/12/31/%E3%80%8C%E5%B8%83%E5%B1%80%E6%8A%80%E5%B7%A7%E3%80%8D%E5%9B%BE%E7%89%87%E6%9C%AA%E5%8A%A0%E8%BD%BD%E5%89%8D%E8%87%AA%E5%8A%A8%E6%92%91%E5%BC%80%E5%85%83%E7%B4%A0%E9%AB%98%E5%BA%A6/">「布局技巧」图片未加载前自动撑开元素高度<i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">文章目录：</h3>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E7%9B%B8%E5%85%B3%E7%AC%94%E8%AE%B0"><span class="toc-text">数据挖掘课程设计相关笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#01-%E7%88%AC%E8%99%AB"><span class="toc-text">01 爬虫</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#02-jieba-%E5%88%86%E8%AF%8D%E3%80%81%E8%AF%8D%E4%BA%91"><span class="toc-text">02 jieba 分词、词云</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#03-TF-IDF"><span class="toc-text">03 TF-IDF</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#04-K-means-%E8%81%9A%E7%B1%BB"><span class="toc-text">04 K-means 聚类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#05-%E5%B1%82%E6%AC%A1%E8%81%9A%E7%B1%BB"><span class="toc-text">05 层次聚类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#06-lda-%E4%B8%BB%E9%A2%98%E6%A8%A1%E5%9E%8B"><span class="toc-text">06 lda 主题模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#07-%E7%BB%93%E8%AE%BA"><span class="toc-text">07 结论</span></a></li></ol></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
+  
+
+<footer class="footer">
+  <div class="footer-social"><a 
+        href="tencent://message/?Menu=yes&uin=1846730600 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#12B7F5'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconQQ "></i>
+      </a><a 
+        href="https://i.loli.net/2021/11/11/7hfawNSHkoeCrzl.jpg "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#09BB07'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconwechat-fill "></i>
+      </a><a 
+        href="https://github.com/zhangxingyu618 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#9f7be1'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  icongithub-fill "></i>
+      </a><a 
+        href="mailto:1846730600@qq.com "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#DA2E76'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconmail "></i>
+      </a></div>
+  
+    <div class="footer-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+  
+</footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+    <div class="fab fab-like">
+      <i class="iconfont iconheart"></i>
+    </div>
+  
+  
+    <div class="fab fab-daovoice">
+      <i class="iconfont iconcomment"></i>
+    </div>
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+    <div class="scrollbar j-scrollbar">
+  <div class="scrollbar-current j-scrollbar-current"></div>
+</div>
+  
+  
+    
+<script src="/js/color-mode.js"></script>
+
+  
+  
+    <div class="search">
+  <div class="search-container">
+    <div class="search-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <div class="search-input-wrapper">
+      <i class="search-input-icon iconfont iconsearch"></i>
+      <input class="search-input" type="search" id="search-input" placeholder="Search..." autofocus autocomplete="off"
+        autocorrect="off" autocapitalize="off">
+    </div>
+    <div class="search-output" id="search-output"></div>
+  </div>
+</div>
+  
+</body>
+
+<script src="/lib/jquery/jquery.js"></script>
+
+
+
+  
+<script src="/lib/lottie/lottie.js"></script>
+
+
+
+
+  
+<script src="/lib/lazyload/lazyload.js"></script>
+
+
+
+
+  
+<script src="/lib/fancybox/fancybox.js"></script>
+
+
+
+
+
+
+  
+<script src="/lib/qrcode/qrcode.js"></script>
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+  <script>
+  $.getScript("//cdn.jsdelivr.net/npm/leancloud-storage@4.1.0/dist/av-min.js", () => {
+
+    AV.init({
+      appId: 'XYmCtrvSgmSaocvAdvV2Mz3m-gzGzoHsz',
+      appKey: 'KwcsbELgwcycRgXH31uI2UzB',
+      serverURLs: 'https://leancloud.cn/',
+    });
+
+    const Counter = AV.Object.extend("Counter");
+    const Like = AV.Object.extend("Like");
+
+    const showCount = (Counter) => {
+      const asyncLimit = new AsyncLimit(2);
+      $(".leancloud-counter").each(async (e) => {
+        const url = $(".leancloud-counter").eq(e).attr('id').trim();
+        const query = new AV.Query("Counter");
+        query.equalTo("words", url);
+        let count = await asyncLimit.run(() => query.count());
+        $(".leancloud-counter").eq(e).text(count ? count : 0);
+      });
+    }
+
+    const addCount = (Counter) => {
+      const url = $(".leancloud-counter").length === 1 ? $(".leancloud-counter").attr('id').trim() : 'https://47.104.3.107';
+      var query = new Counter;
+      query.save({
+        words: url
+      });
+    }
+
+    const showLike = (Like) => {
+      const asyncLimit = new AsyncLimit(2);
+      $(".leancloud-like").each(async (e) => {
+        const url = $(".leancloud-like").eq(e).attr('id').trim();
+        const query = new AV.Query("Like");
+        query.equalTo("path", url);
+        let count = await asyncLimit.run(() => query.count());
+        $(".leancloud-like").eq(e).text(count ? count : 0);
+      });
+    }
+
+    const addLike = (Like) => {
+      const url = $(".leancloud-like").length === 1 ? $(".leancloud-like").attr('id').trim() : 'https://47.104.3.107';
+      var query = new Like;
+      query.save({
+        path: url,
+        nickName: 'Anonymous'
+      });
+      $(".leancloud-like").addClass('islike');
+      $(".fab-like").children(".iconfont").removeClass("iconheart").addClass("iconheart-fill").css("color", "#eb3223");
+      ZHAOO.zui.message({ text: '爱你哦~', type: 'success' });
+      setTimeout(() => showLike(Like), 1000);
+    }
+
+    const handleLikeClick = () => {
+      const isLike = $(".leancloud-like").length === 1 && $(".leancloud-like").hasClass('islike') ? true : false;
+      if (isLike) {
+        ZHAOO.zui.message({ text: '小心心不可以收回呢~', type: 'warning' });
+      } else {
+        addLike(Like);
+      }
+    }
+
+    $(function () {
+      addCount(Counter);
+      showCount(Counter);
+      showLike(Like);
+      $(".fab-like").on("click", function () {
+        handleLikeClick();
+      });
+    });
+
+  });
+</script>
+
+
+
+  
+
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i["DaoVoiceObject"] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    a.charset = "utf-8";
+    m.parentNode.insertBefore(a, m)
+  })(window, document, "script", "https://widget.daovoice.io/widget/731d55bd.js", "daovoice")
+  daovoice('init', {
+    app_id: "731d55bd"
+  }, {
+    launcher: {
+      disableLauncherIcon: true,
+    },
+  });
+  daovoice('update');
+</script>
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

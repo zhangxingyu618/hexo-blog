@@ -1,0 +1,520 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-Hans" color-mode=light>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS3 animation动画 - 1000STAR</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  
+  <meta name="description" content="CSS3之animation动画12345678910...">
+  <meta name="author" content="xing">
+  <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1445822_p6ry5n7lrr.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="/lib/fancybox/fancybox.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/atom-one-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      loading: {
+        gif: '',
+        lottie: 'https://assets4.lottiefiles.com/private_files/lf30_n3at4oi7.json'
+      },
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: {
+          gif: '/images/theme/loading.gif',
+          lottie: ''
+        }
+      },
+      donate: {
+        enable: true,
+        alipay: 'https://i.loli.net/2021/11/11/9FSws7lKeEImAhD.jpg',
+        wechat: 'https://i.loli.net/2021/11/11/yWeBOLCIqRpGlfu.png'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: true
+      },
+      preview: {
+        background: {
+          default: '',
+          api: ''
+        },
+        motto: {
+          default: '我在开了灯的床头下，想问问自己的心啊。',
+          typing: true,
+          api: 'https://v2.jinrishici.com/one.json',
+          data_contents: '["data","content"]'
+        },
+      },
+      qrcode: {
+        enable: true,
+        type: 'url',
+        image: 'https://i.loli.net/2021/11/08/d6Y2VekyzoBU5KA.gif',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        type: 'simple'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      },
+      search: {
+        enable: true,
+        path: '/search.xml'
+      }
+    }
+  </script>
+
+  
+
+  
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body class="lock-screen">
+  <div class="loading" id="loading"></div>
+  
+    
+
+
+  <nav class="navbar">
+    <div class="left">
+      
+        <i class="iconfont iconhome j-navbar-back-home"></i>
+      
+      
+        <i class="iconfont iconqrcode j-navbar-qrcode"></i>
+      
+      
+        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+      
+      
+        <i class="iconfont iconsearch j-navbar-search"></i>
+      
+    </div>
+    <div class="center">CSS3 animation动画</div>
+    <div class="right">
+      <i class="iconfont iconmenu j-navbar-menu"></i>
+    </div>
+    
+      <div id="qrcode-navbar"></div>
+    
+  </nav>
+
+  
+  
+
+<nav class="menu">
+  <div class="menu-container">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline "> 首页</a>
+      </li><li class="menu-item">
+        <a href="/galleries/ " class="underline "> 摄影</a>
+      </li><li class="menu-item">
+        <a href="/archives/ " class="underline "> 归档</a>
+      </li><li class="menu-item">
+        <a href="/tags/ " class="underline "> 标签</a>
+      </li><li class="menu-item">
+        <a href="/categories/ " class="underline "> 分类</a>
+      </li><li class="menu-item">
+        <a href="/about/ " class="underline "> 关于</a>
+      </li></ul>
+    
+      <div class="menu-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+    
+  </div>
+</nav>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/theme/post-image/post%20(15).jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">CSS3 animation动画</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>December 31, 2021</span>
+      
+        <span class="post-info-item">
+          <i class="iconfont iconeye"></i><span id="/2021/12/31/CSS3%E4%B9%8Banimation%E5%8A%A8%E7%94%BB/" class="leancloud-counter" data-flag-title="CSS3 animation动画"></span>
+        </span>
+        <span class="post-info-item">
+          <i class="iconfont iconheart"></i><span id="/2021/12/31/CSS3%E4%B9%8Banimation%E5%8A%A8%E7%94%BB/" class="leancloud-like" data-flag-title="CSS3 animation动画"></span>
+        </span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>3544</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        <h1 id="CSS3之animation动画"><a href="#CSS3之animation动画" class="headerlink" title="CSS3之animation动画"></a>CSS3之animation动画</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;animationBox&quot;</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;rotate&quot;</span>&gt;</span>旋转动画1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;play&quot;</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;img&quot;</span>&gt;</span>旋转动画2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;p2&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;p2&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;elasticity&quot;</span>&gt;</span>弹性动画<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;elasticity2&quot;</span>&gt;</span>曲线弹性<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css"></span><br><span class="css">  <span class="hljs-selector-class">.animationBox</span>&#123;<span class="hljs-attribute">overflow</span>: hidden;&#125;</span><br><span class="css">  <span class="hljs-selector-class">.animationBox</span>&gt;<span class="hljs-selector-tag">div</span>&#123;</span><br><span class="css">    <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;<span class="hljs-attribute">height</span>: <span class="hljs-number">100px</span>;<span class="hljs-attribute">background</span>: <span class="hljs-number">#eee</span>;<span class="hljs-attribute">border-radius</span>: <span class="hljs-number">50%</span>;<span class="hljs-attribute">text-align</span>: center;<span class="hljs-attribute">line-height</span>: <span class="hljs-number">100px</span>;<span class="hljs-attribute">margin</span>: <span class="hljs-number">30px</span>;<span class="hljs-attribute">float</span><span class="hljs-selector-pseudo">:left</span>;</span><br><span class="css">  &#125;</span><br><span class="css">  <span class="hljs-selector-class">.rotate</span>&#123;</span><br><span class="css">    <span class="hljs-attribute">animation</span>: rotate <span class="hljs-number">5s</span> linear infinite</span><br><span class="css">  &#125;</span><br><span class="css">  <span class="hljs-selector-class">.rotate</span><span class="hljs-selector-pseudo">:hover</span>&#123; <span class="hljs-attribute">animation-play-state</span>: paused&#125;</span><br><span class="css">  <span class="hljs-keyword">@keyframes</span> rotate &#123;</span><br><span class="css">    <span class="hljs-number">0%</span>&#123;<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(<span class="hljs-number">0</span>);&#125;</span><br><span class="css">  <span class="hljs-number">100%</span>&#123;<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(<span class="hljs-number">360deg</span>);&#125;</span><br><span class="css">  &#125;</span><br><span class="css">  <span class="hljs-selector-class">.animationBox</span>&gt;<span class="hljs-selector-class">.play</span> &#123;</span><br><span class="css">    <span class="hljs-attribute">position</span>: relative;</span><br><span class="css">    <span class="hljs-attribute">margin</span>: <span class="hljs-number">50px</span> <span class="hljs-number">30px</span>;</span><br><span class="css">    <span class="hljs-attribute">background</span>:none;</span><br><span class="css">  &#125;</span><br><span class="css">  <span class="hljs-selector-class">.play</span> <span class="hljs-selector-class">.img</span>&#123;</span><br><span class="css">    <span class="hljs-attribute">position</span>: absolute;</span><br><span class="css">    <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;</span><br><span class="css">    <span class="hljs-attribute">left</span>:<span class="hljs-number">0</span>;</span><br><span class="css">    <span class="hljs-attribute">z-index</span>: <span class="hljs-number">1</span>;</span><br><span class="css">    <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;<span class="hljs-attribute">height</span>: <span class="hljs-number">100px</span>; <span class="hljs-attribute">background</span>: <span class="hljs-number">#eee</span>;</span><br><span class="css">    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">50%</span>;</span><br><span class="css"></span><br><span class="css">    <span class="hljs-attribute">animation</span>: rotate <span class="hljs-number">5s</span> linear infinite</span><br><span class="css">  &#125;</span><br><span class="css">  <span class="hljs-selector-class">.play</span> <span class="hljs-selector-tag">span</span> &#123;</span><br><span class="css">    <span class="hljs-attribute">position</span>: absolute;</span><br><span class="css">    <span class="hljs-attribute">top</span>: <span class="hljs-number">1px</span>;</span><br><span class="css">    <span class="hljs-attribute">left</span>:<span class="hljs-number">1px</span>;</span><br><span class="css">    <span class="hljs-attribute">z-index</span>: <span class="hljs-number">0</span>;</span><br><span class="css">    <span class="hljs-attribute">display</span>: block;</span><br><span class="css">    <span class="hljs-attribute">width</span>: <span class="hljs-number">96px</span>;</span><br><span class="css">    <span class="hljs-attribute">height</span>: <span class="hljs-number">96px</span>;</span><br><span class="css">    <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#999</span>;</span><br><span class="css">    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">50%</span>;</span><br><span class="css">  &#125;</span><br><span class="css">  <span class="hljs-selector-class">.play</span> <span class="hljs-selector-tag">span</span> <span class="hljs-selector-tag">p</span>&#123;<span class="hljs-attribute">display</span>: block;<span class="hljs-attribute">width</span>: <span class="hljs-number">4px</span>;<span class="hljs-attribute">height</span>: <span class="hljs-number">4px</span>;<span class="hljs-attribute">background</span>: <span class="hljs-number">#000</span>;<span class="hljs-attribute">margin</span>: -<span class="hljs-number">2px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">50%</span>;<span class="hljs-attribute">border-radius</span>: <span class="hljs-number">50%</span>;<span class="hljs-attribute">opacity</span>: <span class="hljs-number">0.5</span>;&#125;</span><br><span class="css">  <span class="hljs-selector-class">.play</span> <span class="hljs-selector-tag">span</span> <span class="hljs-selector-class">.p2</span>&#123;<span class="hljs-attribute">margin</span>: <span class="hljs-number">50%</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> -<span class="hljs-number">2px</span>;&#125;</span><br><span class="css">  <span class="hljs-selector-class">.play</span> <span class="hljs-selector-tag">span</span>&#123;</span><br><span class="css">    <span class="hljs-attribute">animation</span>: wave <span class="hljs-number">5s</span> linear infinite</span><br><span class="css">  &#125;</span><br><span class="css">  <span class="hljs-selector-class">.play</span>&gt;<span class="hljs-selector-tag">span</span><span class="hljs-selector-pseudo">:nth-child</span>(<span class="hljs-number">3</span>)&#123;</span><br><span class="css">    <span class="hljs-comment">/* 延迟时间 */</span></span><br><span class="css">    <span class="hljs-attribute">animation-delay</span>:<span class="hljs-number">1s</span>; </span><br><span class="css">  &#125;</span><br><span class="css">  <span class="hljs-selector-class">.play</span>&gt;<span class="hljs-selector-tag">span</span><span class="hljs-selector-pseudo">:nth-child</span>(<span class="hljs-number">4</span>)&#123;</span><br><span class="css">    <span class="hljs-attribute">animation-delay</span>:<span class="hljs-number">2.2s</span>;</span><br><span class="css">  &#125;</span><br><span class="css">  <span class="hljs-selector-class">.play</span>&gt;<span class="hljs-selector-tag">span</span><span class="hljs-selector-pseudo">:nth-child</span>(<span class="hljs-number">5</span>)&#123;</span><br><span class="css">    <span class="hljs-attribute">animation-delay</span>:<span class="hljs-number">3.8s</span>;</span><br><span class="css">  &#125;</span><br><span class="css">  </span><br><span class="css">  <span class="hljs-keyword">@keyframes</span> wave &#123;</span><br><span class="css">    <span class="hljs-number">0%</span></span><br><span class="css">    &#123;</span><br><span class="css">      <span class="hljs-attribute">transform</span>:<span class="hljs-built_in">scale</span>(<span class="hljs-number">1</span>) <span class="hljs-built_in">rotate</span>(<span class="hljs-number">360deg</span>);</span><br><span class="css">      <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0.8</span>;</span><br><span class="css">    &#125;</span><br><span class="css">  <span class="hljs-number">100%</span></span><br><span class="css">    &#123;</span><br><span class="css">      <span class="hljs-attribute">transform</span>:<span class="hljs-built_in">scale</span>(<span class="hljs-number">1.8</span>) <span class="hljs-built_in">rotate</span>(<span class="hljs-number">0deg</span>);</span><br><span class="css">      <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;</span><br><span class="css">    &#125;</span><br><span class="css">  &#125;</span><br><span class="css"></span><br><span class="css"></span><br><span class="css">  <span class="hljs-selector-class">.elasticity</span>&#123;</span><br><span class="css">    <span class="hljs-comment">/* 参数说明</span></span><br><span class="hljs-comment"><span class="css">      动画名称 花费时间 贝塞尔曲线 延迟开始时间 播放次数n|infinite  是否反向播放动画</span></span><br><span class="hljs-comment"><span class="css">    */</span></span><br><span class="css">    <span class="hljs-attribute">animation</span>: elasticity <span class="hljs-number">1s</span> linear <span class="hljs-number">2s</span> infinite</span><br><span class="css">  &#125;</span><br><span class="css">  </span><br><span class="css">  <span class="hljs-keyword">@keyframes</span> elasticity&#123;</span><br><span class="css">    <span class="hljs-number">0%</span>&#123;</span><br><span class="css">      <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">scale</span>(<span class="hljs-number">0</span>);</span><br><span class="css">    &#125;</span><br><span class="css">    <span class="hljs-number">60%</span>&#123;</span><br><span class="css">      <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">scale</span>(<span class="hljs-number">1.1</span>);</span><br><span class="css">    &#125;</span><br><span class="css">    <span class="hljs-number">90%</span>&#123;</span><br><span class="css">      <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">scale</span>(<span class="hljs-number">1</span>);</span><br><span class="css">    &#125;</span><br><span class="css">  &#125;</span><br><span class="css">  </span><br><span class="css"></span><br><span class="css">  <span class="hljs-selector-class">.elasticity2</span>&#123;</span><br><span class="css">    <span class="hljs-comment">/**</span></span><br><span class="hljs-comment"><span class="css">    贝塞尔曲线 cubic-bezier(x1,y1,x2,y2)</span></span><br><span class="hljs-comment"><span class="css"></span></span><br><span class="hljs-comment"><span class="css">    通过调整贝塞尔曲线可以设置出多种动画效果，比如反弹效果等</span></span><br><span class="hljs-comment"><span class="css">    X轴的范围是0~1，Y轴的取值没有规定，但是也不宜过大</span></span><br><span class="hljs-comment"><span class="css">    直线：linear，即cubic-bezier(0,0,1,1)</span></span><br><span class="hljs-comment"><span class="css"></span></span><br><span class="hljs-comment"><span class="css">    贝塞尔曲线在线工具：https://cubic-bezier.com/#.17,.67,.83,.67</span></span><br><span class="hljs-comment"><span class="css">      */</span></span><br><span class="css">    <span class="hljs-attribute">animation</span>: elasticity2 <span class="hljs-number">1s</span> <span class="hljs-built_in">cubic-bezier</span>(.<span class="hljs-number">39</span>,.<span class="hljs-number">62</span>,.<span class="hljs-number">74</span>,<span class="hljs-number">1.39</span>) <span class="hljs-number">2s</span> infinite</span><br><span class="css">  &#125;</span><br><span class="css">  <span class="hljs-keyword">@keyframes</span> elasticity2&#123;</span><br><span class="css">    <span class="hljs-number">0%</span>&#123;</span><br><span class="css">      <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">scale</span>(<span class="hljs-number">0</span>);</span><br><span class="css">    &#125;</span><br><span class="css">    <span class="hljs-number">90%</span>&#123;</span><br><span class="css">      <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">scale</span>(<span class="hljs-number">1</span>);</span><br><span class="css">    &#125;</span><br><span class="css">  &#125;</span><br><span class="css"></span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span><br><br></code></pre></td></tr></table></figure>
+
+<h3 id="贝塞尔曲线-cubic-bezier-x1-y1-x2-y2"><a href="#贝塞尔曲线-cubic-bezier-x1-y1-x2-y2" class="headerlink" title="贝塞尔曲线 cubic-bezier(x1,y1,x2,y2)"></a>贝塞尔曲线 cubic-bezier(x1,y1,x2,y2)</h3><p>通过调整贝塞尔曲线可以设置出多种动画效果，比如反弹效果等 X轴的范围是0~1，Y轴的取值没有规定，但是也不宜过大。 如：直线linear，即cubic-bezier(0,0,1,1)</p>
+<p>贝塞尔曲线在线工具：<a target="_blank" rel="noopener" href="https://cubic-bezier.com/#.17,.67,.83,.67">https://cubic-bezier.com/#.17,.67,.83,.67(opens new window)</a></p>
+<blockquote>
+<p>参考：<a target="_blank" rel="noopener" href="https://www.w3school.com.cn/css3/index.asp">https://www.w3school.com.cn/css3/index.asp</a></p>
+</blockquote>
+
+      </section>
+      <section class="extra">
+        
+          <ul class="copyright">
+  
+    <li><strong>本文作者：</strong>xing</li>
+    <li><strong>本文链接：</strong><a href="https://47.104.3.107/2021/12/31/CSS3%E4%B9%8Banimation%E5%8A%A8%E7%94%BB/index.html" title="https:&#x2F;&#x2F;47.104.3.107&#x2F;2021&#x2F;12&#x2F;31&#x2F;CSS3%E4%B9%8Banimation%E5%8A%A8%E7%94%BB&#x2F;index.html">https:&#x2F;&#x2F;47.104.3.107&#x2F;2021&#x2F;12&#x2F;31&#x2F;CSS3%E4%B9%8Banimation%E5%8A%A8%E7%94%BB&#x2F;index.html</a></li>
+    <li><strong>版权声明：</strong>本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="BY-NC-SA" target="_blank" rel="noopener">BY-NC-SA</a> 许可协议，转载请注明出处！</li>
+  
+</ul>
+        
+        
+          <section class="donate">
+  <div id="qrcode-donate">
+    <img   class="lazyload" data-original="https://i.loli.net/2021/11/11/9FSws7lKeEImAhD.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
+  </div>
+  <div class="icon">
+    <a href="javascript:;" id="alipay"><i class="iconfont iconalipay"></i></a>
+    <a href="javascript:;" id="wechat"><i class="iconfont iconwechat-fill"></i></a>
+  </div>
+</section>
+        
+        
+        
+  <nav class="nav">
+    <a href="/2021/12/31/CSS%E6%95%99%E7%A8%8B%E6%8A%80%E5%B7%A7/"><i class="iconfont iconleft"></i>CSS教程技巧</a>
+    <a href="/2021/12/31/CSS3%20%20transition%E8%BF%87%E6%B8%A1/">CSS3 transition过渡<i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">文章目录：</h3>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#CSS3%E4%B9%8Banimation%E5%8A%A8%E7%94%BB"><span class="toc-text">CSS3之animation动画</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B4%9D%E5%A1%9E%E5%B0%94%E6%9B%B2%E7%BA%BF-cubic-bezier-x1-y1-x2-y2"><span class="toc-text">贝塞尔曲线 cubic-bezier(x1,y1,x2,y2)</span></a></li></ol></li></ol></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
+  
+
+<footer class="footer">
+  <div class="footer-social"><a 
+        href="tencent://message/?Menu=yes&uin=1846730600 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#12B7F5'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconQQ "></i>
+      </a><a 
+        href="https://i.loli.net/2021/11/11/7hfawNSHkoeCrzl.jpg "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#09BB07'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconwechat-fill "></i>
+      </a><a 
+        href="https://github.com/zhangxingyu618 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#9f7be1'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  icongithub-fill "></i>
+      </a><a 
+        href="mailto:1846730600@qq.com "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#DA2E76'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconmail "></i>
+      </a></div>
+  
+    <div class="footer-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+  
+</footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+    <div class="fab fab-like">
+      <i class="iconfont iconheart"></i>
+    </div>
+  
+  
+    <div class="fab fab-daovoice">
+      <i class="iconfont iconcomment"></i>
+    </div>
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+    <div class="scrollbar j-scrollbar">
+  <div class="scrollbar-current j-scrollbar-current"></div>
+</div>
+  
+  
+    
+<script src="/js/color-mode.js"></script>
+
+  
+  
+    <div class="search">
+  <div class="search-container">
+    <div class="search-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <div class="search-input-wrapper">
+      <i class="search-input-icon iconfont iconsearch"></i>
+      <input class="search-input" type="search" id="search-input" placeholder="Search..." autofocus autocomplete="off"
+        autocorrect="off" autocapitalize="off">
+    </div>
+    <div class="search-output" id="search-output"></div>
+  </div>
+</div>
+  
+</body>
+
+<script src="/lib/jquery/jquery.js"></script>
+
+
+
+  
+<script src="/lib/lottie/lottie.js"></script>
+
+
+
+
+  
+<script src="/lib/lazyload/lazyload.js"></script>
+
+
+
+
+  
+<script src="/lib/fancybox/fancybox.js"></script>
+
+
+
+
+
+
+  
+<script src="/lib/qrcode/qrcode.js"></script>
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+  <script>
+  $.getScript("//cdn.jsdelivr.net/npm/leancloud-storage@4.1.0/dist/av-min.js", () => {
+
+    AV.init({
+      appId: 'XYmCtrvSgmSaocvAdvV2Mz3m-gzGzoHsz',
+      appKey: 'KwcsbELgwcycRgXH31uI2UzB',
+      serverURLs: 'https://leancloud.cn/',
+    });
+
+    const Counter = AV.Object.extend("Counter");
+    const Like = AV.Object.extend("Like");
+
+    const showCount = (Counter) => {
+      const asyncLimit = new AsyncLimit(2);
+      $(".leancloud-counter").each(async (e) => {
+        const url = $(".leancloud-counter").eq(e).attr('id').trim();
+        const query = new AV.Query("Counter");
+        query.equalTo("words", url);
+        let count = await asyncLimit.run(() => query.count());
+        $(".leancloud-counter").eq(e).text(count ? count : 0);
+      });
+    }
+
+    const addCount = (Counter) => {
+      const url = $(".leancloud-counter").length === 1 ? $(".leancloud-counter").attr('id').trim() : 'https://47.104.3.107';
+      var query = new Counter;
+      query.save({
+        words: url
+      });
+    }
+
+    const showLike = (Like) => {
+      const asyncLimit = new AsyncLimit(2);
+      $(".leancloud-like").each(async (e) => {
+        const url = $(".leancloud-like").eq(e).attr('id').trim();
+        const query = new AV.Query("Like");
+        query.equalTo("path", url);
+        let count = await asyncLimit.run(() => query.count());
+        $(".leancloud-like").eq(e).text(count ? count : 0);
+      });
+    }
+
+    const addLike = (Like) => {
+      const url = $(".leancloud-like").length === 1 ? $(".leancloud-like").attr('id').trim() : 'https://47.104.3.107';
+      var query = new Like;
+      query.save({
+        path: url,
+        nickName: 'Anonymous'
+      });
+      $(".leancloud-like").addClass('islike');
+      $(".fab-like").children(".iconfont").removeClass("iconheart").addClass("iconheart-fill").css("color", "#eb3223");
+      ZHAOO.zui.message({ text: '爱你哦~', type: 'success' });
+      setTimeout(() => showLike(Like), 1000);
+    }
+
+    const handleLikeClick = () => {
+      const isLike = $(".leancloud-like").length === 1 && $(".leancloud-like").hasClass('islike') ? true : false;
+      if (isLike) {
+        ZHAOO.zui.message({ text: '小心心不可以收回呢~', type: 'warning' });
+      } else {
+        addLike(Like);
+      }
+    }
+
+    $(function () {
+      addCount(Counter);
+      showCount(Counter);
+      showLike(Like);
+      $(".fab-like").on("click", function () {
+        handleLikeClick();
+      });
+    });
+
+  });
+</script>
+
+
+
+  
+
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i["DaoVoiceObject"] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    a.charset = "utf-8";
+    m.parentNode.insertBefore(a, m)
+  })(window, document, "script", "https://widget.daovoice.io/widget/731d55bd.js", "daovoice")
+  daovoice('init', {
+    app_id: "731d55bd"
+  }, {
+    launcher: {
+      disableLauncherIcon: true,
+    },
+  });
+  daovoice('update');
+</script>
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
